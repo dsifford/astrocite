@@ -13,20 +13,15 @@
     "test": "npm run build && jest",
     "posttest": "npm run lint",
     "lint": "tslint -p . -t codeFrame",
-    "prebuild": "pegjs -o src/bibtex/grammar.js --cache src/bibtex/grammar.pegjs && pegjs -o src/ris/grammar.js --cache src/ris/grammar.pegjs",
+    "prebuild":
+      "pegjs -o src/bibtex/grammar.js --cache src/bibtex/grammar.pegjs && pegjs -o src/ris/grammar.js --cache src/ris/grammar.pegjs",
     "build": "tsc -p ."
   },
-  "files": [
-    "lib/**"
-  ],
-  "keywords": [
-    "CSL",
-    "Citation Style Language",
-    "BibTeX",
-    "AST",
-    "Bibliography",
-    "Citation"
-  ],
+  "lint-staged": {
+    "*.{ts,tsx,json}": ["prettier --write", "git add"]
+  },
+  "files": ["lib/**"],
+  "keywords": ["CSL", "Citation Style Language", "BibTeX", "AST", "Bibliography", "Citation"],
   "devDependencies": {
     "@types/node": "^8.0.27",
     "husky": "^0.14.3",
