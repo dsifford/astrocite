@@ -12,7 +12,7 @@
     "prepush": "npm test && npm run lint",
     "test": "npm run build && jest",
     "posttest": "npm run lint",
-    "lint": "tslint -p . -t codeFrame",
+    "lint": "tslint -e \"**/*.js\" -p . -t codeFrame",
     "prebuild":
       "pegjs -o src/bibtex/grammar.js --cache src/bibtex/grammar.pegjs && pegjs -o src/ris/grammar.js --cache src/ris/grammar.pegjs",
     "build": "tsc -p ."
