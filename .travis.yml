@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+    - node
+    - '7'
+    - '6'
+branches:
+    only:
+        - master
+        - /^greenkeeper-.*$/
+cache:
+    directories:
+        - node_modules
+script: npm test -- --runInBand
+after_success:
+    - bash <(curl -s https://codecov.io/bash)
