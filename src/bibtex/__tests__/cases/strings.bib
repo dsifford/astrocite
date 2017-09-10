@@ -1,0 +1,23 @@
+@STRING{ foo = "foo" }
+
+@string ( bar = { bar } )
+
+@StRiNg{baz="baz"}
+
+@string{ foobarbaz = "foo" #
+    { bar } # "baz" }
+
+@article{parses_defined_strings,
+    title = foo # bar # baz,
+    note = foobarbaz,
+}
+
+@book{skips_over_unknown_string,
+    title = mystring # "Title starts here",
+}
+
+@string{mystring = "Now this string is available to use"}
+
+@article{parses_string_above_now_that_its_available,
+    title = mystring # {!},
+}

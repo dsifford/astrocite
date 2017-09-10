@@ -13,26 +13,17 @@ type PartialDate2 = (second?: DatePart) => CSL.DateType;
 type CurriedDate = PartialDate0 | PartialDate1 | PartialDate2 | CSL.DateType;
 
 const curriedDate: PartialDate0 = () => (first = { value: '' }) => (second = { value: '' }) => {
-    if (!first.kind && !second.kind) {
+    if (!first.kind) {
         return {
             'date-parts': [['', '', '']],
         };
     }
-    if (first.kind) {
-        return first.kind === 'year'
-            ? {
-                  'date-parts': [[first.value, second.value, '']],
-              }
-            : {
-                  'date-parts': [[second.value, first.value, '']],
-              };
-    }
-    return second.kind === 'year'
+    return first.kind === 'year'
         ? {
-              'date-parts': [[second.value, first.value, '']],
+              'date-parts': [[first.value, second.value, '']],
           }
         : {
-              'date-parts': [[first.value, second.value, '']],
+              'date-parts': [[second.value, first.value, '']],
           };
 };
 
@@ -59,10 +50,8 @@ const parseValue = (value: ValueType | ValueType[], macros: Map<string, string>)
                 output += `${KNOWN_COMMANDS.get(v.value) || ''}`;
                 break;
             case 'DicraticalCommand':
-                output += `${v.character}${DICRATICS.get(v.mark) || ''}`;
+                output += `${v.character}${DICRATICS.get(v.mark)}`;
                 break;
-            default:
-                continue;
         }
     }
     return output;

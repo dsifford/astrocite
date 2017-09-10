@@ -80,20 +80,20 @@ PreambleExpression
     }
 
 StringExpression
-    = '@string'i __h '{' __h k:$([A-Za-z-_][A-Za-z0-9-_]*) PropertySeparator v:(QuotedValue / BracesValue) __ '}' _v __ {
+    = '@string'i __h '{' __h k:$([A-Za-z-_][A-Za-z0-9-_]*) PropertySeparator v:(QuotedValue / BracesValue)+ __ '}' _v __ {
         return {
             kind: 'StringExpression',
             loc: location(),
             key: k,
-            value: v,
+            value: v.reduce((a, b) => a.concat(b), []),
         };
     }
-    / '@string'i __h '(' __h k:$([A-Za-z-_][A-Za-z0-9-_]*) PropertySeparator v:(QuotedValue / BracesValue) __ ')' _v __ {
+    / '@string'i __h '(' __h k:$([A-Za-z-_][A-Za-z0-9-_]*) PropertySeparator v:(QuotedValue / BracesValue)+ __ ')' _v __ {
         return {
             kind: 'StringExpression',
             loc: location(),
             key: k,
-            value: v,
+            value: v.reduce((a, b) => a.concat(b), []),
         };
     }
 
@@ -223,7 +223,7 @@ SymbolCommand
 RegularCommand
     = '\\' v:$[A-Za-z]+ args:Argument* {
         return {
-            kind: 'Command',
+            kind: 'RegularCommand',
             loc: location(),
             value: v,
             arguments: args,
@@ -258,7 +258,7 @@ SimpleDicratical
     = ['`=~^.]
 
 ExtendedDicratical
-    = ['`"c=buv~^.drHkt]
+    = ['`"c=buv~^.drHk]
 
 PropertySeparator
     = __h '=' __h
