@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/dsifford/astrocite.svg?branch=master)](https://travis-ci.org/dsifford/astrocite) [![codecov](https://codecov.io/gh/dsifford/astrocite/branch/master/graph/badge.svg)](https://codecov.io/gh/dsifford/astrocite)
 # astrocite
 
 > Bibliography Format => AST => CSL JSON

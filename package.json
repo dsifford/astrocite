@@ -15,7 +15,7 @@
     "postci": "npm run lint",
     "lint": "tslint -e \"**/*.js\" -p . -t codeFrame",
     "prebuild": "pegjs -o src/bibtex/grammar.js --cache src/bibtex/grammar.pegjs && pegjs -o src/ris/grammar.js --cache src/ris/grammar.pegjs",
-    "build": "rm -r lib/* && tsc -p ."
+    "build": "rm -rf lib/* && tsc -p ."
   },
   "lint-staged": {
     "*.{ts,tsx}": [
