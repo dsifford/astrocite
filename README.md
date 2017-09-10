@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/dsifford/astrocite.svg?branch=master)](https://travis-ci.org/dsifford/astrocite) [![codecov](https://codecov.io/gh/dsifford/astrocite/branch/master/graph/badge.svg)](https://codecov.io/gh/dsifford/astrocite)
+[![Join the chat at https://gitter.im/astrocite/Lobby](https://badges.gitter.im/astrocite/Lobby.svg)](https://gitter.im/astrocite/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Build Status](https://travis-ci.org/dsifford/astrocite.svg?branch=master)](https://travis-ci.org/dsifford/astrocite) [![codecov](https://codecov.io/gh/dsifford/astrocite/branch/master/graph/badge.svg)](https://codecov.io/gh/dsifford/astrocite)
+
 # astrocite
 
 > Bibliography Format => AST => CSL JSON
