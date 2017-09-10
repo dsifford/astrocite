@@ -1,6 +1,8 @@
 [![Build Status](https://travis-ci.org/dsifford/astrocite.svg?branch=master)](https://travis-ci.org/dsifford/astrocite) [![codecov](https://codecov.io/gh/dsifford/astrocite/branch/master/graph/badge.svg)](https://codecov.io/gh/dsifford/astrocite)
 # astrocite
 
+[![Join the chat at https://gitter.im/astrocite/Lobby](https://badges.gitter.im/astrocite/Lobby.svg)](https://gitter.im/astrocite/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 > Bibliography Format => AST => CSL JSON
 
 **NOTE:** This project is currently a work in progress. The API is subject to change drastically and without warning. Any use of this library is at your own risk until either this message disappears or version `^1.x.x` is released.
