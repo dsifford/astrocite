@@ -1,9 +1,36 @@
+{
+    function simpleLatexConversions(text) {
+        return [
+            [/---/g, '\u2014'],
+            [/--/g, '\u2013'],
+            [/~/g, '\u00A0'],
+            [/</g, '\u00A1'],
+            [/>/g, '\u00BF'],
+        ].reduce((output, replacer) => {
+            output = output.replace(replacer[0], replacer[1]);
+            return output;
+        }, text);
+    }
+
+    function normalizeWhitespace(textArr) {
+        return textArr.reduce((prev, curr) => {
+            if (/\s/.test(curr)) {
+                if (/\s/.test(prev[prev.length - 1])) {
+                    return prev;
+                } else {
+                    return prev + ' ';
+                }
+            }
+            return prev + curr;
+        }, '');
+    }
+}
 
 File
     = __ r:Node+ __ {
         return {
             kind: 'File',
-            // location: location(),
+            loc: location(),
             children: r,
         };
     }
@@ -17,19 +44,21 @@ Node
 //-----------------  Top-level Nodes
 
 Entry
-    = '@' type:$[A-Za-z]+ '{' id:EntryId props:Property+ '}' _v __ {
+    = '@' type:$[A-Za-z]+ '{' id:EntryId props:Property+ '}' _v? __ {
         return {
             kind: 'Entry',
-            type: type.toLowerCase(),
             id: id,
+            type: type.toLowerCase(),
+            loc: location(),
             properties: props,
         }
     }
     / '@' type:$[A-Za-z]+ '(' id:EntryId props:Property+ ')' _v __ {
         return {
             kind: 'Entry',
-            type: type.toLowerCase(),
             id: id,
+            type: type.toLowerCase(),
+            loc: location(),
             properties: props,
         }
     }
@@ -38,12 +67,14 @@ PreambleExpression
     = '@preamble'i __h '{' __ v:(QuotedValue / BracesValue)+ __ '}' _v __ {
         return {
             kind: 'PreambleExpression',
+            loc: location(),
             value: v.reduce((a, b) => a.concat(b), []),
         }
     }
     / '@preamble'i __h '(' __ v:(QuotedValue / BracesValue)+ __ ')' _v __ {
         return {
             kind: 'PreambleExpression',
+            loc: location(),
             value: v.reduce((a, b) => a.concat(b), []),
         }
     }
@@ -52,6 +83,7 @@ StringExpression
     = '@string'i __h '{' __h k:$([A-Za-z-_][A-Za-z0-9-_]*) PropertySeparator v:(QuotedValue / BracesValue) __ '}' _v __ {
         return {
             kind: 'StringExpression',
+            loc: location(),
             key: k,
             value: v,
         };
@@ -59,6 +91,7 @@ StringExpression
     / '@string'i __h '(' __h k:$([A-Za-z-_][A-Za-z0-9-_]*) PropertySeparator v:(QuotedValue / BracesValue) __ ')' _v __ {
         return {
             kind: 'StringExpression',
+            loc: location(),
             key: k,
             value: v,
         };
@@ -69,12 +102,13 @@ StringExpression
 //------------------ Entry Child Nodes
 
 EntryId
-    = __h id:$[a-zA-Z0-9-:]+ ',' __h EOL { return id; }
+    = __h id:$[a-zA-Z0-9-:_]+ ',' __h EOL { return id; }
 
 Property
     = k:PropertyKey PropertySeparator v:PropertyValue PropertyTerminator {
         return {
             kind: 'Property',
+            loc: location(),
             key: k.toLowerCase(),
             value: v,
         }
@@ -103,19 +137,11 @@ StringValue
 //---------------------- Value Kinds
 
 Text
-    = r:[^{}"\\]+ {
+    = v:[^{}"\\]+ {
         return {
             kind: 'Text',
-            value: r.reduce((prev, curr) => {
-                if (/\s/.test(curr)) {
-                    if (/\s/.test(prev[prev.length - 1])) {
-                        return prev;
-                    } else {
-                        return prev + ' ';
-                    }
-                }
-                return prev + curr;
-            }, ''),
+            loc: location(),
+            value: simpleLatexConversions(normalizeWhitespace(v)),
         };
     }
 
@@ -123,6 +149,7 @@ Number
     = v:$[0-9]+ {
         return {
             kind: 'Number',
+            loc: location(),
             value: parseInt(v, 10),
         };
     }
@@ -131,6 +158,7 @@ String
     = v:$([a-zA-Z-_][a-zA-Z0-9-_]+) {
         return {
             kind: 'String',
+            loc: location(),
             value: v,
         };
     }
@@ -139,6 +167,7 @@ NestedLiteral
     = '{' v:(Text / Command / NestedLiteral)* '}' {
         return {
             kind: 'NestedLiteral',
+            loc: location(),
             value: v,
         };
     }
@@ -150,6 +179,7 @@ LineComment
     = '%' __h v:$[^\r\n]+ EOL+ {
         return {
             kind: 'LineComment',
+            loc: location(),
             value: v,
         };
     }
@@ -158,21 +188,43 @@ LineComment
 //---------------------- LaTeX Commands
 
 Command
-    = StringCommand
+    = DicraticalCommand
+    / RegularCommand
     / SymbolCommand
 
+DicraticalCommand
+    = '\\' mark:SimpleDicratical char:[a-zA-Z0-9] {
+        return {
+            kind: 'DicraticalCommand',
+            loc: location(),
+            mark: mark,
+            character: char,
+        };
+    }
+    / '\\' mark:ExtendedDicratical '{' char:[a-zA-Z0-9] '}' {
+        return {
+            kind: 'DicraticalCommand',
+            loc: location(),
+            mark: mark,
+            character: char,
+        }
+    }
+
+
 SymbolCommand
-    = '\\' v:$[^A-Za-z0-9\t\r\n ] {
+    = '\\' v:$[^A-Za-z0-9\t\r\n] {
         return {
             kind: 'SymbolCommand',
+            loc: location(),
             value: v,
         };
     }
 
-StringCommand
+RegularCommand
     = '\\' v:$[A-Za-z]+ args:Argument* {
         return {
-            kind: 'StringCommand',
+            kind: 'Command',
+            loc: location(),
             value: v,
             arguments: args,
         };
@@ -186,6 +238,7 @@ OptionalArgument
     = '[' __h v:$[^\]]+ __h ']' {
         return {
             kind: 'OptionalArgument',
+            loc: location(),
             value: v,
         }
     }
@@ -194,11 +247,18 @@ RequiredArgument
     = '{' __h v:(Command / Text)* __h '}' {
         return {
             kind: 'RequiredArgument',
+            loc: location(),
             value: v,
         }
     }
 
 //-------------- Helpers
+
+SimpleDicratical
+    = ['`=~^.]
+
+ExtendedDicratical
+    = ['`"c=buv~^.drHkt]
 
 PropertySeparator
     = __h '=' __h
@@ -229,4 +289,6 @@ _ "Mandatory Whitespace"
 
 __ "Optional Whitespace"
     = [ \t\n\r]*
+
+
 

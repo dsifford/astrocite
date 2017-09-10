@@ -21,4 +21,5 @@ export interface AST {
 
 const file = readFileSync(resolve(__dirname, '../tester.ris'), 'utf-8');
 
+// tslint:disable no-console
 console.log(JSON.stringify(parser.parse(file), null, 4));

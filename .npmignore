@@ -1,4 +1,5 @@
 src
+tmp
 .vscode
 .prettierrc
 tsconfig.json
