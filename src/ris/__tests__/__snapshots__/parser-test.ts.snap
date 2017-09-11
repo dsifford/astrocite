@@ -1,0 +1,842 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RIS Parser should parse a long RIS file correctly 1`] = `
+Array [
+  Object {
+    "URL": "http://blogs.nejm.org/now/index.php/the-final-nail-in-early-goal-directed-therapys-coffin/2015/03/24/",
+    "author": Array [
+      Object {
+        "family": "Allen-Dicker",
+        "given": "Joshua",
+        "literal": "Allen-Dicker, Joshua",
+      },
+    ],
+    "container-title": "Now @ NEJM",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2015",
+          "",
+          "",
+        ],
+      ],
+    },
+    "title": "The Final Nail in Early Goal Directed Therapy’s Coffin?",
+    "type": "webpage",
+  },
+  Object {
+    "URL": "http://stemlynsblog.org/the-promise-study-egdt-rip/; http://blogs.nejm.org/now/index.php/the-final-nail-in-early-goal-directed-therapys-coffin/2015/03/24/",
+    "accessed": Object {
+      "date-parts": Array [
+        Array [
+          "2016",
+          "",
+          "",
+        ],
+      ],
+    },
+    "author": Array [
+      Object {
+        "family": "Body",
+        "given": "Rick",
+        "literal": "Body, Rick",
+      },
+    ],
+    "container-title": "St. Emlyn's website",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2015",
+          "",
+          "",
+        ],
+      ],
+    },
+    "title": "The ProMISe Study: EGDT RIP?",
+    "type": "webpage",
+  },
+  Object {
+    "URL": "http://ajkdblog.org/2015/03/18/nephmadness-2015-process-arise-promise-and-the-promise-of-early-goal-directed-therapy/",
+    "author": Array [
+      Object {
+        "family": "Boka",
+        "given": "Kamran",
+        "literal": "Boka, Kamran",
+      },
+    ],
+    "container-title": "AJKD blog",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2015",
+          "",
+          "",
+        ],
+      ],
+    },
+    "title": "NephMadness 2015: ProCESS ARISE ProMISe and the promise of Early Goal Directed Therapy",
+    "type": "webpage",
+  },
+  Object {
+    "DOI": "10.1038/nature.2015.18202",
+    "author": Array [
+      Object {
+        "family": "Callaway",
+        "given": "Ewen",
+        "literal": "Callaway, Ewen",
+      },
+    ],
+    "container-title": "Nature: News Section2",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2015",
+          "",
+          "",
+        ],
+      ],
+    },
+    "page": "23-25",
+    "page-first": "23",
+    "title": "Faked peer reviews prompt 64 retractions",
+    "type": "webpage",
+    "volume": "785",
+  },
+  Object {
+    "author": Array [
+      Object {
+        "family": "Cameron",
+        "given": "Peter",
+        "literal": "Cameron, Peter",
+      },
+    ],
+    "container-title": "Emergency Physicians International",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2015",
+          "",
+          "",
+        ],
+      ],
+    },
+    "title": "Pundit-Based Medicine",
+    "type": "webpage",
+  },
+  Object {
+    "ISBN": "9781100205175",
+    "abstract": "This guide outlines those elements that contribute to strong KT projects. It is intended to be used both bythose developing project proposals and by those who are assessing such proposals for the purposes of funding or partnership.",
+    "author": Array [
+      Object {
+        "family": "",
+        "given": "",
+        "literal": "Canadian Institutes of Health Research",
+      },
+    ],
+    "container-title": "CIHR Website",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2012",
+          "",
+          "",
+        ],
+      ],
+    },
+    "page": "1-30",
+    "page-first": "1",
+    "publisher": "Canadian Institute of Health Research",
+    "publisher-place": "Ottawa",
+    "title": "Guide to Knowledge Translation Planning at CIHR: Integrated and End-of-Grant Approaches",
+    "type": "book",
+  },
+  Object {
+    "author": Array [
+      Object {
+        "family": "Chan",
+        "given": "Teresa",
+        "literal": "Chan, Teresa",
+      },
+    ],
+    "container-title": "CanadiEM.org (formerly BoringEM.org)",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2015",
+          "",
+          "",
+        ],
+      ],
+    },
+    "title": "Battle Hymn of the Tiger Editor: Introducing the Coached peer review for FOAM",
+    "type": "webpage",
+  },
+  Object {
+    "URL": "www.aliem.com/MEdIC-Series-The-Case-the-FOAM-Faux-Pas-Expert-Review-and-Curated-Commentary",
+    "author": Array [
+      Object {
+        "family": "Chan",
+        "given": "Teresa",
+        "literal": "Chan, Teresa",
+      },
+      Object {
+        "family": "Helman",
+        "given": "Anton",
+        "literal": "Helman, Anton",
+      },
+      Object {
+        "family": "Davis",
+        "given": "Tessa",
+        "literal": "Davis, Tessa",
+      },
+      Object {
+        "family": "Purdy",
+        "given": "Eve",
+        "literal": "Purdy, Eve",
+      },
+    ],
+    "container-title": "Academic Life in Emergency Medicine",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2015",
+          "",
+          "",
+        ],
+      ],
+    },
+    "title": "MEdIC Series | The Case the FOAM Faux Pas – Expert Review and Curated Commentary",
+    "type": "webpage",
+  },
+  Object {
+    "DOI": "10.15200/winn.144720.08769",
+    "author": Array [
+      Object {
+        "family": "Colmers",
+        "given": "Isabelle N",
+        "literal": "Colmers, Isabelle N",
+      },
+      Object {
+        "family": "Paterson",
+        "given": "Quinten S",
+        "literal": "Paterson, Quinten S",
+      },
+      Object {
+        "family": "Lin",
+        "given": "Michelle",
+        "literal": "Lin, Michelle",
+      },
+      Object {
+        "family": "Thoma",
+        "given": "Brent",
+        "literal": "Thoma, Brent",
+      },
+      Object {
+        "family": "Chan",
+        "given": "Teresa M",
+        "literal": "Chan, Teresa M",
+      },
+    ],
+    "container-title": "The Winnower",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2015",
+          "",
+          "",
+        ],
+      ],
+    },
+    "title": "The quality checklists for medical education blogs and podcasts",
+    "type": "article-journal",
+  },
+  Object {
+    "author": Array [
+      Object {
+        "family": "Grock",
+        "given": "Andy",
+        "literal": "Grock, Andy",
+      },
+      Object {
+        "family": "Ankel",
+        "given": "Felix",
+        "literal": "Ankel, Felix",
+      },
+      Object {
+        "family": "Branzetti",
+        "given": "Jeremy",
+        "literal": "Branzetti, Jeremy",
+      },
+      Object {
+        "family": "Joshi",
+        "given": "Nikita",
+        "literal": "Joshi, Nikita",
+      },
+      Object {
+        "family": "Lin",
+        "given": "Michelle",
+        "literal": "Lin, Michelle",
+      },
+      Object {
+        "family": "Morley",
+        "given": "Eric",
+        "literal": "Morley, Eric",
+      },
+      Object {
+        "family": "Swaminathan",
+        "given": "Anand",
+        "literal": "Swaminathan, Anand",
+      },
+      Object {
+        "family": "Taira",
+        "given": "Taku",
+        "literal": "Taira, Taku",
+      },
+      Object {
+        "family": "Yarris",
+        "given": "Lalena",
+        "literal": "Yarris, Lalena",
+      },
+    ],
+    "container-title": "Academic Life in Emergency Medicine",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2014",
+          "",
+          "",
+        ],
+      ],
+    },
+    "title": "ALiEM AIR Series Grading Tool",
+    "type": "webpage",
+  },
+  Object {
+    "URL": "http://www.aliem.com/aliem-annals-em-journal-club-spontaneous-pneumothorax-pigtail-catheters-outpatient-management/",
+    "author": Array [
+      Object {
+        "family": "Lin",
+        "given": "Michelle",
+        "literal": "Lin, Michelle",
+      },
+    ],
+    "container-title": "Academic Life in Emergency Medicine",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2014",
+          "",
+          "",
+        ],
+      ],
+    },
+    "title": "ALiEM-Annals of EM Journal Club: Spontaneous pneumothorax, pigtail catheters, and outpatient management",
+    "type": "webpage",
+  },
+  Object {
+    "author": Array [
+      Object {
+        "family": "Lin",
+        "given": "Michelle",
+        "literal": "Lin, Michelle",
+      },
+      Object {
+        "family": "Joshi",
+        "given": "Nikita",
+        "literal": "Joshi, Nikita",
+      },
+      Object {
+        "family": "Grock",
+        "given": "Andy",
+        "literal": "Grock, Andy",
+      },
+    ],
+    "container-title": "Journal of Graduate Medical Education",
+    "issue": "2",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2016",
+          "",
+          "",
+        ],
+      ],
+    },
+    "page": "In-press",
+    "page-first": "In",
+    "title": "Approved Instructional Resources (AIR) Series: A national initiative to identify quality emergency medicine blog and podcast content for resident education",
+    "type": "article-journal",
+    "volume": "8",
+  },
+  Object {
+    "URL": "http://www.wessexics.com/The_Bottom_Line/Review/index.php?id=3665078336903245716",
+    "author": Array [
+      Object {
+        "family": "Mathieu",
+        "given": "Steven",
+        "literal": "Mathieu, Steven",
+      },
+    ],
+    "container-title": "The Bottom Line",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2015",
+          "",
+          "",
+        ],
+      ],
+    },
+    "title": "Trial of Early, Goal-Directed Resuscitation for Septic Shock",
+    "type": "webpage",
+  },
+  Object {
+    "URL": "http://stemlynsblog.org/when-foam-doesnt-wash/; http://www.aliem.com/medic-series-the-case-of-the-foam-faux-pas/",
+    "author": Array [
+      Object {
+        "family": "May",
+        "given": "Natalie",
+        "literal": "May, Natalie",
+      },
+    ],
+    "container-title": "St. Emlyn's website",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2013",
+          "",
+          "",
+        ],
+      ],
+    },
+    "title": "When FOAM Doesn't Wash",
+    "type": "webpage",
+  },
+  Object {
+    "DOI": "10.1136/bmjopen-2013-002988.3",
+    "author": Array [
+      Object {
+        "family": "Melvin",
+        "given": "Lindsay",
+        "literal": "Melvin, Lindsay",
+      },
+      Object {
+        "family": "Chan",
+        "given": "Teresa",
+        "literal": "Chan, Teresa",
+      },
+    ],
+    "container-title": "Journal of Graduate Medical Education",
+    "issue": "September",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2014",
+          "",
+          "",
+        ],
+      ],
+    },
+    "page": "581-582",
+    "page-first": "581",
+    "title": "Using Twitter in Clinical Education and Practice",
+    "type": "article-journal",
+  },
+  Object {
+    "URL": "http://thesgem.com/2014/04/sgem69-cry-me-a-river-early-goal-directed-therapy-process-trial/",
+    "author": Array [
+      Object {
+        "family": "Milne",
+        "given": "W. Kenneth",
+        "literal": "Milne, W. Kenneth",
+      },
+      Object {
+        "family": "Upadhye",
+        "given": "Suneel",
+        "literal": "Upadhye, Suneel",
+      },
+    ],
+    "container-title": "The Skeptics Guide to Emergency Medicine",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2014",
+          "",
+          "",
+        ],
+      ],
+    },
+    "title": "Cry Me A River (Early Goal Directed Therapy) ProCESS Trial",
+    "type": "webpage",
+  },
+  Object {
+    "URL": "http://thesgem.com/2014/10/sgem92-arise-up-arise-up-egdt-vs-usual-care-for-sepsis/",
+    "author": Array [
+      Object {
+        "family": "Milne",
+        "given": "W. Kenneth",
+        "literal": "Milne, W. Kenneth",
+      },
+      Object {
+        "family": "Upadhye",
+        "given": "Suneel",
+        "literal": "Upadhye, Suneel",
+      },
+    ],
+    "container-title": "The Skeptics Guide to Emergency Medicine",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2014",
+          "",
+          "",
+        ],
+      ],
+    },
+    "title": "ARISE Up, ARISE Up (EGDT vs. Usual Care for Sepsis)",
+    "type": "webpage",
+  },
+  Object {
+    "URL": "http://thesgem.com/2015/03/sgem113-egdt-promises-promises/",
+    "author": Array [
+      Object {
+        "family": "Milne",
+        "given": "W. Kenneth",
+        "literal": "Milne, W. Kenneth",
+      },
+      Object {
+        "family": "Upadhye",
+        "given": "Suneel",
+        "literal": "Upadhye, Suneel",
+      },
+      Object {
+        "family": "Osborn",
+        "given": "Tiffany",
+        "literal": "Osborn, Tiffany",
+      },
+    ],
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2015",
+          "",
+          "",
+        ],
+      ],
+    },
+    "title": "EGDT – ProMISe(s) ProMISe(s)",
+    "type": "webpage",
+  },
+  Object {
+    "author": Array [
+      Object {
+        "family": "Paterson",
+        "given": "Quinten S",
+        "literal": "Paterson, Quinten S",
+      },
+      Object {
+        "family": "Thoma",
+        "given": "Brent",
+        "literal": "Thoma, Brent",
+      },
+      Object {
+        "family": "Lin",
+        "given": "Michelle",
+        "literal": "Lin, Michelle",
+      },
+      Object {
+        "family": "Chan",
+        "given": "Teresa M",
+        "literal": "Chan, Teresa M",
+      },
+    ],
+    "container-title": "Association of American Medical Colleges Medical Education Meeting",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2014",
+          "",
+          "",
+        ],
+      ],
+    },
+    "publisher-place": "Chicago",
+    "title": "Quality Indicators for Medical Education Blog Posts and Podcasts: A Qualitative Analysis and Focus Group",
+    "type": "paper-conference",
+  },
+  Object {
+    "URL": "http://www.aliem.com/medic-series-the-case-of-the-foam-faux-pas/",
+    "author": Array [
+      Object {
+        "family": "Purdy",
+        "given": "Eve",
+        "literal": "Purdy, Eve",
+      },
+      Object {
+        "family": "Thoma",
+        "given": "Brent",
+        "literal": "Thoma, Brent",
+      },
+    ],
+    "container-title": "Academic Life in Emergency Medicine",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2015",
+          "",
+          "",
+        ],
+      ],
+    },
+    "title": "MEdIC Series | The Case of the FOAM Faux Pas",
+    "type": "webpage",
+  },
+  Object {
+    "DOI": "10.1016/j.annemergmed.2014.01.033",
+    "abstract": "The Annals November 2013 Journal Club issue marked one of the first collaborations with Academic Life in Emergency Medicine, a medical education blog, in an effort to promote a worldwide, transparent, online effort to perform critical appraisals of journal articles. The Global Emergency Medicine Journal Club was hosted on the blog for 1 week during November 18 to 24, 2013, with comments moderated on the blog and on Twitter. This summary article compiles the discussion and insights.",
+    "author": Array [
+      Object {
+        "family": "Radecki",
+        "given": "Ryan P",
+        "literal": "Radecki, Ryan P",
+      },
+      Object {
+        "family": "Rezaie",
+        "given": "Salim R",
+        "literal": "Rezaie, Salim R",
+      },
+      Object {
+        "family": "Lin",
+        "given": "Michelle",
+        "literal": "Lin, Michelle",
+      },
+    ],
+    "container-title": "Annals of emergency medicine",
+    "issue": "4",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2014",
+          "04",
+          "",
+        ],
+      ],
+    },
+    "page": "490-4",
+    "page-first": "490",
+    "title": "Global Emergency Medicine Journal Club: Social Media Responses to the November 2013 Annals of Emergency Medicine Journal Club.",
+    "type": "article-journal",
+    "volume": "63",
+  },
+  Object {
+    "DOI": "10.2196/jmir.4194",
+    "abstract": "BACKGROUND: Journal clubs are an essential tool in promoting clinical evidence-based medical education to all medical and allied health professionals. Twitter represents a public, microblogging forum that can facilitate traditional journal club requirements, while also reaching a global audience, and participation for discussion with study authors and colleagues. OBJECTIVE: The aim of the current study was to evaluate the current state of social media-facilitated journal clubs, specifically Twitter, as an example of continuing professional development. METHODS: A systematic review of literature databases (Medline, Embase, CINAHL, Web of Science, ERIC via ProQuest) was performed according to Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) guidelines. A systematic search of Twitter, the followers of identified journal clubs, and Symplur was also performed. Demographic and monthly tweet data were extracted from Twitter and Symplur. All manuscripts related to Twitter-based journal clubs were included. Statistical analyses were performed in MS Excel and STATA. RESULTS: From a total of 469 citations, 11 manuscripts were included and referred to five Twitter-based journal clubs (#ALiEMJC, #BlueJC, #ebnjc, #urojc, #meded). A Twitter-based journal club search yielded 34 potential hashtags/accounts, of which 24 were included in the final analysis. The median duration of activity was 11.75 (interquartile range [IQR] 19.9, SD 10.9) months, with 7 now inactive. The median number of followers and participants was 374 (IQR 574) and 157 (IQR 272), respectively. An overall increasing establishment of active Twitter-based journal clubs was observed, resulting in an exponential increase in total cumulative tweets (R(2)=.98), and tweets per month (R(2)=.72). Cumulative tweets for specific journal clubs increased linearly, with @ADC_JC, @EBNursingBMJ, @igsjc, @iurojc, and @NephJC, and showing greatest rate of change, as well as total impressions per month since establishment. An average of two tweets per month was estimated for the majority of participants, while the \\"Top 10\\" tweeters for @iurojc showed a significantly lower contribution to overall tweets for each month (P<.005). A linearly increasing impression:tweet ratio was observed for the top five journal clubs. CONCLUSIONS: Twitter-based journal clubs are free, time-efficient, and publicly accessible means to facilitate international discussions regarding clinically important evidence-base…",
+    "author": Array [
+      Object {
+        "family": "Roberts",
+        "given": "Matthew John",
+        "literal": "Roberts, Matthew John",
+      },
+      Object {
+        "family": "Perera",
+        "given": "Marlon",
+        "literal": "Perera, Marlon",
+      },
+      Object {
+        "family": "Lawrentschuk",
+        "given": "Nathan",
+        "literal": "Lawrentschuk, Nathan",
+      },
+      Object {
+        "family": "Romanic",
+        "given": "Diana",
+        "literal": "Romanic, Diana",
+      },
+      Object {
+        "family": "Papa",
+        "given": "Nathan",
+        "literal": "Papa, Nathan",
+      },
+      Object {
+        "family": "Bolton",
+        "given": "Damien",
+        "literal": "Bolton, Damien",
+      },
+    ],
+    "container-title": "Journal of medical Internet research",
+    "issue": "4",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2015",
+          "",
+          "",
+        ],
+      ],
+    },
+    "page": "e103-e103",
+    "page-first": "e103",
+    "title": "Globalization of continuing professional development by journal clubs via microblogging: a systematic review.",
+    "type": "article-journal",
+    "volume": "17",
+  },
+  Object {
+    "URL": "http://intensiveblog.com/process-trial/",
+    "author": Array [
+      Object {
+        "family": "Robillard",
+        "given": "John",
+        "literal": "Robillard, John",
+      },
+      Object {
+        "family": "Nickson",
+        "given": "Christopher",
+        "literal": "Nickson, Christopher",
+      },
+    ],
+    "container-title": "The Intensive Blog",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2014",
+          "",
+          "",
+        ],
+      ],
+    },
+    "title": "The ProCESS Trial",
+    "type": "webpage",
+  },
+  Object {
+    "DOI": "10.1503/cmaj.081229",
+    "ISSN": "9781405181068",
+    "abstract": "Gaps between evidence and decision-making occur at all levels of health care, including those of patients, health care professionals and policy-makers. • Knowledge translation involves using high-quality knowledge in processes of decision-making. • The knowledge-to-action framework provides a model for the promotion of the application of research and the process of knowledge translation. Knowledge",
+    "author": Array [
+      Object {
+        "family": "Straus",
+        "given": "Sharon E",
+        "literal": "Straus, Sharon E",
+      },
+      Object {
+        "family": "Tetroe",
+        "given": "Jacqueline",
+        "literal": "Tetroe, Jacqueline",
+      },
+      Object {
+        "family": "Graham",
+        "given": "Ian",
+        "literal": "Graham, Ian",
+      },
+    ],
+    "container-title": "Journal of the Canadian Medical Association",
+    "issue": "3-4",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2009",
+          "",
+          "",
+        ],
+      ],
+    },
+    "page": "165-168",
+    "page-first": "165",
+    "publisher": "Canadian Medical Association",
+    "title": "Defining knowledge translation Review",
+    "type": "article-journal",
+    "volume": "181",
+  },
+]
+`;
+
+exports[`RIS Parser should parse pages under varied circumstances 1`] = `
+Array [
+  Object {
+    "page": "25-30",
+    "page-first": "25",
+    "title": "Both page numbers",
+    "type": "webpage",
+  },
+  Object {
+    "page": "25-30",
+    "page-first": "25",
+    "title": "Both page numbers, reversed order",
+    "type": "webpage",
+  },
+  Object {
+    "page": "25",
+    "page-first": "25",
+    "title": "Only start page",
+    "type": "webpage",
+  },
+  Object {
+    "page": "25",
+    "title": "Only end page",
+    "type": "webpage",
+  },
+  Object {
+    "title": "No page numbers",
+    "type": "webpage",
+  },
+]
+`;
+
+exports[`RIS Parser should parse various "people" types and keywords 1`] = `
+Array [
+  Object {
+    "author": Array [
+      Object {
+        "family": "Doe",
+        "given": "John P",
+        "literal": "Doe, John P",
+      },
+      Object {
+        "family": "Doe",
+        "given": "Jan",
+        "literal": "Doe, Jan",
+      },
+    ],
+    "editor": Array [
+      Object {
+        "family": "Brown",
+        "given": "Sue Q",
+        "literal": "Brown, Sue Q",
+      },
+    ],
+    "keyword": Array [
+      "Keyword 1",
+      "Keyword 2",
+      "Keyword 3",
+      "Keyword 4",
+      "Keyword 5",
+    ],
+    "translator": Array [
+      Object {
+        "family": "Smith",
+        "given": "Carter",
+        "literal": "Smith, Carter",
+      },
+    ],
+    "type": "article-journal",
+  },
+]
+`;
+
+exports[`RIS Parser should parse various edge cases 1`] = `
+Array [
+  Object {
+    "title": "Unknown item type",
+    "type": "article",
+  },
+  Object {
+    "PMID": "1252546",
+    "title": "Article with PMID",
+    "type": "article-journal",
+  },
+  Object {
+    "PMCID": "PMC123523",
+    "title": "Article with PMCID",
+    "type": "article-journal",
+  },
+]
+`;

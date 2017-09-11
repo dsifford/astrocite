@@ -1,51 +1,67 @@
+
 File
-    = __ r:Reference+ __ {
+    = __ r:Entry+ __ {
         return {
-            type: 'File',
-            references: r,
+            kind: 'File',
+            loc: location(),
+            children: r,
         };
     }
 
-Reference
-    = kind:START fields:Property+ END {
+Entry
+    = type:START fields:Property+ END {
         return {
-            type: 'Reference',
-            kind: kind,
+            kind: 'Entry',
+            loc: location(),
+            type: type,
             properties: fields,
         };
     }
 
 Property
-    = k:PropertyKey SEP v:PropertyValue EOL {
+    = k:PropertyKey PropertySeparator v:PropertyValue EOL {
         return {
             type: 'Property',
+            loc: location(),
             key: k,
             value: v,
         };
     }
 
 PropertyKey
-    = ! 'ER' k:[A-Z0-9]+ { return k.join(''); }
+    = ! 'ER' k:$[A-Z0-9]+ { return k; }
 
 PropertyValue
-    = line:[^\r\n]* { return line.join(''); }
+    = line:$[^\r\n]* { return line; }
 
-// --- Meta Sequences
+PropertySeparator
+    = _h '-' _h
+
+// --- Helpers
 
 START
-	= 'TY' SEP v:PropertyValue __ { return v; }
+    = 'TY' PropertySeparator v:PropertyValue __ { return v; }
 
 END
-    = 'ER' _ '-' __
+    = 'ER' _h '-' __
 
 EOL
-    = [\r\n]?
+    = [\r\n]
 
-SEP "Field Separator"
-    = _ '-' _
+_h "Mandatory Horizontal Whitespace"
+    = [ \t]+
+
+__h "Optional Horizontal Whitespace"
+    = [ \t]*
+
+_v "Mandatory Vertical Whitespace"
+    = [\r\n]+
+
+__v "Optional Vertical Whitespace"
+    = [\r\n]*
 
 _ "Mandatory Whitespace"
-    = [ \t\r\n]+
+    = [ \t\n\r]+
 
 __ "Optional Whitespace"
-    = [ \t\r\n]*
+    = [ \t\n\r]*
