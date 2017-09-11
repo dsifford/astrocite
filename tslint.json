@@ -3,10 +3,6 @@
   "rules": {
     // tslint rules
     "await-promise": true,
-    "cyclomatic-complexity": {
-      "options": [10],
-      "severity": "warning"
-    },
     "member-access": {
       "options": ["no-public"]
     },

@@ -30,7 +30,24 @@ Array [
 exports[`BibTeX Parser should parse a simple .bib file 1`] = `
 Array [
   Object {
-    "author": "Peltan, Ithan D. and Vande Vusse, Lisa K. and Maier, Ronald V. and Watkins, Timothy R.",
+    "author": Array [
+      Object {
+        "family": "Peltan",
+        "given": "Ithan D.",
+      },
+      Object {
+        "family": "Vande Vusse",
+        "given": "Lisa K.",
+      },
+      Object {
+        "family": "Maier",
+        "given": "Ronald V.",
+      },
+      Object {
+        "family": "Watkins",
+        "given": "Timothy R.",
+      },
+    ],
     "container-title": "Critical Care Medicine",
     "id": "peltan_international_2015",
     "issued": Object {
@@ -49,7 +66,36 @@ Array [
     "volume": "43",
   },
   Object {
-    "author": "Inaba, Kenji and Rizoli, Sandro and Veigas, Precilla V. and Callum, Jeannie and Davenport, Ross and Hess, John and Maegele, Marc",
+    "author": Array [
+      Object {
+        "family": "Inaba",
+        "given": "Kenji",
+      },
+      Object {
+        "family": "Rizoli",
+        "given": "Sandro",
+      },
+      Object {
+        "family": "Veigas",
+        "given": "Precilla V.",
+      },
+      Object {
+        "family": "Callum",
+        "given": "Jeannie",
+      },
+      Object {
+        "family": "Davenport",
+        "given": "Ross",
+      },
+      Object {
+        "family": "Hess",
+        "given": "John",
+      },
+      Object {
+        "family": "Maegele",
+        "given": "Marc",
+      },
+    ],
     "container-title": "Journal of Trauma and Acute Care Surgery",
     "id": "inaba_2014_2015",
     "issued": Object {
