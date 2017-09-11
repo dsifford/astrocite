@@ -4,29 +4,11 @@ exports[`BibTeX Parser should default to "article" for unknown types 1`] = `
 Array [
   Object {
     "id": "should_default_to_article",
-    "issued": Object {
-      "date-parts": Array [
-        Array [
-          "",
-          "",
-          "",
-        ],
-      ],
-    },
     "title": "My awesome type",
     "type": "article",
   },
   Object {
     "id": "should_also_be_article",
-    "issued": Object {
-      "date-parts": Array [
-        Array [
-          "",
-          "",
-          "",
-        ],
-      ],
-    },
     "title": " Foobar type ",
     "type": "article",
   },
@@ -37,15 +19,6 @@ exports[`BibTeX Parser should parse a file without leading or trailing whitespac
 Array [
   Object {
     "id": "my_ref_id",
-    "issued": Object {
-      "date-parts": Array [
-        Array [
-          "",
-          "",
-          "",
-        ],
-      ],
-    },
     "note": "Note in quotes",
     "number": "6",
     "title": "Title in braces",
@@ -153,15 +126,6 @@ Array [
   },
   Object {
     "id": "case_5",
-    "issued": Object {
-      "date-parts": Array [
-        Array [
-          "",
-          "",
-          "",
-        ],
-      ],
-    },
     "title": "this case has no listed date",
     "type": "thesis",
   },
@@ -172,15 +136,6 @@ exports[`BibTeX Parser should parse and skip over preamble statements correctly 
 Array [
   Object {
     "id": "case_1",
-    "issued": Object {
-      "date-parts": Array [
-        Array [
-          "",
-          "",
-          "",
-        ],
-      ],
-    },
     "title": "Test book title",
     "type": "book",
   },
@@ -191,29 +146,11 @@ exports[`BibTeX Parser should parse dicratical commands 1`] = `
 Array [
   Object {
     "id": "simple_dicraticals",
-    "issued": Object {
-      "date-parts": Array [
-        Array [
-          "",
-          "",
-          "",
-        ],
-      ],
-    },
     "title": "fõóōb̀ȧr̂",
     "type": "article",
   },
   Object {
     "id": "extended_dicraticals",
-    "issued": Object {
-      "date-parts": Array [
-        Array [
-          "",
-          "",
-          "",
-        ],
-      ],
-    },
     "title": "föo̧o̱ŏǒọo̊őbąr",
     "type": "article",
   },
@@ -224,44 +161,17 @@ exports[`BibTeX Parser should parse known commands and skip unknown commands 1`]
 Array [
   Object {
     "id": "known_commands",
-    "issued": Object {
-      "date-parts": Array [
-        Array [
-          "",
-          "",
-          "",
-        ],
-      ],
-    },
     "note": "© 2017",
     "title": "ΘΣπ",
     "type": "book",
   },
   Object {
     "id": "skip_unknown_commands",
-    "issued": Object {
-      "date-parts": Array [
-        Array [
-          "",
-          "",
-          "",
-        ],
-      ],
-    },
     "title": "Hello World",
     "type": "article",
   },
   Object {
     "id": "symbol_commands",
-    "issued": Object {
-      "date-parts": Array [
-        Array [
-          "",
-          "",
-          "",
-        ],
-      ],
-    },
     "title": "$%#&_{}",
     "type": "article",
   },
@@ -272,44 +182,17 @@ exports[`BibTeX Parser should parse user-defined strings 1`] = `
 Array [
   Object {
     "id": "parses_defined_strings",
-    "issued": Object {
-      "date-parts": Array [
-        Array [
-          "",
-          "",
-          "",
-        ],
-      ],
-    },
     "note": "foo bar baz",
     "title": "foo bar baz",
     "type": "article",
   },
   Object {
     "id": "skips_over_unknown_string",
-    "issued": Object {
-      "date-parts": Array [
-        Array [
-          "",
-          "",
-          "",
-        ],
-      ],
-    },
     "title": "Title starts here",
     "type": "book",
   },
   Object {
     "id": "parses_string_above_now_that_its_available",
-    "issued": Object {
-      "date-parts": Array [
-        Array [
-          "",
-          "",
-          "",
-        ],
-      ],
-    },
     "title": "Now this string is available to use!",
     "type": "article",
   },

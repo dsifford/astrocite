@@ -9,22 +9,14 @@ interface DatePart {
 
 type PartialDate0 = () => PartialDate1;
 type PartialDate1 = (first?: DatePart) => PartialDate2;
-type PartialDate2 = (second?: DatePart) => CSL.DateType;
-type CurriedDate = PartialDate0 | PartialDate1 | PartialDate2 | CSL.DateType;
+type PartialDate2 = (second?: DatePart) => Partial<CSL.Data> | undefined;
+type CurriedDate = PartialDate0 | PartialDate1 | PartialDate2 | (Partial<CSL.Data> | undefined);
 
 const curriedDate: PartialDate0 = () => (first = { value: '' }) => (second = { value: '' }) => {
-    if (!first.kind) {
-        return {
-            'date-parts': [['', '', '']],
-        };
-    }
+    if (!first.kind) return;
     return first.kind === 'year'
-        ? {
-              'date-parts': [[first.value, second.value, '']],
-          }
-        : {
-              'date-parts': [[second.value, first.value, '']],
-          };
+        ? { issued: { 'date-parts': [[first.value, second.value, '']] } }
+        : { issued: { 'date-parts': [[second.value, first.value, '']] } };
 };
 
 // Disabling below because switch statements will generally increase "complexity", but that's by
@@ -92,7 +84,7 @@ export default function parseCSL(source: string): CSL.Data[] {
                 while (typeof date === 'function') {
                     date = date();
                 }
-                csl = [...csl, { ...entry, issued: date }];
+                csl = [...csl, { ...entry, ...date ? date : {} }];
                 break;
             default:
                 continue;
