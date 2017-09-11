@@ -20,6 +20,7 @@ interface MultiField {
     editor: Set<CSL.Person>;
     translator: Set<CSL.Person>;
     keyword: Set<string>;
+    [k: string]: Set<any>;
 }
 
 function generateID(): string {
@@ -122,8 +123,9 @@ const parseEntry = (entry: Entry): CSL.Data => {
                 page = page({ key: prop.key, value: prop.value });
         }
     }
-    for (const [key, value] of Object.entries(multiFields)) {
-        if (value.size > 0) {
+    for (const key of Object.keys(multiFields)) {
+        const value = multiFields[key];
+        if (multiFields[key].size > 0) {
             csl = { ...csl, [key]: [...value] };
         }
     }
