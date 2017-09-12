@@ -8,7 +8,7 @@
   "main": "lib/index.js",
   "scripts": {
     "precommit": "lint-staged",
-    "prepublish": "npm run build",
+    "prepublishOnly": "npm run build",
     "prepush": "npm test && npm run lint",
     "test": "jest src/**",
     "ci": "jest --coverage src/**",
