@@ -11,7 +11,7 @@
     "prepublishOnly": "npm run build",
     "prepush": "npm test && npm run lint",
     "test": "jest src/**",
-    "ci": "jest --coverage src/**",
+    "ci": "npm run build && jest --coverage src/**",
     "postci": "npm run lint",
     "lint": "tslint -e \"**/*.js\" -p . -t codeFrame",
     "prebuild": "pegjs -o src/bibtex/grammar.js --cache src/bibtex/grammar.pegjs && pegjs -o src/ris/grammar.js --cache src/ris/grammar.pegjs",
