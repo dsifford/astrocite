@@ -224,6 +224,87 @@ Array [
 ]
 `;
 
+exports[`BibTeX Parser should parse names in various formats 1`] = `
+Array [
+  Object {
+    "author": Array [
+      Object {
+        "dropping-particle": "de la Fontaine du",
+        "family": "Bois Joli",
+        "given": "Jean",
+      },
+      Object {
+        "family": "Diderik van der Waals",
+        "given": "Johannes",
+      },
+      Object {
+        "family": "Smith",
+        "given": "John",
+      },
+    ],
+    "id": "case_1",
+    "type": "article",
+  },
+  Object {
+    "author": Array [
+      Object {
+        "dropping-particle": "De la Fontaine du",
+        "family": "Bois Joli",
+        "given": "Jean",
+      },
+      Object {
+        "family": "Waals",
+        "given": "Johannes Diderik",
+        "non-dropping-particle": "Van der",
+      },
+      Object {
+        "family": "Smith",
+        "given": "John",
+      },
+    ],
+    "id": "case_2",
+    "type": "article",
+  },
+  Object {
+    "author": Array [
+      Object {
+        "dropping-particle": "De la Fontaine du",
+        "family": "Bois Joli",
+        "given": "Jean",
+        "suffix": "Jr.",
+      },
+      Object {
+        "family": "Waals",
+        "given": "Johannes Diderik",
+        "non-dropping-particle": "Van der",
+        "suffix": "III",
+      },
+      Object {
+        "family": "Smith",
+        "given": "John",
+        "suffix": "IV",
+      },
+    ],
+    "id": "case_3",
+    "type": "article",
+  },
+  Object {
+    "author": Array [
+      Object {
+        "family": "Smith",
+        "given": "Frank",
+      },
+      Object {
+        "family": "Research Collaborators",
+        "given": "Foobar",
+      },
+    ],
+    "id": "case_4",
+    "type": "article",
+  },
+]
+`;
+
 exports[`BibTeX Parser should parse user-defined strings 1`] = `
 Array [
   Object {

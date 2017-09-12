@@ -1,3 +1,4 @@
+import { parseNameParticles } from '../utils/';
 import { DICRATICS, FIELD_MAP, KNOWN_COMMANDS, KNOWN_MACROS, TYPE_MAP } from './constants';
 import * as parser from './grammar';
 import { AST, ValueType } from './types.d';
@@ -54,10 +55,10 @@ const parseNames = (input: string): CSL.Person[] => {
         names = [
             ...names,
             {
-                ...last ? { family: last } : {},
-                ...first ? { given: first } : {},
-                ...jr ? { suffix: jr } : {},
-                ...von ? { 'dropping-particle': von } : {},
+                ...last ? { family: last.trim() } : {},
+                ...first ? { given: first.trim() } : {},
+                ...jr ? { suffix: jr.trim() } : {},
+                ...von ? parseNameParticles(von.trim()) : {},
             },
         ];
     }

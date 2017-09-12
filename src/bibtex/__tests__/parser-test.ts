@@ -44,4 +44,7 @@ describe('BibTeX Parser', () => {
     it('should parse dicratical commands', () => {
         expect(parse(cases.dicraticals)).toMatchSnapshot();
     });
+    it('should parse names in various formats', () => {
+        expect(parse(cases.names)).toMatchSnapshot();
+    });
 });
