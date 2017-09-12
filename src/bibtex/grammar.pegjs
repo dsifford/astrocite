@@ -40,7 +40,7 @@ Junk
     / [^@] [^\n\r]* [\n\r]*
 
 Node
-    = Junk* n:(PreambleExpression / StringExpression / Entry) { return n; }
+    = Junk* n:(PreambleExpression / StringExpression / Entry) Junk* { return n; }
 
 //-----------------  Top-level Nodes
 

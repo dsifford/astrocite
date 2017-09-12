@@ -21,10 +21,50 @@ $ npm install astrocite
 
 ## Usage
 
-**TODO...**
+### Modular (smaller bundles)
 
+```js
+import { parse } from 'astrocite/bibtex';
+// or
+var parse = require('astrocite/bibtex').parse;
+
+const input = `
+@article{my_article,
+    title = {Hello world},
+    journal = "Some Journal"
+}
+`;
+
+const cslJson = parse(input);
 ```
+
+### Classic
+
+```js
+import * as astrocite from 'astrocite';
+// or
+var astrocite = require('astrocite');
+
+const input = `
+@article{my_article,
+    title = {Hello world},
+    journal = "Some Journal"
+}
+`;
+
+const cslJson = astrocite.bibtex.parse(input);
 ```
+
+**ASTs are also available if needed.**
+
+```js
+import { AST } from 'astrocite/bibtex';
+// or
+import { AST } from 'astrocite/ris';
+// ....etc
+```
+
+> **Note:** Examples for each individual AST can be found in the README file of each subdirectory.
 
 ## Contributing
 
