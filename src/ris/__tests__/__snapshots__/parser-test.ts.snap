@@ -8,7 +8,6 @@ Array [
       Object {
         "family": "Allen-Dicker",
         "given": "Joshua",
-        "literal": "Allen-Dicker, Joshua",
       },
     ],
     "container-title": "Now @ NEJM",
@@ -39,7 +38,6 @@ Array [
       Object {
         "family": "Body",
         "given": "Rick",
-        "literal": "Body, Rick",
       },
     ],
     "container-title": "St. Emlyn's website",
@@ -61,7 +59,6 @@ Array [
       Object {
         "family": "Boka",
         "given": "Kamran",
-        "literal": "Boka, Kamran",
       },
     ],
     "container-title": "AJKD blog",
@@ -83,7 +80,6 @@ Array [
       Object {
         "family": "Callaway",
         "given": "Ewen",
-        "literal": "Callaway, Ewen",
       },
     ],
     "container-title": "Nature: News Section2",
@@ -107,7 +103,6 @@ Array [
       Object {
         "family": "Cameron",
         "given": "Peter",
-        "literal": "Cameron, Peter",
       },
     ],
     "container-title": "Emergency Physicians International",
@@ -128,9 +123,8 @@ Array [
     "abstract": "This guide outlines those elements that contribute to strong KT projects. It is intended to be used both bythose developing project proposals and by those who are assessing such proposals for the purposes of funding or partnership.",
     "author": Array [
       Object {
-        "family": "",
-        "given": "",
-        "literal": "Canadian Institutes of Health Research",
+        "family": "Institutes of Health Research",
+        "given": "Canadian",
       },
     ],
     "container-title": "CIHR Website",
@@ -155,7 +149,6 @@ Array [
       Object {
         "family": "Chan",
         "given": "Teresa",
-        "literal": "Chan, Teresa",
       },
     ],
     "container-title": "CanadiEM.org (formerly BoringEM.org)",
@@ -177,22 +170,18 @@ Array [
       Object {
         "family": "Chan",
         "given": "Teresa",
-        "literal": "Chan, Teresa",
       },
       Object {
         "family": "Helman",
         "given": "Anton",
-        "literal": "Helman, Anton",
       },
       Object {
         "family": "Davis",
         "given": "Tessa",
-        "literal": "Davis, Tessa",
       },
       Object {
         "family": "Purdy",
         "given": "Eve",
-        "literal": "Purdy, Eve",
       },
     ],
     "container-title": "Academic Life in Emergency Medicine",
@@ -214,27 +203,22 @@ Array [
       Object {
         "family": "Colmers",
         "given": "Isabelle N",
-        "literal": "Colmers, Isabelle N",
       },
       Object {
         "family": "Paterson",
         "given": "Quinten S",
-        "literal": "Paterson, Quinten S",
       },
       Object {
         "family": "Lin",
         "given": "Michelle",
-        "literal": "Lin, Michelle",
       },
       Object {
         "family": "Thoma",
         "given": "Brent",
-        "literal": "Thoma, Brent",
       },
       Object {
         "family": "Chan",
         "given": "Teresa M",
-        "literal": "Chan, Teresa M",
       },
     ],
     "container-title": "The Winnower",
@@ -255,47 +239,38 @@ Array [
       Object {
         "family": "Grock",
         "given": "Andy",
-        "literal": "Grock, Andy",
       },
       Object {
         "family": "Ankel",
         "given": "Felix",
-        "literal": "Ankel, Felix",
       },
       Object {
         "family": "Branzetti",
         "given": "Jeremy",
-        "literal": "Branzetti, Jeremy",
       },
       Object {
         "family": "Joshi",
         "given": "Nikita",
-        "literal": "Joshi, Nikita",
       },
       Object {
         "family": "Lin",
         "given": "Michelle",
-        "literal": "Lin, Michelle",
       },
       Object {
         "family": "Morley",
         "given": "Eric",
-        "literal": "Morley, Eric",
       },
       Object {
         "family": "Swaminathan",
         "given": "Anand",
-        "literal": "Swaminathan, Anand",
       },
       Object {
         "family": "Taira",
         "given": "Taku",
-        "literal": "Taira, Taku",
       },
       Object {
         "family": "Yarris",
         "given": "Lalena",
-        "literal": "Yarris, Lalena",
       },
     ],
     "container-title": "Academic Life in Emergency Medicine",
@@ -317,7 +292,6 @@ Array [
       Object {
         "family": "Lin",
         "given": "Michelle",
-        "literal": "Lin, Michelle",
       },
     ],
     "container-title": "Academic Life in Emergency Medicine",
@@ -338,17 +312,14 @@ Array [
       Object {
         "family": "Lin",
         "given": "Michelle",
-        "literal": "Lin, Michelle",
       },
       Object {
         "family": "Joshi",
         "given": "Nikita",
-        "literal": "Joshi, Nikita",
       },
       Object {
         "family": "Grock",
         "given": "Andy",
-        "literal": "Grock, Andy",
       },
     ],
     "container-title": "Journal of Graduate Medical Education",
@@ -374,7 +345,6 @@ Array [
       Object {
         "family": "Mathieu",
         "given": "Steven",
-        "literal": "Mathieu, Steven",
       },
     ],
     "container-title": "The Bottom Line",
@@ -396,7 +366,6 @@ Array [
       Object {
         "family": "May",
         "given": "Natalie",
-        "literal": "May, Natalie",
       },
     ],
     "container-title": "St. Emlyn's website",
@@ -418,12 +387,10 @@ Array [
       Object {
         "family": "Melvin",
         "given": "Lindsay",
-        "literal": "Melvin, Lindsay",
       },
       Object {
         "family": "Chan",
         "given": "Teresa",
-        "literal": "Chan, Teresa",
       },
     ],
     "container-title": "Journal of Graduate Medical Education",
@@ -448,12 +415,10 @@ Array [
       Object {
         "family": "Milne",
         "given": "W. Kenneth",
-        "literal": "Milne, W. Kenneth",
       },
       Object {
         "family": "Upadhye",
         "given": "Suneel",
-        "literal": "Upadhye, Suneel",
       },
     ],
     "container-title": "The Skeptics Guide to Emergency Medicine",
@@ -475,12 +440,10 @@ Array [
       Object {
         "family": "Milne",
         "given": "W. Kenneth",
-        "literal": "Milne, W. Kenneth",
       },
       Object {
         "family": "Upadhye",
         "given": "Suneel",
-        "literal": "Upadhye, Suneel",
       },
     ],
     "container-title": "The Skeptics Guide to Emergency Medicine",
@@ -502,17 +465,14 @@ Array [
       Object {
         "family": "Milne",
         "given": "W. Kenneth",
-        "literal": "Milne, W. Kenneth",
       },
       Object {
         "family": "Upadhye",
         "given": "Suneel",
-        "literal": "Upadhye, Suneel",
       },
       Object {
         "family": "Osborn",
         "given": "Tiffany",
-        "literal": "Osborn, Tiffany",
       },
     ],
     "issued": Object {
@@ -532,22 +492,18 @@ Array [
       Object {
         "family": "Paterson",
         "given": "Quinten S",
-        "literal": "Paterson, Quinten S",
       },
       Object {
         "family": "Thoma",
         "given": "Brent",
-        "literal": "Thoma, Brent",
       },
       Object {
         "family": "Lin",
         "given": "Michelle",
-        "literal": "Lin, Michelle",
       },
       Object {
         "family": "Chan",
         "given": "Teresa M",
-        "literal": "Chan, Teresa M",
       },
     ],
     "container-title": "Association of American Medical Colleges Medical Education Meeting",
@@ -570,12 +526,10 @@ Array [
       Object {
         "family": "Purdy",
         "given": "Eve",
-        "literal": "Purdy, Eve",
       },
       Object {
         "family": "Thoma",
         "given": "Brent",
-        "literal": "Thoma, Brent",
       },
     ],
     "container-title": "Academic Life in Emergency Medicine",
@@ -598,17 +552,14 @@ Array [
       Object {
         "family": "Radecki",
         "given": "Ryan P",
-        "literal": "Radecki, Ryan P",
       },
       Object {
         "family": "Rezaie",
         "given": "Salim R",
-        "literal": "Rezaie, Salim R",
       },
       Object {
         "family": "Lin",
         "given": "Michelle",
-        "literal": "Lin, Michelle",
       },
     ],
     "container-title": "Annals of emergency medicine",
@@ -635,32 +586,26 @@ Array [
       Object {
         "family": "Roberts",
         "given": "Matthew John",
-        "literal": "Roberts, Matthew John",
       },
       Object {
         "family": "Perera",
         "given": "Marlon",
-        "literal": "Perera, Marlon",
       },
       Object {
         "family": "Lawrentschuk",
         "given": "Nathan",
-        "literal": "Lawrentschuk, Nathan",
       },
       Object {
         "family": "Romanic",
         "given": "Diana",
-        "literal": "Romanic, Diana",
       },
       Object {
         "family": "Papa",
         "given": "Nathan",
-        "literal": "Papa, Nathan",
       },
       Object {
         "family": "Bolton",
         "given": "Damien",
-        "literal": "Bolton, Damien",
       },
     ],
     "container-title": "Journal of medical Internet research",
@@ -686,12 +631,10 @@ Array [
       Object {
         "family": "Robillard",
         "given": "John",
-        "literal": "Robillard, John",
       },
       Object {
         "family": "Nickson",
         "given": "Christopher",
-        "literal": "Nickson, Christopher",
       },
     ],
     "container-title": "The Intensive Blog",
@@ -715,17 +658,14 @@ Array [
       Object {
         "family": "Straus",
         "given": "Sharon E",
-        "literal": "Straus, Sharon E",
       },
       Object {
         "family": "Tetroe",
         "given": "Jacqueline",
-        "literal": "Tetroe, Jacqueline",
       },
       Object {
         "family": "Graham",
         "given": "Ian",
-        "literal": "Graham, Ian",
       },
     ],
     "container-title": "Journal of the Canadian Medical Association",
@@ -788,19 +728,16 @@ Array [
       Object {
         "family": "Doe",
         "given": "John P",
-        "literal": "Doe, John P",
       },
       Object {
         "family": "Doe",
         "given": "Jan",
-        "literal": "Doe, Jan",
       },
     ],
     "editor": Array [
       Object {
         "family": "Brown",
         "given": "Sue Q",
-        "literal": "Brown, Sue Q",
       },
     ],
     "keyword": Array [
@@ -814,7 +751,6 @@ Array [
       Object {
         "family": "Smith",
         "given": "Carter",
-        "literal": "Smith, Carter",
       },
     ],
     "type": "article-journal",

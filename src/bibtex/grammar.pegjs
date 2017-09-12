@@ -36,7 +36,8 @@ File
     }
 
 Junk
-    = [^@] [^\n\r]* [\n\r]*
+    = '@comment'i [^\n\r]* [\n\r]*
+    / [^@] [^\n\r]* [\n\r]*
 
 Node
     = Junk* n:(PreambleExpression / StringExpression / Entry) { return n; }
@@ -44,16 +45,7 @@ Node
 //-----------------  Top-level Nodes
 
 Entry
-    = '@' type:$[A-Za-z]+ '{' id:EntryId props:Property+ '}' _v? __ {
-        return {
-            kind: 'Entry',
-            id: id,
-            type: type.toLowerCase(),
-            loc: location(),
-            properties: props,
-        }
-    }
-    / '@' type:$[A-Za-z]+ '(' id:EntryId props:Property+ ')' _v __ {
+    = '@' type:$[A-Za-z]+ [({] id:EntryId props:Property+ [})] _v? __ {
         return {
             kind: 'Entry',
             id: id,
@@ -64,14 +56,7 @@ Entry
     }
 
 PreambleExpression
-    = '@preamble'i __h '{' __ v:(QuotedValue / BracesValue)+ __ '}' _v __ {
-        return {
-            kind: 'PreambleExpression',
-            loc: location(),
-            value: v.reduce((a, b) => a.concat(b), []),
-        }
-    }
-    / '@preamble'i __h '(' __ v:(QuotedValue / BracesValue)+ __ ')' _v __ {
+    = '@preamble'i __h [({] __ v:RegularValue+ __ [})] _v __ {
         return {
             kind: 'PreambleExpression',
             loc: location(),
@@ -80,7 +65,7 @@ PreambleExpression
     }
 
 StringExpression
-    = '@string'i __h '{' __h k:$([A-Za-z-_][A-Za-z0-9-_]*) PropertySeparator v:(QuotedValue / BracesValue)+ __ '}' _v __ {
+    = '@string'i __h [({] __h k:$([A-Za-z-_][A-Za-z0-9-_]*) PropertySeparator v:RegularValue+ __ [})] _v __ {
         return {
             kind: 'StringExpression',
             loc: location(),
@@ -88,16 +73,6 @@ StringExpression
             value: v.reduce((a, b) => a.concat(b), []),
         };
     }
-    / '@string'i __h '(' __h k:$([A-Za-z-_][A-Za-z0-9-_]*) PropertySeparator v:(QuotedValue / BracesValue)+ __ ')' _v __ {
-        return {
-            kind: 'StringExpression',
-            loc: location(),
-            key: k,
-            value: v.reduce((a, b) => a.concat(b), []),
-        };
-    }
-
-// CommentExpression
 
 //------------------ Entry Child Nodes
 
@@ -121,15 +96,12 @@ PropertyKey
 
 PropertyValue
     = Number
-    / v:(QuotedValue / BracesValue / StringValue)* {
+    / v:(RegularValue / StringValue)* {
         return v.reduce((a, b) => a.concat(b), []);
     }
 
-QuotedValue
-    = '"' v:(NestedLiteral / Command / Text)* '"' Concat? { return v; }
-
-BracesValue
-    = '{' v:(NestedLiteral / Command / Text)* '}' Concat? { return v; }
+RegularValue
+    = ["{] v:(NestedLiteral / Command / Text)* [}"] Concat? { return v; }
 
 StringValue
     = v:String Concat? { return v; }
@@ -289,6 +261,3 @@ _ "Mandatory Whitespace"
 
 __ "Optional Whitespace"
     = [ \t\n\r]*
-
-
-

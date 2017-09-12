@@ -20,3 +20,43 @@ export function parseNameParticles(input: string): Partial<CSL.Person> {
         ? { 'non-dropping-particle': input }
         : { 'dropping-particle': input };
 }
+
+export function parseName(name: string): CSL.Person {
+    const FIRST_VON_LAST = /([A-Z][a-zA-Z-]+ )?([a-z][a-zA-Z-]+ .+? [a-z][a-zA-Z-]+ )?([A-Z].+)/;
+    const VON_LAST_FIRST = /(.+ [a-z][a-zA-Z-]+ )?(.+), (.+)/;
+    const VON_LAST_JR_FIRST = /(.+ [a-z][a-zA-Z-]+ )?(.+), (.+), (.+)/;
+
+    let first = '';
+    let von = '';
+    let last = '';
+    let suffix = '';
+    let literal = '';
+    let match: RegExpMatchArray | null;
+
+    switch (name.split(',').length) {
+        case 1:
+            match = name.match(FIRST_VON_LAST);
+            if (!match) break;
+            [, first, von, last] = match;
+            break;
+        case 2:
+            match = name.match(VON_LAST_FIRST);
+            if (!match) break;
+            [, von, last, first] = match;
+            break;
+        case 3:
+            match = name.match(VON_LAST_JR_FIRST);
+            if (!match) break;
+            [, von, last, suffix, first] = match;
+            break;
+        default:
+            literal = name;
+    }
+    return {
+        ...last ? { family: last.trim() } : {},
+        ...first ? { given: first.trim() } : {},
+        ...suffix ? { suffix: suffix.trim() } : {},
+        ...von ? parseNameParticles(von.trim()) : {},
+        ...literal ? { literal } : {},
+    };
+}

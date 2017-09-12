@@ -1,1 +1,1 @@
-export { parseNameParticles } from './name-particles';
+export { parseName } from './names';

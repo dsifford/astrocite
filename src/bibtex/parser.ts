@@ -1,7 +1,7 @@
-import { parseNameParticles } from '../utils/';
+import { parseName } from '../utils/';
 import { DICRATICS, FIELD_MAP, KNOWN_COMMANDS, KNOWN_MACROS, TYPE_MAP } from './constants';
 import * as parser from './grammar';
-import { AST, ValueType } from './types.d';
+import { AST, Entry, ValueType } from './types.d';
 
 interface DatePart {
     kind?: string;
@@ -18,51 +18,6 @@ const curriedDate: PartialDate0 = () => (first = { value: '' }) => (second = { v
     return first.kind === 'year'
         ? { issued: { 'date-parts': [[first.value, second.value, '']] } }
         : { issued: { 'date-parts': [[second.value, first.value, '']] } };
-};
-
-const parseNames = (input: string): CSL.Person[] => {
-    const FIRST_VON_LAST = /([A-Z][a-zA-Z-]+ )?([a-z][a-zA-Z-]+ .+? [a-z][a-zA-Z-]+ )?([A-Z].+)/;
-    const VON_LAST_FIRST = /(.+ [a-z][a-zA-Z-]+ )?(.+), (.+)/;
-    const VON_LAST_JR_FIRST = /(.+ [a-z][a-zA-Z-]+ )?(.+), (.+), (.+)/;
-    const rawNames = input.split(/ and (?:others)?/g).filter(Boolean);
-    let names: CSL.Person[] = [];
-
-    for (const name of rawNames) {
-        let first = '';
-        let von = '';
-        let last = '';
-        let jr = '';
-        let match: RegExpMatchArray | null;
-        switch (name.split(',').length) {
-            case 1:
-                match = name.match(FIRST_VON_LAST);
-                if (!match) break;
-                [, first, von, last] = match;
-                break;
-            case 2:
-                match = name.match(VON_LAST_FIRST);
-                if (!match) break;
-                [, von, last, first] = match;
-                break;
-            case 3:
-                match = name.match(VON_LAST_JR_FIRST);
-                if (!match) break;
-                [, von, last, jr, first] = match;
-                break;
-            default:
-                throw new Error(`Invalid name format found: ${name}`);
-        }
-        names = [
-            ...names,
-            {
-                ...last ? { family: last.trim() } : {},
-                ...first ? { given: first.trim() } : {},
-                ...jr ? { suffix: jr.trim() } : {},
-                ...von ? parseNameParticles(von.trim()) : {},
-            },
-        ];
-    }
-    return names;
 };
 
 const parseValue = (value: ValueType | ValueType[], macros: Map<string, string>): string => {
@@ -92,6 +47,50 @@ const parseValue = (value: ValueType | ValueType[], macros: Map<string, string>)
     return output;
 };
 
+const parseEntry = (node: Entry, macros: Map<string, string>): CSL.Data => {
+    let entry: CSL.Data = {
+        id: node.id,
+        type: TYPE_MAP.get(node.type) || 'article',
+    };
+    let date: CurriedDate = curriedDate();
+    for (const property of node.properties) {
+        switch (property.key) {
+            case 'year':
+            case 'month':
+                date = date({
+                    kind: property.key,
+                    value: parseValue(property.value, macros),
+                });
+                break;
+            case 'author':
+            case 'editor':
+                entry = {
+                    ...entry,
+                    [property.key]: parseValue(property.value, macros)
+                        .split(/ and (?:others)?/g)
+                        .filter(Boolean)
+                        .map(parseName),
+                };
+                break;
+            default:
+                const field = FIELD_MAP.get(property.key);
+                if (field) {
+                    entry = {
+                        ...entry,
+                        [field]: parseValue(property.value, macros),
+                    };
+                }
+        }
+    }
+    while (typeof date === 'function') {
+        date = date();
+    }
+    return {
+        ...entry,
+        ...date ? date : {},
+    };
+};
+
 export default function parseCSL(source: string): CSL.Data[] {
     const STRINGS_MAP: Map<string, string> = new Map(KNOWN_MACROS);
     const ast: AST = parser.parse(source);
@@ -103,47 +102,11 @@ export default function parseCSL(source: string): CSL.Data[] {
                 STRINGS_MAP.set(node.key, parseValue(node.value, STRINGS_MAP));
                 break;
             case 'Entry':
-                // TODO: Extract into own function
-                let entry: CSL.Data = {
-                    id: node.id,
-                    type: TYPE_MAP.get(node.type) || 'article',
-                };
-                let date: CurriedDate = curriedDate();
-                for (const property of node.properties) {
-                    switch (property.key) {
-                        case 'year':
-                        case 'month':
-                            date = date({
-                                kind: property.key,
-                                value: parseValue(property.value, STRINGS_MAP),
-                            });
-                            break;
-                        case 'author':
-                        case 'editor':
-                            entry = {
-                                ...entry,
-                                [property.key]: parseNames(parseValue(property.value, STRINGS_MAP)),
-                            };
-                            break;
-                        default:
-                            const field = FIELD_MAP.get(property.key);
-                            if (field) {
-                                entry = {
-                                    ...entry,
-                                    [field]: parseValue(property.value, STRINGS_MAP),
-                                };
-                            }
-                    }
-                }
-                while (typeof date === 'function') {
-                    date = date();
-                }
-                csl = [...csl, { ...entry, ...date ? date : {} }];
+                csl = [...csl, parseEntry(node, STRINGS_MAP)];
                 break;
             default:
                 continue;
         }
     }
-
     return csl;
 }

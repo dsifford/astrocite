@@ -1,3 +1,4 @@
+import { parseName } from '../utils/';
 import { FIELD_MAP, TYPE_MAP } from './constants';
 import * as parser from './grammar';
 import { AST, Entry } from './types.d';
@@ -35,21 +36,6 @@ const curriedPage: PartialPage0 = () => (first = { value: '' }) => (second = { v
     return first.key === 'SP'
         ? { page: `${first.value}${second.value === '' ? '' : '-' + second.value}` }
         : { page: `${second.value ? second.value + '-' : ''}${first.value}` };
-};
-
-const parsePerson = (value: string): CSL.Person => {
-    let given: string;
-    let middle: string;
-    let family: string;
-    let literal = value;
-    [, literal, middle] = /(.+) ([A-Z]\.$)/.exec(literal) || ['', literal, ''];
-    [literal, family, given] = /(^[^,]+), (.+)/.exec(literal) || [literal, '', ''];
-    given = `${given}${middle}`;
-    return {
-        family,
-        given,
-        literal,
-    };
 };
 
 const parseDateField: DynamicFieldHandler = ({ key, value }) => {
@@ -107,13 +93,13 @@ const parseEntry = (entry: Entry): CSL.Data => {
             case 'A2':
             case 'A3':
             case 'A4':
-                multiFields.author.add(parsePerson(prop.value));
+                multiFields.author.add(parseName(prop.value));
                 break;
             case 'ED':
-                multiFields.editor.add(parsePerson(prop.value));
+                multiFields.editor.add(parseName(prop.value));
                 break;
             case 'TA':
-                multiFields.translator.add(parsePerson(prop.value));
+                multiFields.translator.add(parseName(prop.value));
                 break;
             case 'KW':
                 multiFields.keyword.add(prop.value);

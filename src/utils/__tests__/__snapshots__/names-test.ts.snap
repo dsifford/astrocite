@@ -1,0 +1,275 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`parseName() should parse names appropriately 1`] = `
+Object {
+  "dropping-particle": "De la Fontaine du",
+  "family": "Bois Joli",
+  "given": "Jean",
+}
+`;
+
+exports[`parseName() should parse names appropriately 2`] = `
+Object {
+  "dropping-particle": "de la Fontaine du",
+  "family": "Bois Joli",
+  "given": "Jean",
+}
+`;
+
+exports[`parseName() should parse names appropriately 3`] = `
+Object {
+  "dropping-particle": "De la Fontaine du",
+  "family": "Bois Joli",
+  "given": "Jean",
+  "suffix": "Jr.",
+}
+`;
+
+exports[`parseName() should parse names appropriately 4`] = `
+Object {
+  "family": "Diderik van der Waals",
+  "given": "Johannes",
+}
+`;
+
+exports[`parseName() should parse names appropriately 5`] = `
+Object {
+  "family": "Waals",
+  "given": "Johannes Diderik",
+  "non-dropping-particle": "Van der",
+}
+`;
+
+exports[`parseName() should parse names appropriately 6`] = `
+Object {
+  "family": "Waals",
+  "given": "Johannes Diderik",
+  "non-dropping-particle": "Van der",
+  "suffix": "III",
+}
+`;
+
+exports[`parseName() should parse names appropriately 7`] = `
+Object {
+  "family": "Adler",
+  "given": "Alfred",
+}
+`;
+
+exports[`parseName() should parse names appropriately 8`] = `
+Object {
+  "family": "B. Bull",
+  "given": "Bertie",
+}
+`;
+
+exports[`parseName() should parse names appropriately 9`] = `
+Object {
+  "family": "C. Z. Crop",
+}
+`;
+
+exports[`parseName() should parse names appropriately 10`] = `
+Object {
+  "family": "D Decket",
+  "given": "Derek",
+}
+`;
+
+exports[`parseName() should parse names appropriately 11`] = `
+Object {
+  "family": "Egbert von Eel",
+}
+`;
+
+exports[`parseName() should parse names appropriately 12`] = `
+Object {
+  "dropping-particle": "van der valt",
+  "family": "Frome",
+  "given": "Francis",
+}
+`;
+
+exports[`parseName() should parse names appropriately 13`] = `
+Object {
+  "family": "R. van Gloom",
+  "given": "Gregory",
+}
+`;
+
+exports[`parseName() should parse names appropriately 14`] = `
+Object {
+  "family": "F. van Henkel",
+  "given": "Henry",
+}
+`;
+
+exports[`parseName() should parse names appropriately 15`] = `
+Object {
+  "family": "Jolly",
+  "given": "James",
+  "suffix": "III",
+}
+`;
+
+exports[`parseName() should parse names appropriately 16`] = `Object {}`;
+
+exports[`parseName() should parse names appropriately 17`] = `
+Object {
+  "family": "van Kluster",
+  "given": "Kevin",
+  "suffix": "Jr.",
+}
+`;
+
+exports[`parseName() should parse names appropriately 18`] = `
+Object {
+  "family": "Louis Xavier Joseph de la Valle Poussin",
+  "given": "Charles",
+}
+`;
+
+exports[`parseName() should parse names appropriately 19`] = `
+Object {
+  "family": "Graaff",
+  "given": "R. J.",
+  "non-dropping-particle": "Van de",
+}
+`;
+
+exports[`parseName() should parse names appropriately 20`] = `
+Object {
+  "family": "St John-Mollusc",
+  "given": "Oliver",
+}
+`;
+
+exports[`parseName() should parse names appropriately 21`] = `
+Object {
+  "family": "P.G. van Gompel",
+  "given": "Roger",
+}
+`;
+
+exports[`parseName() should parse names appropriately 22`] = `
+Object {
+  "family": "Mustermann",
+  "given": "Klaus-Peter",
+}
+`;
+
+exports[`parseName() should parse names appropriately 23`] = `
+Object {
+  "family": "Lam",
+  "given": "Ho-Pun",
+}
+`;
+
+exports[`parseName() should parse names appropriately 24`] = `
+Object {
+  "family": "Henry Ford",
+  "given": "John",
+}
+`;
+
+exports[`parseName() should parse names appropriately 25`] = `
+Object {
+  "family": "Smith",
+  "given": "Someone",
+}
+`;
+
+exports[`parseName() should parse names appropriately 26`] = `
+Object {
+  "family": "Smith",
+}
+`;
+
+exports[`parseName() should parse names appropriately 27`] = `
+Object {
+  "family": "Someone Šmith",
+}
+`;
+
+exports[`parseName() should parse names appropriately 28`] = `
+Object {
+  "family": "American Psychological Association",
+  "given": "Task Force on the Sexualization of Girls",
+}
+`;
+
+exports[`parseName() should parse names appropriately 29`] = `
+Object {
+  "family": "Publishers",
+  "given": "Sci-Art",
+}
+`;
+
+exports[`parseName() should parse names appropriately 30`] = `
+Object {
+  "literal": "Smith, Jr., Bill, Lee",
+}
+`;
+
+exports[`parseName() should parse names appropriately 31`] = `
+Object {
+  "literal": "U.S. Department of Health and Human Services, National Institute of Mental Health, National Heart, Lung and Blood Institute",
+}
+`;
+
+exports[`parseName() should parse names appropriately 32`] = `
+Object {
+  "family": "E. S. El-Mallah",
+}
+`;
+
+exports[`parseName() should parse names appropriately 33`] = `
+Object {
+  "family": "Zelly",
+  "given": "Arthur",
+}
+`;
+
+exports[`parseName() should parse names appropriately 34`] = `
+Object {
+  "family": "Author",
+  "given": "Alan",
+}
+`;
+
+exports[`parseName() should parse names appropriately 35`] = `
+Object {
+  "family": "Secondauthor und andere",
+  "given": "Steven",
+}
+`;
+
+exports[`parseName() should parse names appropriately 36`] = `
+Object {
+  "family": "Author",
+  "given": "Alan",
+}
+`;
+
+exports[`parseName() should parse names appropriately 37`] = `Object {}`;
+
+exports[`parseName() should parse names appropriately 38`] = `
+Object {
+  "family": "Miffed",
+  "given": "Alan",
+}
+`;
+
+exports[`parseName() should parse names appropriately 39`] = `
+Object {
+  "family": "Deutsch",
+  "given": "J. Anthony",
+}
+`;
+
+exports[`parseName() should parse names appropriately 40`] = `
+Object {
+  "family": "Deutsch",
+  "given": "Diana P",
+}
+`;
