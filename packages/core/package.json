@@ -3,9 +3,9 @@
   "version": "0.3.0",
   "description": "Shared utility functions for the astrocite package library",
   "main": "lib/index.js",
-  "types": [
-    "lib/index.d.ts",
-    "src/"
+  "types": "lib/index.d.ts",
+  "files": [
+      "lib/**"
   ],
   "scripts": {
     "test": "jest",

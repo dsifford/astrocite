@@ -9,12 +9,6 @@
   "scripts": {
     "build": "rm -rf lib/* && tsc -p ."
   },
-  "lint-staged": {
-    "*.{ts,tsx}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
   "files": [
     "lib/**"
   ],
@@ -26,6 +20,10 @@
     "Bibliography",
     "Citation"
   ],
+  "dependencies": {
+      "astrocite-bibtex": "^0.3.0",
+      "astrocite-ris": "^0.3.0"
+  },
   "devDependencies": {
     "typescript": "^2.5.2"
   },

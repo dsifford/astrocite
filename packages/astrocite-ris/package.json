@@ -3,9 +3,13 @@
   "version": "0.3.0",
   "description": "Parser and AST for converting RIS to CSL JSON",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "test": "jest"
   },
+  "files": [
+      "lib/**"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dsifford/astrocite.git"
@@ -22,6 +26,9 @@
     "url": "https://github.com/dsifford/astrocite/issues"
   },
   "homepage": "https://github.com/dsifford/astrocite#readme",
+  "dependencies": {
+      "astrocite-core": "^0.3.0"
+  },
   "devDependencies": {
     "jest": "^21.1.0",
     "pegjs": "^0.10.0",
