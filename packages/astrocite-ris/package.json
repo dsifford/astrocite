@@ -1,6 +1,6 @@
 {
   "name": "astrocite-ris",
-  "version": "0.4.1-0",
+  "version": "0.4.2-0",
   "description": "Parser and AST for converting RIS to CSL JSON",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
