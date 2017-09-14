@@ -1,6 +1,6 @@
 lib
 tmp
 node_modules
-src/**/grammar.js
+grammar.js
 NOTES.md
 example.*

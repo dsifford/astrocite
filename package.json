@@ -7,15 +7,17 @@
   "author": "Derek P Sifford <dereksifford@gmail.com>",
   "main": "lib/index.js",
   "scripts": {
+    "foo": "env",
+    "bootstrap": "lerna bootstrap --hoist",
     "precommit": "lint-staged",
     "prepublishOnly": "npm run build",
     "prepush": "npm test && npm run lint",
-    "test": "jest src/**",
-    "ci": "npm run build && jest --coverage src/**",
+    "test": "jest packages/**",
+    "ci": "npm run bootstrap && npm run build && jest --coverage src/**",
     "postci": "npm run lint",
     "lint": "tslint -e \"**/*.js\" -p . -t codeFrame",
-    "prebuild": "pegjs -o src/bibtex/grammar.js --cache src/bibtex/grammar.pegjs && pegjs -o src/ris/grammar.js --cache src/ris/grammar.pegjs",
-    "build": "rm -rf lib/* && tsc -p ."
+    "prebuild": "lerna --ignore astrocite --ignore astrocite-core exec pegjs -o src/grammar.js src/grammar.pegjs",
+    "build": "lerna exec -- rm -rf lib/* && lerna exec -- tsc -p ."
   },
   "lint-staged": {
     "*.{ts,tsx}": [
@@ -53,9 +55,9 @@
     },
     "coverageDirectory": "tmp/coverage",
     "collectCoverageFrom": [
-      "src/**/*.ts",
-      "!src/**/*.d.ts",
-      "!src/**/index.ts"
+      "packages/**/*.ts",
+      "!packages/**/*.d.ts",
+      "!packages/**/index.ts"
     ],
     "mapCoverage": true,
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",

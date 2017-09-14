@@ -125,7 +125,7 @@ const parseEntry = (entry: Entry): CSL.Data => {
 };
 
 export default function parseCSL(source: string): CSL.Data[] {
-    const ast: AST = parser.parse(source);
+    const ast: AST = <AST>parser.parse(source);
     let csl: CSL.Data[] = [];
 
     for (const entry of ast.children) {

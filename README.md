@@ -28,9 +28,9 @@ $ npm install astrocite
 ### Modular (smaller bundles)
 
 ```js
-import { parse } from 'astrocite/bibtex';
+import { parse } from 'astrocite-bibtex';
 // or
-const parse = require('astrocite/bibtex').parse;
+const parse = require('astrocite-bibtex').parse;
 
 const cslJson = parse(`
 @article{my_article,
@@ -58,9 +58,9 @@ const cslJson = astrocite.bibtex.parse(`
 **ASTs are also available if needed.**
 
 ```js
-import { AST } from 'astrocite/bibtex';
+import { AST } from 'astrocite-bibtex';
 // or
-// import { AST } from 'astrocite/ris';
+// import { AST } from 'astrocite-ris';
 // ....etc
 
 const bibtexAST = AST.parse(`

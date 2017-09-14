@@ -93,7 +93,7 @@ const parseEntry = (node: Entry, macros: Map<string, string>): CSL.Data => {
 
 export default function parseCSL(source: string): CSL.Data[] {
     const STRINGS_MAP: Map<string, string> = new Map(KNOWN_MACROS);
-    const ast: AST = parser.parse(source);
+    const ast: AST = <AST>parser.parse(source);
     let csl: CSL.Data[] = [];
 
     for (const node of ast.children) {
