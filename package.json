@@ -11,12 +11,12 @@
     "precommit": "lint-staged",
     "prepublishOnly": "npm run build",
     "prepush": "npm test && npm run lint",
-    "test": "jest packages/**",
-    "ci": "npm run bootstrap && npm run build && jest --coverage src/**",
+    "test": "jest",
+    "ci": "npm run bootstrap && npm run build && jest --coverage",
     "postci": "npm run lint",
     "lint": "tslint -e \"**/*.js\" -p . -t codeFrame",
     "build-grammars": "lerna --ignore astrocite --ignore astrocite-core exec -- pegjs -o src/grammar.js src/grammar.pegjs",
-    "build-types": "lerna --ignore astrocite --ignore astrocite-core exec -- mkdir -p ./lib && cp ./src/index.d.ts ./lib/index.d.ts",
+    "build-types": "lerna --ignore astrocite --ignore astrocite-core exec -- mkdir -p ./lib && lerna --ignore astrocite --ignore astrocite-core exec -- cp ./src/index.d.ts ./lib/index.d.ts",
     "prebuild": "lerna exec -- rm -rf lib/* && npm run build-grammars && npm run build-types",
     "build": "lerna exec -- tsc -p ."
   },
@@ -61,7 +61,7 @@
       "!packages/**/index.ts"
     ],
     "mapCoverage": true,
-    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx)$",
     "moduleFileExtensions": [
       "ts",
       "tsx",
