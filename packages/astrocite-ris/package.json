@@ -1,0 +1,30 @@
+{
+  "name": "astrocite-ris",
+  "version": "0.1.0",
+  "description": "Parser and AST for converting RIS to CSL JSON",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dsifford/astrocite.git"
+  },
+  "keywords": [
+    "RIS",
+    "CSL",
+    "citation-style-language",
+    "citation"
+  ],
+  "author": "Derek P Sifford",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dsifford/astrocite/issues"
+  },
+  "homepage": "https://github.com/dsifford/astrocite#readme",
+  "devDependencies": {
+    "jest": "^21.1.0",
+    "pegjs": "^0.10.0",
+    "typescript": "^2.5.2"
+  }
+}
