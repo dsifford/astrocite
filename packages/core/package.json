@@ -1,6 +1,6 @@
 {
   "name": "astrocite-core",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "description": "Shared utility functions for the astrocite package library",
   "main": "lib/index.js",
   "types": [
