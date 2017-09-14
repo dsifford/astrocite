@@ -7,7 +7,6 @@
   "author": "Derek P Sifford <dereksifford@gmail.com>",
   "main": "lib/index.js",
   "scripts": {
-    "foo": "env",
     "bootstrap": "lerna bootstrap --hoist",
     "precommit": "lint-staged",
     "prepublishOnly": "npm run build",
@@ -16,8 +15,9 @@
     "ci": "npm run bootstrap && npm run build && jest --coverage src/**",
     "postci": "npm run lint",
     "lint": "tslint -e \"**/*.js\" -p . -t codeFrame",
-    "prebuild": "lerna --ignore astrocite --ignore astrocite-core exec pegjs -o src/grammar.js src/grammar.pegjs",
-    "build": "lerna exec -- rm -rf lib/* && lerna exec -- tsc -p ."
+    "prebuild": "lerna --ignore astrocite --ignore astrocite-core exec -- pegjs -o src/grammar.js src/grammar.pegjs",
+    "build": "lerna exec -- rm -rf lib/* && lerna exec -- tsc -p .",
+    "postbuild": "lerna --ignore astrocite --ignore astrocite-core exec -- cp ./src/index.d.ts ./lib/index.d.ts"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
