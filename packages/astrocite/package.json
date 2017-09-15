@@ -12,6 +12,7 @@
   "files": [
     "lib/**"
   ],
+  "types": "lib/index.d.ts",
   "keywords": [
     "CSL",
     "Citation Style Language",
