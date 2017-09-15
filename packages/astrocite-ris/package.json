@@ -1,6 +1,6 @@
 {
   "name": "astrocite-ris",
-  "version": "0.4.4-0",
+  "version": "0.5.0",
   "description": "Parser and AST for converting RIS to CSL JSON",
   "license": "MIT",
   "repository": "dsifford/astrocite",
@@ -21,7 +21,7 @@
     "citation"
   ],
   "dependencies": {
-    "astrocite-core": "^0.4.4-0"
+    "astrocite-core": "^0.5.0"
   },
   "devDependencies": {
     "pegjs": "^0.10.0",
