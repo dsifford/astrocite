@@ -2,27 +2,18 @@
   "name": "astrocite-core",
   "version": "0.4.4-0",
   "description": "Shared utility functions for the astrocite package library",
+  "license": "MIT",
+  "repository": "dsifford/astrocite",
+  "author": "Derek P Sifford",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
     "lib/**"
   ],
   "scripts": {
-    "test": "jest",
     "build": "rm -rf lib/* && tsc -p ."
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dsifford/astrocite.git"
-  },
-  "author": "Derek P Sifford",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/dsifford/astrocite/issues"
-  },
-  "homepage": "https://github.com/dsifford/astrocite#readme",
   "devDependencies": {
-    "jest": "^21.1.0",
     "typescript": "^2.5.2"
   }
 }

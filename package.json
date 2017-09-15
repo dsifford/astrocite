@@ -1,42 +1,5 @@
 {
-  "name": "astrocite",
-  "version": "0.2.0",
-  "description": "Bibliography file format => AST => CSL JSON",
-  "license": "MIT",
-  "repository": "dsifford/astrocite",
-  "author": "Derek P Sifford <dereksifford@gmail.com>",
-  "main": "lib/index.js",
-  "scripts": {
-    "bootstrap": "lerna bootstrap --hoist",
-    "precommit": "lint-staged",
-    "prepublishOnly": "npm run build",
-    "prepush": "npm test && npm run lint",
-    "test": "jest",
-    "ci": "npm run bootstrap && npm run build && jest --coverage",
-    "postci": "npm run lint",
-    "lint": "tslint -e \"**/*.js\" -p . -t codeFrame",
-    "build-grammars": "lerna --ignore astrocite --ignore astrocite-core exec -- pegjs -o src/grammar.js src/grammar.pegjs",
-    "build-types": "lerna --ignore astrocite --ignore astrocite-core exec -- mkdir -p ./lib && lerna --ignore astrocite --ignore astrocite-core exec -- cp ./src/index.d.ts ./lib/index.d.ts",
-    "prebuild": "lerna exec -- rm -rf lib/* && npm run build-grammars && npm run build-types",
-    "build": "lerna exec -- tsc -p ."
-  },
-  "lint-staged": {
-    "*.{ts,tsx}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
-  "files": [
-    "lib/**"
-  ],
-  "keywords": [
-    "CSL",
-    "Citation Style Language",
-    "BibTeX",
-    "AST",
-    "Bibliography",
-    "Citation"
-  ],
+  "private": true,
   "devDependencies": {
     "@types/jest": "^20.0.8",
     "@types/node": "^8.0.28",
@@ -49,6 +12,23 @@
     "ts-jest": "^21.0.1",
     "tslint": "^5.7.0",
     "typescript": "^2.5.2"
+  },
+  "scripts": {
+    "bootstrap": "lerna bootstrap --hoist",
+    "build": "lerna exec -- npm run build",
+    "ci": "npm run bootstrap && npm run build && jest --coverage --runInBand",
+    "lint": "tslint -e \"**/*.js\" -p . -t codeFrame",
+    "postci": "npm run lint",
+    "precommit": "lint-staged",
+    "prepublishOnly": "npm run build",
+    "prepush": "npm test && npm run lint",
+    "test": "jest"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "jest": {
     "transform": {
