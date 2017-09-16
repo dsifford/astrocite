@@ -7,6 +7,16 @@
 @string{ foobarbaz = "foo" #
     { bar } # "baz" }
 
+@string{ aaa = "AAA" }@string{bbb={BBB}} @string(ccc = "CCC")@article{no_spaces_test,title=aaa#bbb#ccc,}
+
+@book{test_concat_whitespace,
+    title = {foo}
+    # " "#
+    {bar}    # " "
+
+    #baz,
+}
+
 @article{parses_defined_strings,
     title = foo # bar # baz,
     note = foobarbaz,

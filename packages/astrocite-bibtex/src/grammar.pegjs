@@ -27,7 +27,7 @@
 }
 
 File
-    = __ r:Node+ __ {
+    = __ r:Node* __ {
         return {
             kind: 'File',
             loc: location(),
@@ -45,10 +45,10 @@ Node
 //-----------------  Top-level Nodes
 
 Entry
-    = '@' type:$[A-Za-z]+ [({] id:EntryId props:Property+ [})] _v? __ {
+    = '@' type:$[A-Za-z]+ [({] __ id:EntryId? __ props:Property* __ [})] __ {
         return {
             kind: 'Entry',
-            id: id,
+            id: id || '',
             type: type.toLowerCase(),
             loc: location(),
             properties: props,
@@ -56,7 +56,7 @@ Entry
     }
 
 PreambleExpression
-    = '@preamble'i __h [({] __ v:RegularValue+ __ [})] _v __ {
+    = '@preamble'i __ [({] __ v:RegularValue* __ [})] __ {
         return {
             kind: 'PreambleExpression',
             loc: location(),
@@ -65,7 +65,7 @@ PreambleExpression
     }
 
 StringExpression
-    = '@string'i __h [({] __h k:$([A-Za-z-_][A-Za-z0-9-_]*) PropertySeparator v:RegularValue+ __ [})] _v __ {
+    = '@string'i __ [({] __ k:VariableName PropertySeparator v:RegularValue+ __ [})] __ {
         return {
             kind: 'StringExpression',
             loc: location(),
@@ -77,7 +77,7 @@ StringExpression
 //------------------ Entry Child Nodes
 
 EntryId
-    = __h id:$[a-zA-Z0-9-:_]+ ',' __h EOL { return id; }
+    = __ id:$[^ \t\r\n,]* __ ',' { return id; }
 
 Property
     = k:PropertyKey PropertySeparator v:PropertyValue PropertyTerminator {
@@ -90,7 +90,7 @@ Property
     }
 
 PropertyKey
-    = __ k:$[a-zA-Z]+ { return k; }
+    = __ k:$[a-zA-Z0-9-]+ { return k; }
 
 //----------------------- Value Descriptors
 
@@ -101,7 +101,8 @@ PropertyValue
     }
 
 RegularValue
-    = ["{] v:(NestedLiteral / Command / Text)* [}"] Concat? { return v; }
+    = '"' v:(NestedLiteral / Command / TextNoQuotes)* '"' Concat? { return v; }
+    / '{' v:(NestedLiteral / Command / Text)* '}' Concat? { return v; }
 
 StringValue
     = v:String Concat? { return v; }
@@ -109,6 +110,15 @@ StringValue
 //---------------------- Value Kinds
 
 Text
+    = v:[^{}\\]+ {
+        return {
+            kind: 'Text',
+            loc: location(),
+            value: simpleLatexConversions(normalizeWhitespace(v)),
+        };
+    }
+
+TextNoQuotes
     = v:[^{}"\\]+ {
         return {
             kind: 'Text',
@@ -127,7 +137,7 @@ Number
     }
 
 String
-    = v:$([a-zA-Z-_][a-zA-Z0-9-_]+) {
+    = v:VariableName {
         return {
             kind: 'String',
             loc: location(),
@@ -226,6 +236,9 @@ RequiredArgument
 
 //-------------- Helpers
 
+VariableName
+    = $([a-zA-Z-_][a-zA-Z0-9-_:]+)
+
 SimpleDicratical
     = ['`=~^.]
 
@@ -236,10 +249,10 @@ PropertySeparator
     = __h '=' __h
 
 PropertyTerminator
-    = __h ','? __h (LineComment / EOL)
+    = __ ','? __h (LineComment / EOL)*
 
 Concat
-    = _ '#' _
+    = __ '#' __
 
 EOL
     = [\r\n]

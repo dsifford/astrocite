@@ -47,4 +47,16 @@ describe('BibTeX Parser', () => {
     it('should parse names in various formats', () => {
         expect(parse(cases.names)).toMatchSnapshot();
     });
+    it('should parse minified files', () => {
+        expect(parse(cases.minified)).toMatchSnapshot();
+    });
+    it('should parse files with zero entries', () => {
+        expect(parse(cases.no_entries)).toMatchSnapshot();
+    });
+    it('should parse empty files', () => {
+        expect(parse(cases.empty)).toMatchSnapshot();
+    });
+    it('should parse entries without IDs', () => {
+        expect(parse(cases.no_id)).toMatchSnapshot();
+    });
 });

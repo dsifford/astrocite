@@ -203,6 +203,40 @@ Array [
 ]
 `;
 
+exports[`BibTeX Parser should parse empty files 1`] = `Array []`;
+
+exports[`BibTeX Parser should parse entries without IDs 1`] = `
+Array [
+  Object {
+    "id": "",
+    "title": "Test 1",
+    "type": "article",
+  },
+  Object {
+    "id": "",
+    "title": "Test 2",
+    "type": "book",
+  },
+  Object {
+    "id": "",
+    "title": "Test 3",
+    "type": "thesis",
+  },
+  Object {
+    "id": "",
+    "title": "Test 4",
+    "type": "article",
+  },
+  Object {
+    "id": "",
+    "title": "Test 5",
+    "type": "article",
+  },
+]
+`;
+
+exports[`BibTeX Parser should parse files with zero entries 1`] = `Array []`;
+
 exports[`BibTeX Parser should parse known commands and skip unknown commands 1`] = `
 Array [
   Object {
@@ -220,6 +254,105 @@ Array [
     "id": "symbol_commands",
     "title": "$%#&_{}",
     "type": "article",
+  },
+]
+`;
+
+exports[`BibTeX Parser should parse minified files 1`] = `
+Array [
+  Object {
+    "author": Array [
+      Object {
+        "family": "Torre",
+        "given": "Joe",
+      },
+      Object {
+        "family": "Verducci",
+        "given": "Tom",
+      },
+    ],
+    "id": "with_spaces_single",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2008",
+          "",
+          "",
+        ],
+      ],
+    },
+    "publisher": "Doubleday",
+    "title": "The Yankee Years",
+    "type": "book",
+  },
+  Object {
+    "editor": Array [
+      Object {
+        "family": "Correns",
+        "given": "Paul",
+      },
+    ],
+    "id": "without_spaces_single",
+    "page": "1-11",
+    "title": "Die dem Boethius fälschlich zugeschriebene Abhandlung des Dominicus Gundisalvi 'De unitate'",
+    "type": "article",
+    "volume": "1",
+  },
+  Object {
+    "id": "with_spaces_multiple_1",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2015",
+          "",
+          "",
+        ],
+      ],
+    },
+    "title": "Testing 1",
+    "type": "article",
+  },
+  Object {
+    "id": "with_spaces_multiple_2",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2015",
+          "",
+          "",
+        ],
+      ],
+    },
+    "title": "Testing 2",
+    "type": "article",
+  },
+  Object {
+    "id": "without_spaces_multiple_1",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2015",
+          "",
+          "",
+        ],
+      ],
+    },
+    "title": "Testing 1",
+    "type": "book",
+  },
+  Object {
+    "id": "without_spaces_multiple_2",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2015",
+          "",
+          "",
+        ],
+      ],
+    },
+    "title": "Testing 1",
+    "type": "book",
   },
 ]
 `;
@@ -307,6 +440,16 @@ Array [
 
 exports[`BibTeX Parser should parse user-defined strings 1`] = `
 Array [
+  Object {
+    "id": "no_spaces_test",
+    "title": "AAABBBCCC",
+    "type": "article",
+  },
+  Object {
+    "id": "test_concat_whitespace",
+    "title": "foo bar baz",
+    "type": "book",
+  },
   Object {
     "id": "parses_defined_strings",
     "note": "foo bar baz",
