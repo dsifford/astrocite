@@ -1,6 +1,4 @@
-import { EntryOk } from './pubmed-json.d';
-
-export const FIELD_MAP = new Map<keyof EntryOk, keyof CSL.Data>([
+export const FIELD_MAP = new Map<keyof Eutils.EntryOk, keyof CSL.Data>([
     ['availablefromurl', 'URL'],
     ['bookname', 'title'],
     ['booktitle', 'title'],

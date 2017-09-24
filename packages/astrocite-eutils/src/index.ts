@@ -1,1 +1,1 @@
-export { toCSL } from './pubmed/pubmed';
+export { toCSL } from './eutils';

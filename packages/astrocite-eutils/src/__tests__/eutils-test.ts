@@ -1,4 +1,4 @@
-import { toCSL } from '../pubmed';
+import { toCSL } from '../eutils';
 const pubmedjson = require('./fixtures/pubmed.json');
 const pubmedJsonEdges = require('./fixtures/pubmed-edge-cases.json');
 const pmcjson = require('./fixtures/pmc.json');

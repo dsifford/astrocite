@@ -1,8 +1,9 @@
+/// <reference path="./globals.d.ts" />
+/// <reference path="./schema.d.ts" />
 import { parseDate } from 'astrocite-core';
 import { FIELD_MAP } from './constants';
-import { Entry, EntryOk, Response } from './pubmed-json.d';
 
-type CSLTransform = (entry: EntryOk) => Partial<CSL.Data>;
+type CSLTransform = (entry: Eutils.EntryOk) => Partial<CSL.Data>;
 
 const transformUID: CSLTransform = entry => {
     const database = entry.articleids.find(i => i.value.endsWith(entry.uid));
@@ -25,7 +26,7 @@ const transformAuthors: CSLTransform = entry => {
     return { author };
 };
 
-const FIELD_TRANSFORMS = new Map<keyof EntryOk, CSLTransform>([
+const FIELD_TRANSFORMS = new Map<keyof Eutils.EntryOk, CSLTransform>([
     ['authors', transformAuthors],
     ['uid', transformUID],
     ['lang', entry => ({ language: entry.lang[0] })],
@@ -37,12 +38,12 @@ const FIELD_TRANSFORMS = new Map<keyof EntryOk, CSLTransform>([
     ],
 ]);
 
-const parseEntry = (entry: Entry): CSL.Data | Error => {
+const parseEntry = (entry: Eutils.Entry): CSL.Data | Error => {
     if (entry.__astrocite_kind === 'error') {
         return new Error(entry.error);
     }
     return Object.keys(entry).reduce(
-        (obj, key: keyof EntryOk) => {
+        (obj, key: keyof Eutils.EntryOk) => {
             if (!entry[key]) return obj;
             const transform = FIELD_TRANSFORMS.get(key);
             const cslKey = FIELD_MAP.get(key);
@@ -58,7 +59,7 @@ const parseEntry = (entry: Entry): CSL.Data | Error => {
     );
 };
 
-export function toCSL(input: Response): Array<CSL.Data | Error> {
+export function toCSL(input: Eutils.Response): Array<CSL.Data | Error> {
     const entries = input.result.uids.map(id => ({
         ...input.result[id],
         __astrocite_kind: input.result[id].error ? 'error' : 'entry',
