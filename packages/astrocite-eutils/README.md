@@ -17,7 +17,7 @@ The entire JSON response received from the PubMed EUtils ESummary API
 ## Usage
 
 ```js
-import toCSL from 'astrocite-eutils';
+import { toCSL } from 'astrocite-eutils';
 
 // Assume apiResponse is the JSON received from the EUtils ESummary API
 const cslJSON = toCSL(apiResponse);
