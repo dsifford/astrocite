@@ -1,3 +1,42 @@
+# astrocite-ris
+
+An AST and parser for parsing RIS files to CSL JSON.
+
+See [astrocite](https://github.com/dsifford/astrocite) for more details.
+
+## API
+
+### astrociteRIS.parse(ris)
+
+#### ris
+
+Type: `String`
+
+Raw RIS to be parsed to CSL JSON
+
+### astrociteBibtex.AST(ris)
+
+#### ris
+
+Type: `String`
+
+Raw RIS to be parsed to an AST
+
+## Usage
+
+```js
+import { parse } from 'astrocite-ris';
+const cslJson = parse(`
+TY  - ICOMM
+T1  - Some Blog Title
+A1  - Doe, John
+Y1  - 2015///
+UR  - https://google.com
+ER  -
+`);
+// cslJson is now valid CSL JSON
+```
+
 ## Schema
 
 The full schema specification can be found [here](./types.d.ts).

@@ -1,0 +1,568 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pubmed JSON should parse eutils pmc json correctly 1`] = `
+Array [
+  [Error: Invalid uid PMC345345 at position=40],
+  Object {
+    "PMCID": "PMC5562999",
+    "author": Array [
+      Object {
+        "family": "Coccolini",
+        "given": "F",
+      },
+      Object {
+        "family": "Montori",
+        "given": "G",
+      },
+      Object {
+        "family": "Catena",
+        "given": "F",
+      },
+      Object {
+        "family": "Kluger",
+        "given": "Y",
+      },
+      Object {
+        "family": "Biffl",
+        "given": "W",
+      },
+      Object {
+        "family": "Moore",
+        "given": "EE",
+      },
+      Object {
+        "family": "Reva",
+        "given": "V",
+      },
+      Object {
+        "family": "Bing",
+        "given": "C",
+      },
+      Object {
+        "family": "Bala",
+        "given": "M",
+      },
+      Object {
+        "family": "Fugazzola",
+        "given": "P",
+      },
+      Object {
+        "family": "Bahouth",
+        "given": "H",
+      },
+      Object {
+        "family": "Marzi",
+        "given": "I",
+      },
+      Object {
+        "family": "Velmahos",
+        "given": "G",
+      },
+      Object {
+        "family": "Ivatury",
+        "given": "R",
+      },
+      Object {
+        "family": "Soreide",
+        "given": "K",
+      },
+      Object {
+        "family": "Horer",
+        "given": "T",
+      },
+      Object {
+        "family": "ten",
+        "given": "Broek",
+      },
+      Object {
+        "family": "Pereira",
+        "given": "BM",
+      },
+      Object {
+        "family": "Fraga",
+        "given": "GP",
+      },
+      Object {
+        "family": "Inaba",
+        "given": "K",
+      },
+      Object {
+        "family": "Kashuk",
+        "given": "J",
+      },
+      Object {
+        "family": "Parry",
+        "given": "N",
+      },
+      Object {
+        "family": "Masiakos",
+        "given": "PT",
+      },
+      Object {
+        "family": "Mylonas",
+        "given": "KS",
+      },
+      Object {
+        "family": "Kirkpatrick",
+        "given": "A",
+      },
+      Object {
+        "family": "Abu-Zidan",
+        "given": "F",
+      },
+      Object {
+        "family": "Gomes",
+        "given": "CA",
+      },
+      Object {
+        "family": "Benatti",
+        "given": "SV",
+      },
+      Object {
+        "family": "Naidoo",
+        "given": "N",
+      },
+      Object {
+        "family": "Salvetti",
+        "given": "F",
+      },
+      Object {
+        "family": "Maccatrozzo",
+        "given": "S",
+      },
+      Object {
+        "family": "Agnoletti",
+        "given": "V",
+      },
+      Object {
+        "family": "Gamberini",
+        "given": "E",
+      },
+      Object {
+        "family": "Solaini",
+        "given": "L",
+      },
+      Object {
+        "family": "Costanzo",
+        "given": "A",
+      },
+      Object {
+        "family": "Celotti",
+        "given": "A",
+      },
+      Object {
+        "family": "Tomasoni",
+        "given": "M",
+      },
+      Object {
+        "family": "Khokha",
+        "given": "V",
+      },
+      Object {
+        "family": "Arvieux",
+        "given": "C",
+      },
+      Object {
+        "family": "Napolitano",
+        "given": "L",
+      },
+      Object {
+        "family": "Handolin",
+        "given": "L",
+      },
+      Object {
+        "family": "Pisano",
+        "given": "M",
+      },
+      Object {
+        "family": "Magnone",
+        "given": "S",
+      },
+      Object {
+        "family": "Spain",
+        "given": "DA",
+      },
+      Object {
+        "family": "de",
+        "given": "Moya",
+      },
+      Object {
+        "family": "Davis",
+        "given": "KA",
+      },
+      Object {
+        "family": "De",
+        "given": "Angelis",
+      },
+      Object {
+        "family": "Leppaniemi",
+        "given": "A",
+      },
+      Object {
+        "family": "Ferrada",
+        "given": "P",
+      },
+      Object {
+        "family": "Latifi",
+        "given": "R",
+      },
+      Object {
+        "family": "Navarro",
+        "given": "DC",
+      },
+      Object {
+        "family": "Otomo",
+        "given": "Y",
+      },
+      Object {
+        "family": "Coimbra",
+        "given": "R",
+      },
+      Object {
+        "family": "Maier",
+        "given": "RV",
+      },
+      Object {
+        "family": "Moore",
+        "given": "F",
+      },
+      Object {
+        "family": "Rizoli",
+        "given": "S",
+      },
+      Object {
+        "family": "Sakakushev",
+        "given": "B",
+      },
+      Object {
+        "family": "Galante",
+        "given": "JM",
+      },
+      Object {
+        "family": "Chiara",
+        "given": "O",
+      },
+      Object {
+        "family": "Cimbanassi",
+        "given": "S",
+      },
+      Object {
+        "family": "Mefire",
+        "given": "AC",
+      },
+      Object {
+        "family": "Weber",
+        "given": "D",
+      },
+      Object {
+        "family": "Ceresoli",
+        "given": "M",
+      },
+      Object {
+        "family": "Peitzman",
+        "given": "AB",
+      },
+      Object {
+        "family": "Wehlie",
+        "given": "L",
+      },
+      Object {
+        "family": "Sartelli",
+        "given": "M",
+      },
+      Object {
+        "family": "Di",
+        "given": "Saverio",
+      },
+      Object {
+        "family": "Ansaloni",
+        "given": "L",
+      },
+    ],
+    "container-title": "World Journal of Emergency Surgery : WJES",
+    "container-title-short": "World J Emerg Surg",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2017",
+          "08",
+          "18",
+        ],
+      ],
+    },
+    "journalAbbreviation": "World J Emerg Surg",
+    "page": "40",
+    "title": "Splenic trauma: WSES classification and guidelines for adult and pediatric patients",
+    "volume": "12",
+  },
+  Object {
+    "PMCID": "PMC345853",
+    "author": Array [
+      Object {
+        "family": "Kao",
+        "given": "FT",
+      },
+      Object {
+        "family": "Hartz",
+        "given": "JA",
+      },
+      Object {
+        "family": "Law",
+        "given": "ML",
+      },
+      Object {
+        "family": "Davidson",
+        "given": "JN",
+      },
+    ],
+    "container-title": "Proceedings of the National Academy of Sciences of the United States of America",
+    "container-title-short": "Proc Natl Acad Sci U S A",
+    "issue": "3",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "1982",
+          "02",
+          "01",
+        ],
+      ],
+    },
+    "journalAbbreviation": "Proc Natl Acad Sci U S A",
+    "page": "865-869",
+    "title": "Isolation and chromosomal localization of unique DNA sequences from a human genomic library.",
+    "volume": "79",
+  },
+  Object {
+    "PMCID": "PMC3456745",
+    "author": Array [
+      Object {
+        "family": "Honda",
+        "given": "H",
+      },
+      Object {
+        "family": "Kikuchi",
+        "given": "K",
+      },
+      Object {
+        "family": "Hatori",
+        "given": "K",
+      },
+      Object {
+        "family": "Imai",
+        "given": "E",
+      },
+      Object {
+        "family": "Shimada",
+        "given": "K",
+      },
+      Object {
+        "family": "Matsuno",
+        "given": "K",
+      },
+    ],
+    "container-title": "Journal of Biological Physics",
+    "container-title-short": "J Biol Phys",
+    "issue": "3",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2002",
+          "09",
+          "01",
+        ],
+      ],
+    },
+    "journalAbbreviation": "J Biol Phys",
+    "page": "359-365",
+    "title": "Longitudinal Distortions and Transversal Fluctuations of an Actin Filament Sliding on Myosin Molecules",
+    "volume": "28",
+  },
+  [Error: cannot get document summary],
+]
+`;
+
+exports[`Pubmed JSON should parse eutils pubmed json correctly 1`] = `
+Array [
+  [Error: Invalid uid whoopsthisisanerror at position=49],
+  Object {
+    "ISSN": "0047-1828",
+    "PMID": "125352",
+    "author": Array [
+      Object {
+        "family": "Sassa",
+        "given": "H",
+      },
+      Object {
+        "family": "Ito",
+        "given": "T",
+      },
+      Object {
+        "family": "Niwa",
+        "given": "T",
+      },
+      Object {
+        "family": "Matsui",
+        "given": "E",
+      },
+    ],
+    "container-title": "Japanese circulation journal",
+    "container-title-short": "Jpn Circ J",
+    "id": "7806868",
+    "issue": "5",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "1975",
+          "05",
+          "01",
+        ],
+      ],
+    },
+    "journalAbbreviation": "Jpn Circ J",
+    "language": "eng",
+    "page": "525-30",
+    "title": "Fibrinolysis in patients with ischemic heart disease (in relation to the etiologic factor of myocardial infarction).",
+    "volume": "39",
+  },
+  Object {
+    "ISSN": "0021-5082",
+    "PMID": "34744",
+    "author": Array [],
+    "container-title": "Nihon eiseigaku zasshi. Japanese journal of hygiene",
+    "container-title-short": "Nihon Eiseigaku Zasshi",
+    "id": "0417457",
+    "issue": "1",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "1979",
+          "04",
+          "01",
+        ],
+      ],
+    },
+    "journalAbbreviation": "Nihon Eiseigaku Zasshi",
+    "language": "jpn",
+    "page": "1-363",
+    "title": "[Sessions of the 49th Congress of the Japanese Society for Hygiene. Abstracts].",
+    "volume": "34",
+  },
+  [Error: cannot get document summary],
+  Object {
+    "ISSN": "0017-6192",
+    "PMID": "363666",
+    "author": Array [
+      Object {
+        "family": "Beck",
+        "given": "C",
+      },
+    ],
+    "container-title": "HNO",
+    "container-title-short": "HNO",
+    "id": "2985099R",
+    "issue": "12",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "1978",
+          "12",
+          "01",
+        ],
+      ],
+    },
+    "journalAbbreviation": "HNO",
+    "language": "ger",
+    "page": "428-9",
+    "title": "[Circumscribed dermoplasty for persistent anterior nasal septal bleeding (author's transl)].",
+    "volume": "26",
+  },
+  Object {
+    "ISSN": "0031-7268",
+    "PMID": "273457",
+    "author": Array [
+      Object {
+        "family": "Czarnecki",
+        "given": "ES",
+      },
+    ],
+    "container-title": "The Bulletin of the Philadelphia County Dental Society",
+    "container-title-short": "Bull Phila Cty Dent Soc",
+    "id": "7505406",
+    "issue": "6",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "1977",
+          "03",
+          "01",
+        ],
+      ],
+    },
+    "journalAbbreviation": "Bull Phila Cty Dent Soc",
+    "language": "eng",
+    "page": "3-4",
+    "title": "\\"The eternal triangle\\" or--\\"how to live with a third party\\".",
+    "volume": "42",
+  },
+  Object {
+    "ISSN": "0025-0317",
+    "PMID": "23463",
+    "author": Array [
+      Object {
+        "family": "Salacz",
+        "given": "T",
+      },
+    ],
+    "container-title": "Magyar traumatologia, orthopaedia es helyreallito sebeszet",
+    "container-title-short": "Magy Traumatol Orthop Helyreallito Seb",
+    "id": "0074071",
+    "issue": "4",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "1977",
+          "01",
+          "01",
+        ],
+      ],
+    },
+    "journalAbbreviation": "Magy Traumatol Orthop Helyreallito Seb",
+    "language": "hun",
+    "page": "298-302",
+    "title": "[Double pelvic ring fracture combined with fracture of the femoral neck].",
+    "volume": "20",
+  },
+]
+`;
+
+exports[`Pubmed JSON should parse eutils pubmed json edge cases correctly 1`] = `
+Array [
+  Object {
+    "PMID": "12345",
+    "author": Array [
+      Object {
+        "family": "Smith",
+      },
+      Object {},
+    ],
+    "container-title": "Astrocite Testing Journal",
+    "container-title-short": "J Astrocite",
+    "id": "123456789",
+    "issue": "1",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2015",
+          "05",
+          "01",
+        ],
+      ],
+    },
+    "journalAbbreviation": "J Astrocite",
+    "language": "eng",
+    "page": "100",
+    "title": "Testing various edge cases.",
+    "volume": "1",
+  },
+]
+`;

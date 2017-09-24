@@ -1,4 +1,4 @@
-import { parseName } from '../names';
+import parseName from '../names';
 
 describe('parseName()', () => {
     it('should parse names appropriately', () => {
@@ -11,6 +11,7 @@ describe('parseName()', () => {
             'Van der Waals, III, Johannes Diderik',
             'Alfred Adler',
             'Bertie B. Bull',
+            ',',
             'C. Z. Crop',
             'Derek D Decket',
             'Egbert von Eel',

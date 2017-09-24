@@ -1,3 +1,60 @@
+# astrocite-bibtex
+
+An AST and parser for parsing BibTeX files to CSL JSON.
+
+See [astrocite](https://github.com/dsifford/astrocite) for more details.
+
+## API
+
+### astrociteBibtex.parse(bibtex)
+
+#### bibtex
+
+Type: `String`
+
+Raw BibTeX to be parsed to CSL JSON
+
+### astrociteBibtex.AST(bibtex)
+
+#### bibtex
+
+Type: `String`
+
+Raw BibTeX to be parsed to an AST
+
+## Usage
+
+```js
+import { parse } from 'astrocite-bibtex';
+const cslJson = parse(`
+@preamble{ "\newcommand{\noopsort}[1]{} " }
+
+% a sample "regular" entry (ie. not a @comment, @preamble, or @string)
+
+@book{abook,
+title = {A } # "Book",                   % an in-entry comment
+editor = {  John Q.  Random} # junk,
+publisher = {Foo Bar \& Sons},
+year = 1922
+}
+
+@STRING{ACM = "The OX Association for Computing Machinery"}
+
+@BOOKLET{booklet-full,
+   author = "Jill C. Knvth",
+   title = "The Programming of Computer Art",
+   howpublished = "Vernier Art Center",
+   address = "Stanford, California",
+   month = feb,
+   year = 1988,
+   note = "This is a full BOOKLET entry",
+}
+
+@comment{ Foo (bar) {baz} }
+`);
+// cslJson is now valid CSL JSON
+```
+
 ## Schema
 
 The full schema specification can be found [here](./types.d.ts).

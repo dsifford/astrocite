@@ -1,0 +1,472 @@
+{
+    "header": {
+        "type": "esummary",
+        "version": "0.3"
+    },
+    "error": "Invalid uid whoopsthisisanerror at position=49",
+    "result": {
+        "uids": [
+            "125352",
+            "34744",
+            "2345234523452345",
+            "363666",
+            "273457",
+            "23463"
+        ],
+        "125352": {
+            "uid": "125352",
+            "pubdate": "1975 May",
+            "epubdate": "",
+            "source": "Jpn Circ J",
+            "authors": [
+                {
+                    "name": "Sassa H",
+                    "authtype": "Author",
+                    "clusterid": ""
+                },
+                {
+                    "name": "Ito T",
+                    "authtype": "Author",
+                    "clusterid": ""
+                },
+                {
+                    "name": "Niwa T",
+                    "authtype": "Author",
+                    "clusterid": ""
+                },
+                {
+                    "name": "Matsui E",
+                    "authtype": "Author",
+                    "clusterid": ""
+                }
+            ],
+            "lastauthor": "Matsui E",
+            "title": "Fibrinolysis in patients with ischemic heart disease (in relation to the etiologic factor of myocardial infarction).",
+            "sorttitle": "fibrinolysis in patients with ischemic heart disease in relation to the etiologic factor of myocardial infarction",
+            "volume": "39",
+            "issue": "5",
+            "pages": "525-30",
+            "lang": [
+                "eng"
+            ],
+            "nlmuniqueid": "7806868",
+            "issn": "0047-1828",
+            "essn": "1347-4839",
+            "pubtype": [
+                "Journal Article"
+            ],
+            "recordstatus": "PubMed - indexed for MEDLINE",
+            "pubstatus": "4",
+            "articleids": [
+                {
+                    "idtype": "pubmed",
+                    "idtypen": 1,
+                    "value": "125352"
+                },
+                {
+                    "idtype": "rid",
+                    "idtypen": 8,
+                    "value": "125352"
+                },
+                {
+                    "idtype": "eid",
+                    "idtypen": 8,
+                    "value": "125352"
+                }
+            ],
+            "history": [
+                {
+                    "pubstatus": "pubmed",
+                    "date": "1975/05/01 00:00"
+                },
+                {
+                    "pubstatus": "medline",
+                    "date": "1975/05/01 00:01"
+                },
+                {
+                    "pubstatus": "entrez",
+                    "date": "1975/05/01 00:00"
+                }
+            ],
+            "references": [
+            ],
+            "attributes": [
+            ],
+            "pmcrefcount": "",
+            "fulljournalname": "Japanese circulation journal",
+            "elocationid": "",
+            "doctype": "citation",
+            "srccontriblist": [
+            ],
+            "booktitle": "",
+            "medium": "",
+            "edition": "",
+            "publisherlocation": "",
+            "publishername": "",
+            "srcdate": "",
+            "reportnumber": "",
+            "availablefromurl": "",
+            "locationlabel": "",
+            "doccontriblist": [
+            ],
+            "docdate": "",
+            "bookname": "",
+            "chapter": "",
+            "sortpubdate": "1975/05/01 00:00",
+            "sortfirstauthor": "Sassa H",
+            "vernaculartitle": ""
+        },
+        "34744": {
+            "uid": "34744",
+            "pubdate": "1979 Apr",
+            "epubdate": "",
+            "source": "Nihon Eiseigaku Zasshi",
+            "authors": [
+            ],
+            "lastauthor": "",
+            "title": "[Sessions of the 49th Congress of the Japanese Society for Hygiene. Abstracts].",
+            "sorttitle": "sessions of the 49th congress of the japanese society for hygiene abstracts",
+            "volume": "34",
+            "issue": "1",
+            "pages": "1-363",
+            "lang": [
+                "jpn"
+            ],
+            "nlmuniqueid": "0417457",
+            "issn": "0021-5082",
+            "essn": "1882-6482",
+            "pubtype": [
+                "Congresses"
+            ],
+            "recordstatus": "PubMed - indexed for MEDLINE",
+            "pubstatus": "4",
+            "articleids": [
+                {
+                    "idtype": "pubmed",
+                    "idtypen": 1,
+                    "value": "34744"
+                },
+                {
+                    "idtype": "rid",
+                    "idtypen": 8,
+                    "value": "34744"
+                },
+                {
+                    "idtype": "eid",
+                    "idtypen": 8,
+                    "value": "34744"
+                }
+            ],
+            "history": [
+                {
+                    "pubstatus": "pubmed",
+                    "date": "1979/04/01 00:00"
+                },
+                {
+                    "pubstatus": "medline",
+                    "date": "1979/04/01 00:01"
+                },
+                {
+                    "pubstatus": "entrez",
+                    "date": "1979/04/01 00:00"
+                }
+            ],
+            "references": [
+            ],
+            "attributes": [
+            ],
+            "pmcrefcount": "",
+            "fulljournalname": "Nihon eiseigaku zasshi. Japanese journal of hygiene",
+            "elocationid": "",
+            "doctype": "citation",
+            "srccontriblist": [
+            ],
+            "booktitle": "",
+            "medium": "",
+            "edition": "",
+            "publisherlocation": "",
+            "publishername": "",
+            "srcdate": "",
+            "reportnumber": "",
+            "availablefromurl": "",
+            "locationlabel": "",
+            "doccontriblist": [
+            ],
+            "docdate": "",
+            "bookname": "",
+            "chapter": "",
+            "sortpubdate": "1979/04/01 00:00",
+            "sortfirstauthor": "",
+            "vernaculartitle": ""
+        },
+        "2345234523452345": {
+            "uid": "2345234523452345",
+            "error": "cannot get document summary"
+        },
+        "363666": {
+            "uid": "363666",
+            "pubdate": "1978 Dec",
+            "epubdate": "",
+            "source": "HNO",
+            "authors": [
+                {
+                    "name": "Beck C",
+                    "authtype": "Author",
+                    "clusterid": ""
+                }
+            ],
+            "lastauthor": "Beck C",
+            "title": "[Circumscribed dermoplasty for persistent anterior nasal septal bleeding (author's transl)].",
+            "sorttitle": "circumscribed dermoplasty for persistent anterior nasal septal bleeding author s transl",
+            "volume": "26",
+            "issue": "12",
+            "pages": "428-9",
+            "lang": [
+                "ger"
+            ],
+            "nlmuniqueid": "2985099R",
+            "issn": "0017-6192",
+            "essn": "1433-0458",
+            "pubtype": [
+                "Journal Article"
+            ],
+            "recordstatus": "PubMed - indexed for MEDLINE",
+            "pubstatus": "4",
+            "articleids": [
+                {
+                    "idtype": "pubmed",
+                    "idtypen": 1,
+                    "value": "363666"
+                },
+                {
+                    "idtype": "rid",
+                    "idtypen": 8,
+                    "value": "363666"
+                },
+                {
+                    "idtype": "eid",
+                    "idtypen": 8,
+                    "value": "363666"
+                }
+            ],
+            "history": [
+                {
+                    "pubstatus": "pubmed",
+                    "date": "1978/12/01 00:00"
+                },
+                {
+                    "pubstatus": "medline",
+                    "date": "1978/12/01 00:01"
+                },
+                {
+                    "pubstatus": "entrez",
+                    "date": "1978/12/01 00:00"
+                }
+            ],
+            "references": [
+            ],
+            "attributes": [
+                "Has Abstract"
+            ],
+            "pmcrefcount": "",
+            "fulljournalname": "HNO",
+            "elocationid": "",
+            "doctype": "citation",
+            "srccontriblist": [
+            ],
+            "booktitle": "",
+            "medium": "",
+            "edition": "",
+            "publisherlocation": "",
+            "publishername": "",
+            "srcdate": "",
+            "reportnumber": "",
+            "availablefromurl": "",
+            "locationlabel": "",
+            "doccontriblist": [
+            ],
+            "docdate": "",
+            "bookname": "",
+            "chapter": "",
+            "sortpubdate": "1978/12/01 00:00",
+            "sortfirstauthor": "Beck C",
+            "vernaculartitle": "Umschriebene Dermoplastik bei hartnäckiger Blutung aus dem vorderen Abschnitt der Nasenscheidewand."
+        },
+        "273457": {
+            "uid": "273457",
+            "pubdate": "1977 Mar",
+            "epubdate": "",
+            "source": "Bull Phila Cty Dent Soc",
+            "authors": [
+                {
+                    "name": "Czarnecki ES",
+                    "authtype": "Author",
+                    "clusterid": ""
+                }
+            ],
+            "lastauthor": "Czarnecki ES",
+            "title": "\"The eternal triangle\" or--\"how to live with a third party\".",
+            "sorttitle": "eternal triangle or how to live with a third party",
+            "volume": "42",
+            "issue": "6",
+            "pages": "3-4",
+            "lang": [
+                "eng"
+            ],
+            "nlmuniqueid": "7505406",
+            "issn": "0031-7268",
+            "essn": "",
+            "pubtype": [
+                "Journal Article"
+            ],
+            "recordstatus": "PubMed - indexed for MEDLINE",
+            "pubstatus": "4",
+            "articleids": [
+                {
+                    "idtype": "pubmed",
+                    "idtypen": 1,
+                    "value": "273457"
+                },
+                {
+                    "idtype": "rid",
+                    "idtypen": 8,
+                    "value": "273457"
+                },
+                {
+                    "idtype": "eid",
+                    "idtypen": 8,
+                    "value": "273457"
+                }
+            ],
+            "history": [
+                {
+                    "pubstatus": "pubmed",
+                    "date": "1977/03/01 00:00"
+                },
+                {
+                    "pubstatus": "medline",
+                    "date": "1977/03/01 00:01"
+                },
+                {
+                    "pubstatus": "entrez",
+                    "date": "1977/03/01 00:00"
+                }
+            ],
+            "references": [
+            ],
+            "attributes": [
+            ],
+            "pmcrefcount": "",
+            "fulljournalname": "The Bulletin of the Philadelphia County Dental Society",
+            "elocationid": "",
+            "doctype": "citation",
+            "srccontriblist": [
+            ],
+            "booktitle": "",
+            "medium": "",
+            "edition": "",
+            "publisherlocation": "",
+            "publishername": "",
+            "srcdate": "",
+            "reportnumber": "",
+            "availablefromurl": "",
+            "locationlabel": "",
+            "doccontriblist": [
+            ],
+            "docdate": "",
+            "bookname": "",
+            "chapter": "",
+            "sortpubdate": "1977/03/01 00:00",
+            "sortfirstauthor": "Czarnecki ES",
+            "vernaculartitle": ""
+        },
+        "23463": {
+            "uid": "23463",
+            "pubdate": "1977",
+            "epubdate": "",
+            "source": "Magy Traumatol Orthop Helyreallito Seb",
+            "authors": [
+                {
+                    "name": "Salacz T",
+                    "authtype": "Author",
+                    "clusterid": ""
+                }
+            ],
+            "lastauthor": "Salacz T",
+            "title": "[Double pelvic ring fracture combined with fracture of the femoral neck].",
+            "sorttitle": "double pelvic ring fracture combined with fracture of the femoral neck",
+            "volume": "20",
+            "issue": "4",
+            "pages": "298-302",
+            "lang": [
+                "hun"
+            ],
+            "nlmuniqueid": "0074071",
+            "issn": "0025-0317",
+            "essn": "",
+            "pubtype": [
+                "Journal Article"
+            ],
+            "recordstatus": "PubMed - indexed for MEDLINE",
+            "pubstatus": "4",
+            "articleids": [
+                {
+                    "idtype": "pubmed",
+                    "idtypen": 1,
+                    "value": "23463"
+                },
+                {
+                    "idtype": "rid",
+                    "idtypen": 8,
+                    "value": "23463"
+                },
+                {
+                    "idtype": "eid",
+                    "idtypen": 8,
+                    "value": "23463"
+                }
+            ],
+            "history": [
+                {
+                    "pubstatus": "pubmed",
+                    "date": "1977/01/01 00:00"
+                },
+                {
+                    "pubstatus": "medline",
+                    "date": "1977/01/01 00:01"
+                },
+                {
+                    "pubstatus": "entrez",
+                    "date": "1977/01/01 00:00"
+                }
+            ],
+            "references": [
+            ],
+            "attributes": [
+            ],
+            "pmcrefcount": "",
+            "fulljournalname": "Magyar traumatologia, orthopaedia es helyreallito sebeszet",
+            "elocationid": "",
+            "doctype": "citation",
+            "srccontriblist": [
+            ],
+            "booktitle": "",
+            "medium": "",
+            "edition": "",
+            "publisherlocation": "",
+            "publishername": "",
+            "srcdate": "",
+            "reportnumber": "",
+            "availablefromurl": "",
+            "locationlabel": "",
+            "doccontriblist": [
+            ],
+            "docdate": "",
+            "bookname": "",
+            "chapter": "",
+            "sortpubdate": "1977/01/01 00:00",
+            "sortfirstauthor": "Salacz T",
+            "vernaculartitle": "Kettös medencegyürütörés combnyaktöréssel."
+        }
+    }
+}

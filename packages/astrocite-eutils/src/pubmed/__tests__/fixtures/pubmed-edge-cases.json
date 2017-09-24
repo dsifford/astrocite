@@ -1,0 +1,78 @@
+{
+  "header": {
+    "type": "esummary",
+    "version": "0.3"
+  },
+  "result": {
+    "uids": ["12345"],
+    "12345": {
+      "uid": "12345",
+      "pubdate": "2015 May",
+      "epubdate": "",
+      "source": "J Astrocite",
+      "authors": [
+        {
+          "name": "Smith",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "",
+          "authtype": "Author",
+          "clusterid": ""
+        }
+      ],
+      "lastauthor": "",
+      "title": "Testing various edge cases.",
+      "sorttitle": "testing various edge cases",
+      "volume": "1",
+      "issue": "1",
+      "pages": "100",
+      "lang": ["eng"],
+      "nlmuniqueid": "123456789",
+      "issn": "",
+      "essn": "",
+      "pubtype": ["Journal Article"],
+      "recordstatus": "PubMed - indexed for MEDLINE",
+      "pubstatus": "4",
+      "articleids": [],
+      "history": [
+        {
+          "pubstatus": "pubmed",
+          "date": "1975/05/01 00:00"
+        },
+        {
+          "pubstatus": "medline",
+          "date": "1975/05/01 00:01"
+        },
+        {
+          "pubstatus": "entrez",
+          "date": "1975/05/01 00:00"
+        }
+      ],
+      "references": [],
+      "attributes": [],
+      "pmcrefcount": "",
+      "fulljournalname": "Astrocite Testing Journal",
+      "elocationid": "",
+      "doctype": "citation",
+      "srccontriblist": [],
+      "booktitle": "",
+      "medium": "",
+      "edition": "",
+      "publisherlocation": "",
+      "publishername": "",
+      "srcdate": "",
+      "reportnumber": "",
+      "availablefromurl": "",
+      "locationlabel": "",
+      "doccontriblist": [],
+      "docdate": "",
+      "bookname": "",
+      "chapter": "",
+      "sortpubdate": "2015/05/01 00:00",
+      "sortfirstauthor": "Smith",
+      "vernaculartitle": ""
+    }
+  }
+}

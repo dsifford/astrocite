@@ -63,26 +63,28 @@ Object {
 }
 `;
 
-exports[`parseName() should parse names appropriately 9`] = `
+exports[`parseName() should parse names appropriately 9`] = `Object {}`;
+
+exports[`parseName() should parse names appropriately 10`] = `
 Object {
   "family": "C. Z. Crop",
 }
 `;
 
-exports[`parseName() should parse names appropriately 10`] = `
+exports[`parseName() should parse names appropriately 11`] = `
 Object {
   "family": "D Decket",
   "given": "Derek",
 }
 `;
 
-exports[`parseName() should parse names appropriately 11`] = `
+exports[`parseName() should parse names appropriately 12`] = `
 Object {
   "family": "Egbert von Eel",
 }
 `;
 
-exports[`parseName() should parse names appropriately 12`] = `
+exports[`parseName() should parse names appropriately 13`] = `
 Object {
   "dropping-particle": "van der valt",
   "family": "Frome",
@@ -90,21 +92,21 @@ Object {
 }
 `;
 
-exports[`parseName() should parse names appropriately 13`] = `
+exports[`parseName() should parse names appropriately 14`] = `
 Object {
   "family": "R. van Gloom",
   "given": "Gregory",
 }
 `;
 
-exports[`parseName() should parse names appropriately 14`] = `
+exports[`parseName() should parse names appropriately 15`] = `
 Object {
   "family": "F. van Henkel",
   "given": "Henry",
 }
 `;
 
-exports[`parseName() should parse names appropriately 15`] = `
+exports[`parseName() should parse names appropriately 16`] = `
 Object {
   "family": "Jolly",
   "given": "James",
@@ -112,9 +114,9 @@ Object {
 }
 `;
 
-exports[`parseName() should parse names appropriately 16`] = `Object {}`;
+exports[`parseName() should parse names appropriately 17`] = `Object {}`;
 
-exports[`parseName() should parse names appropriately 17`] = `
+exports[`parseName() should parse names appropriately 18`] = `
 Object {
   "family": "van Kluster",
   "given": "Kevin",
@@ -122,14 +124,14 @@ Object {
 }
 `;
 
-exports[`parseName() should parse names appropriately 18`] = `
+exports[`parseName() should parse names appropriately 19`] = `
 Object {
   "family": "Louis Xavier Joseph de la Valle Poussin",
   "given": "Charles",
 }
 `;
 
-exports[`parseName() should parse names appropriately 19`] = `
+exports[`parseName() should parse names appropriately 20`] = `
 Object {
   "family": "Graaff",
   "given": "R. J.",
@@ -137,137 +139,137 @@ Object {
 }
 `;
 
-exports[`parseName() should parse names appropriately 20`] = `
+exports[`parseName() should parse names appropriately 21`] = `
 Object {
   "family": "St John-Mollusc",
   "given": "Oliver",
 }
 `;
 
-exports[`parseName() should parse names appropriately 21`] = `
+exports[`parseName() should parse names appropriately 22`] = `
 Object {
   "family": "P.G. van Gompel",
   "given": "Roger",
 }
 `;
 
-exports[`parseName() should parse names appropriately 22`] = `
+exports[`parseName() should parse names appropriately 23`] = `
 Object {
   "family": "Mustermann",
   "given": "Klaus-Peter",
 }
 `;
 
-exports[`parseName() should parse names appropriately 23`] = `
+exports[`parseName() should parse names appropriately 24`] = `
 Object {
   "family": "Lam",
   "given": "Ho-Pun",
 }
 `;
 
-exports[`parseName() should parse names appropriately 24`] = `
+exports[`parseName() should parse names appropriately 25`] = `
 Object {
   "family": "Henry Ford",
   "given": "John",
 }
 `;
 
-exports[`parseName() should parse names appropriately 25`] = `
+exports[`parseName() should parse names appropriately 26`] = `
 Object {
   "family": "Smith",
   "given": "Someone",
 }
 `;
 
-exports[`parseName() should parse names appropriately 26`] = `
+exports[`parseName() should parse names appropriately 27`] = `
 Object {
   "family": "Smith",
 }
 `;
 
-exports[`parseName() should parse names appropriately 27`] = `
+exports[`parseName() should parse names appropriately 28`] = `
 Object {
   "family": "Someone Šmith",
 }
 `;
 
-exports[`parseName() should parse names appropriately 28`] = `
+exports[`parseName() should parse names appropriately 29`] = `
 Object {
   "family": "American Psychological Association",
   "given": "Task Force on the Sexualization of Girls",
 }
 `;
 
-exports[`parseName() should parse names appropriately 29`] = `
+exports[`parseName() should parse names appropriately 30`] = `
 Object {
   "family": "Publishers",
   "given": "Sci-Art",
 }
 `;
 
-exports[`parseName() should parse names appropriately 30`] = `
+exports[`parseName() should parse names appropriately 31`] = `
 Object {
   "literal": "Smith, Jr., Bill, Lee",
 }
 `;
 
-exports[`parseName() should parse names appropriately 31`] = `
+exports[`parseName() should parse names appropriately 32`] = `
 Object {
   "literal": "U.S. Department of Health and Human Services, National Institute of Mental Health, National Heart, Lung and Blood Institute",
 }
 `;
 
-exports[`parseName() should parse names appropriately 32`] = `
+exports[`parseName() should parse names appropriately 33`] = `
 Object {
   "family": "E. S. El-Mallah",
 }
 `;
 
-exports[`parseName() should parse names appropriately 33`] = `
+exports[`parseName() should parse names appropriately 34`] = `
 Object {
   "family": "Zelly",
   "given": "Arthur",
 }
 `;
 
-exports[`parseName() should parse names appropriately 34`] = `
+exports[`parseName() should parse names appropriately 35`] = `
 Object {
   "family": "Author",
   "given": "Alan",
 }
 `;
 
-exports[`parseName() should parse names appropriately 35`] = `
+exports[`parseName() should parse names appropriately 36`] = `
 Object {
   "family": "Secondauthor und andere",
   "given": "Steven",
 }
 `;
 
-exports[`parseName() should parse names appropriately 36`] = `
+exports[`parseName() should parse names appropriately 37`] = `
 Object {
   "family": "Author",
   "given": "Alan",
 }
 `;
 
-exports[`parseName() should parse names appropriately 37`] = `Object {}`;
+exports[`parseName() should parse names appropriately 38`] = `Object {}`;
 
-exports[`parseName() should parse names appropriately 38`] = `
+exports[`parseName() should parse names appropriately 39`] = `
 Object {
   "family": "Miffed",
   "given": "Alan",
 }
 `;
 
-exports[`parseName() should parse names appropriately 39`] = `
+exports[`parseName() should parse names appropriately 40`] = `
 Object {
   "family": "Deutsch",
   "given": "J. Anthony",
 }
 `;
 
-exports[`parseName() should parse names appropriately 40`] = `
+exports[`parseName() should parse names appropriately 41`] = `
 Object {
   "family": "Deutsch",
   "given": "Diana P",

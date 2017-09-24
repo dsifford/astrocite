@@ -1,0 +1,417 @@
+{
+    "header": {
+        "type": "esummary",
+        "version": "0.3"
+    },
+    "error": "Invalid uid PMC345345 at position=40",
+    "result": {
+        "uids": [
+            "5562999",
+            "345853",
+            "3456745",
+            "45645635463563546"
+        ],
+        "5562999": {
+            "uid": "5562999",
+            "pubdate": "2017 Aug 18",
+            "epubdate": "2017 Aug 18",
+            "printpubdate": "",
+            "source": "World J Emerg Surg",
+            "authors": [
+                {
+                    "name": "Coccolini F",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Montori G",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Catena F",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Kluger Y",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Biffl W",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Moore EE",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Reva V",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Bing C",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Bala M",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Fugazzola P",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Bahouth H",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Marzi I",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Velmahos G",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Ivatury R",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Soreide K",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Horer T",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "ten Broek R",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Pereira BM",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Fraga GP",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Inaba K",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Kashuk J",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Parry N",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Masiakos PT",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Mylonas KS",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Kirkpatrick A",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Abu-Zidan F",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Gomes CA",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Benatti SV",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Naidoo N",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Salvetti F",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Maccatrozzo S",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Agnoletti V",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Gamberini E",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Solaini L",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Costanzo A",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Celotti A",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Tomasoni M",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Khokha V",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Arvieux C",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Napolitano L",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Handolin L",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Pisano M",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Magnone S",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Spain DA",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "de Moya M",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Davis KA",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "De Angelis N",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Leppaniemi A",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Ferrada P",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Latifi R",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Navarro DC",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Otomo Y",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Coimbra R",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Maier RV",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Moore F",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Rizoli S",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Sakakushev B",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Galante JM",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Chiara O",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Cimbanassi S",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Mefire AC",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Weber D",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Ceresoli M",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Peitzman AB",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Wehlie L",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Sartelli M",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Di Saverio S",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Ansaloni L",
+                    "authtype": "Author"
+                }
+            ],
+            "title": "Splenic trauma: WSES classification and guidelines for adult and pediatric patients",
+            "volume": "12",
+            "issue": "",
+            "pages": "40",
+            "articleids": [
+                {
+                    "idtype": "pmid",
+                    "value": "28828034"
+                },
+                {
+                    "idtype": "doi",
+                    "value": "10.1186/s13017-017-0151-4"
+                },
+                {
+                    "idtype": "pmcid",
+                    "value": "PMC5562999"
+                }
+            ],
+            "fulljournalname": "World Journal of Emergency Surgery : WJES",
+            "sortdate": "2017/08/18 00:00",
+            "pmclivedate": "2017/08/21"
+        },
+        "345853": {
+            "uid": "345853",
+            "pubdate": "1982 Feb",
+            "epubdate": "",
+            "printpubdate": "1982 Feb",
+            "source": "Proc Natl Acad Sci U S A",
+            "authors": [
+                {
+                    "name": "Kao FT",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Hartz JA",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Law ML",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Davidson JN",
+                    "authtype": "Author"
+                }
+            ],
+            "title": "Isolation and chromosomal localization of unique DNA sequences from a human genomic library.",
+            "volume": "79",
+            "issue": "3",
+            "pages": "865-869",
+            "articleids": [
+                {
+                    "idtype": "pmid",
+                    "value": "7038688"
+                },
+                {
+                    "idtype": "pmcid",
+                    "value": "PMC345853"
+                }
+            ],
+            "fulljournalname": "Proceedings of the National Academy of Sciences of the United States of America",
+            "sortdate": "1982/02/01 00:00",
+            "pmclivedate": "2004/03/13"
+        },
+        "3456745": {
+            "uid": "3456745",
+            "pubdate": "2002 Sep",
+            "epubdate": "",
+            "printpubdate": "2002 Sep",
+            "source": "J Biol Phys",
+            "authors": [
+                {
+                    "name": "Honda H",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Kikuchi K",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Hatori K",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Imai E",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Shimada K",
+                    "authtype": "Author"
+                },
+                {
+                    "name": "Matsuno K",
+                    "authtype": "Author"
+                }
+            ],
+            "title": "Longitudinal Distortions and Transversal Fluctuations of an Actin Filament Sliding on Myosin Molecules",
+            "volume": "28",
+            "issue": "3",
+            "pages": "359-365",
+            "articleids": [
+                {
+                    "idtype": "pmid",
+                    "value": "23345781"
+                },
+                {
+                    "idtype": "doi",
+                    "value": "10.1023/A:1020304420132"
+                },
+                {
+                    "idtype": "pmcid",
+                    "value": "PMC3456745"
+                }
+            ],
+            "fulljournalname": "Journal of Biological Physics",
+            "sortdate": "2002/09/01 00:00",
+            "pmclivedate": "2013/01/23"
+        },
+        "45645635463563546": {
+            "uid": "45645635463563546",
+            "error": "cannot get document summary"
+        }
+    }
+}

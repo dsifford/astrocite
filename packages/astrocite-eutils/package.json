@@ -1,0 +1,22 @@
+{
+  "name": "astrocite-eutils",
+  "version": "0.1.0",
+  "description": "Converts PubMed EUtils ESummary API Responses to CSL JSON",
+  "license": "MIT",
+  "repository": "dsifford/astrocite",
+  "author": "Derek P Sifford",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/**"
+  ],
+  "scripts": {
+    "build": "rm -rf lib/* && tsc -p ."
+  },
+  "dependencies": {
+    "astrocite-core": "^0.5.0"
+  },
+  "devDependencies": {
+    "typescript": "^2.5.2"
+  }
+}

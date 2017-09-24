@@ -21,7 +21,7 @@ export function parseNameParticles(input: string): Partial<CSL.Person> {
         : { 'dropping-particle': input };
 }
 
-export function parseName(name: string): CSL.Person {
+export default function(name: string): CSL.Person {
     const FIRST_VON_LAST = /([A-Z][a-zA-Z-]+ )?([a-z][a-zA-Z-]+ .+? [a-z][a-zA-Z-]+ )?([A-Z].+)/;
     const VON_LAST_FIRST = /(.+ [a-z][a-zA-Z-]+ )?(.+), (.+)/;
     const VON_LAST_JR_FIRST = /(.+ [a-z][a-zA-Z-]+ )?(.+), (.+), (.+)/;

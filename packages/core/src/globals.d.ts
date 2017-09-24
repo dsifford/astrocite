@@ -137,11 +137,21 @@ declare namespace CSL {
     type Month = string | number;
     type Day = string | number;
 
+    type DatePart = [Year, Month, Day];
+
     interface DateType {
-        'date-parts'?: Array<[Year, Month, Day]>;
-        season?: string;
-        circa?: string | number | boolean;
+        /** First variant if no end date. Second variant if there is an end date */
+        'date-parts'?: [DatePart] | [DatePart, DatePart];
+        /** Spring, Summer, Fall, Winter */
+        season?: '1' | '2' | '3' | '4';
+        /** If date is approximate, this should be true. Otherwise Don't set */
+        circa?: boolean;
+        /** Literal date string. Should be used as a last resort */
         literal?: string;
+        /**
+         * May be used with Citeproc-js. String must be able to parse directly into a
+         * valid `Date` using `new Date()` **NOT A CSL STANDARD**
+         */
         raw?: string;
     }
 }
