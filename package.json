@@ -1,17 +1,17 @@
 {
   "private": true,
   "devDependencies": {
-    "@types/jest": "^21.1.0",
-    "@types/node": "^8.0.30",
+    "@types/jest": "^21.1.1",
+    "@types/node": "^8.0.31",
     "husky": "^0.14.3",
-    "jest": "^21.1.0",
+    "jest": "^21.2.0",
     "lerna": "^2.2.0",
-    "lint-staged": "^4.2.2",
+    "lint-staged": "^4.2.3",
     "pegjs": "^0.10.0",
-    "prettier": "^1.7.0",
+    "prettier": "^1.7.1",
     "ts-jest": "^21.0.1",
     "tslint": "^5.7.0",
-    "typescript": "^2.5.2"
+    "typescript": "^2.5.3"
   },
   "scripts": {
     "bootstrap": "lerna bootstrap --hoist",

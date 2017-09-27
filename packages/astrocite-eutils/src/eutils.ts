@@ -1,4 +1,4 @@
-/// <reference path="./globals.d.ts" />
+/// <reference path="../globals.d.ts" />
 /// <reference path="./schema.d.ts" />
 import { parseDate } from 'astrocite-core';
 import { FIELD_MAP } from './constants';
