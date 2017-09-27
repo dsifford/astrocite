@@ -1,3 +1,5 @@
+import { CSL } from './CSL';
+
 // prettier-ignore
 const NON_DROPPING_PARTICLES: ReadonlySet<string> = new Set([
     "'s", "'s-", "'t", 'a', "aan 't", 'aan de', 'aan den', 'aan der', 'aan het', 'aan t', 'aan',

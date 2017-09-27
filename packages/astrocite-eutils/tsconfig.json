@@ -6,7 +6,8 @@
     "outDir": "lib"
   },
   "include": [
-      "src/**/*"
+      "src/**/*",
+      "src/globals.d.ts"
   ],
   "exclude": ["**/*-test.ts"]
 }

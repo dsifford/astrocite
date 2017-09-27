@@ -1,10 +1,11 @@
+// tslint:disable no-namespace
 /**
  * NOTE: Some fields in the CSL Specification allow for type "string" OR "number". In those
  * instances, this library will narrow them to be exclusively type string so that the implementer
  * will be certain as to what they are getting.
  */
-declare namespace CSL {
-    interface Data {
+export namespace CSL {
+    export interface Data {
         type: ItemType;
         id: string;
         categories?: string[];
@@ -84,7 +85,7 @@ declare namespace CSL {
         volume?: string;
         'year-suffix'?: string;
     }
-    type ItemType =
+    export type ItemType =
         | 'article'
         | 'article-journal'
         | 'article-magazine'
@@ -121,7 +122,7 @@ declare namespace CSL {
         | 'treaty'
         | 'webpage';
 
-    interface Person {
+    export interface Person {
         family?: string;
         given?: string;
         'dropping-particle'?: string;
@@ -133,13 +134,13 @@ declare namespace CSL {
         'parse-names'?: string | number | boolean;
     }
 
-    type Year = string | number;
-    type Month = string | number;
-    type Day = string | number;
+    export type Year = string | number;
+    export type Month = string | number;
+    export type Day = string | number;
 
-    type DatePart = [Year, Month, Day];
+    export type DatePart = [Year, Month, Day];
 
-    interface DateType {
+    export interface DateType {
         /** First variant if no end date. Second variant if there is an end date */
         'date-parts'?: [DatePart] | [DatePart, DatePart];
         /** Spring, Summer, Fall, Winter */

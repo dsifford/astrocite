@@ -1,3 +1,5 @@
+import { CSL } from './CSL';
+
 const YEAR_MONTH_DAY_SEASON: RegExp = /^\s*([1-2][0-9]{3})(?:\/([0-1][0-9]))?(?:\/([0-3][0-9]))?(?:\/(spring|summer|fall|winter))?.*$/i;
 const seasons = new Map<string, string>([
     ['spring', '1'],

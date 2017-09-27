@@ -1,3 +1,6 @@
+import { CSL } from 'astrocite-core';
+import { Eutils } from './schema';
+
 export const FIELD_MAP = new Map<keyof Eutils.EntryOk, keyof CSL.Data>([
     ['availablefromurl', 'URL'],
     ['bookname', 'title'],

@@ -1,3 +1,5 @@
+import { CSL } from 'astrocite-core';
+
 /**
  * Maps LaTeX dicratical commands to unicode dicraticals
  */

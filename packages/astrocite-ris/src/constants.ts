@@ -1,3 +1,5 @@
+import { CSL } from 'astrocite-core';
+
 export const TYPE_MAP: ReadonlyMap<string, CSL.ItemType> = new Map<string, CSL.ItemType>([
     ['ABST', 'article'],
     ['ADVS', 'broadcast'],

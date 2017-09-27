@@ -1,51 +1,53 @@
+// tslint:disable no-namespace
+
 /**
  * Format: "<YYYY> <Mmm>? <DD>?"
  * Examples: `2004`, `2014 Jun`, `2000 Nov 12`
  */
-type ShortDate = string;
+export type ShortDate = string;
 
 /**
  * Format: "YYYY/MM/DD HH:MM"
  * Example: `2014/07/01 00:00`
  */
-type LongDate = string;
+export type LongDate = string;
 
-interface Reference {
+export interface Reference {
     refsource: string;
     reftype: string;
     pmid: number;
     note: string;
 }
 
-interface HistoryEntry {
+export interface HistoryEntry {
     pubstatus: string;
     date: LongDate;
 }
 
-interface ArticleID {
+export interface ArticleID {
     idtype: 'doi' | 'eid' | 'pii' | 'pmc' | 'pubmed' | 'rid';
     idtypeen: number;
     value: string;
 }
 
-interface Author {
+export interface Author {
     name: string;
     authtype: string;
     clusterid: string;
 }
 
-interface ResultUIDs {
+export interface ResultUIDs {
     uids: string[];
 }
 
-interface ResultItems {
+export interface ResultItems {
     [pmid: string]: Eutils.Entry;
 }
 
-type Result = ResultUIDs & ResultItems;
+export type Result = ResultUIDs & ResultItems;
 
-declare namespace Eutils {
-    interface Response {
+export namespace Eutils {
+    export interface Response {
         header: {
             type: string;
             version: string;
@@ -53,8 +55,8 @@ declare namespace Eutils {
         result: Result;
         error?: string;
     }
-    type Entry = EntryOk | EntryError;
-    interface EntryOk {
+    export type Entry = EntryOk | EntryError;
+    export interface EntryOk {
         __astrocite_kind: 'entry';
         uid: string;
         /** Example: "1975 May" */
@@ -135,7 +137,7 @@ declare namespace Eutils {
         error: ''; // Does not actually exist here. Needed for discriminated union
     }
 
-    interface EntryError {
+    export interface EntryError {
         __astrocite_kind: 'error';
         uid: string;
         error: string;

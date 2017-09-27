@@ -1,4 +1,4 @@
-import { parseName } from 'astrocite-core';
+import { CSL, parseName } from 'astrocite-core';
 import { FIELD_MAP, TYPE_MAP } from './constants';
 import * as parser from './grammar';
 import { AST, Entry } from './types.d';

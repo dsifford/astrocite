@@ -1,7 +1,6 @@
-/// <reference path="../globals.d.ts" />
-/// <reference path="./schema.d.ts" />
-import { parseDate } from 'astrocite-core';
+import { CSL, parseDate } from 'astrocite-core';
 import { FIELD_MAP } from './constants';
+import { Eutils } from './schema';
 
 type CSLTransform = (entry: Eutils.EntryOk) => Partial<CSL.Data>;
 
