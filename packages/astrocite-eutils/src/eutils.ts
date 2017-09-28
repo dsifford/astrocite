@@ -54,7 +54,7 @@ const parseEntry = (entry: Eutils.Entry): CSL.Data | Error => {
             }
             return obj;
         },
-        <CSL.Data>{},
+        <CSL.Data>{ type: 'article-journal' },
     );
 };
 

@@ -293,6 +293,7 @@ Array [
     "journalAbbreviation": "World J Emerg Surg",
     "page": "40",
     "title": "Splenic trauma: WSES classification and guidelines for adult and pediatric patients",
+    "type": "article-journal",
     "volume": "12",
   },
   Object {
@@ -330,6 +331,7 @@ Array [
     "journalAbbreviation": "Proc Natl Acad Sci U S A",
     "page": "865-869",
     "title": "Isolation and chromosomal localization of unique DNA sequences from a human genomic library.",
+    "type": "article-journal",
     "volume": "79",
   },
   Object {
@@ -375,6 +377,7 @@ Array [
     "journalAbbreviation": "J Biol Phys",
     "page": "359-365",
     "title": "Longitudinal Distortions and Transversal Fluctuations of an Actin Filament Sliding on Myosin Molecules",
+    "type": "article-journal",
     "volume": "28",
   },
   [Error: cannot get document summary],
@@ -422,6 +425,7 @@ Array [
     "language": "eng",
     "page": "525-30",
     "title": "Fibrinolysis in patients with ischemic heart disease (in relation to the etiologic factor of myocardial infarction).",
+    "type": "article-journal",
     "volume": "39",
   },
   Object {
@@ -445,6 +449,7 @@ Array [
     "language": "jpn",
     "page": "1-363",
     "title": "[Sessions of the 49th Congress of the Japanese Society for Hygiene. Abstracts].",
+    "type": "article-journal",
     "volume": "34",
   },
   [Error: cannot get document summary],
@@ -474,6 +479,7 @@ Array [
     "language": "ger",
     "page": "428-9",
     "title": "[Circumscribed dermoplasty for persistent anterior nasal septal bleeding (author's transl)].",
+    "type": "article-journal",
     "volume": "26",
   },
   Object {
@@ -502,6 +508,7 @@ Array [
     "language": "eng",
     "page": "3-4",
     "title": "\\"The eternal triangle\\" or--\\"how to live with a third party\\".",
+    "type": "article-journal",
     "volume": "42",
   },
   Object {
@@ -530,6 +537,7 @@ Array [
     "language": "hun",
     "page": "298-302",
     "title": "[Double pelvic ring fracture combined with fracture of the femoral neck].",
+    "type": "article-journal",
     "volume": "20",
   },
 ]
@@ -562,6 +570,7 @@ Array [
     "language": "eng",
     "page": "100",
     "title": "Testing various edge cases.",
+    "type": "article-journal",
     "volume": "1",
   },
 ]
