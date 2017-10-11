@@ -2,6 +2,18 @@ import { CSL, parseDate } from 'astrocite-core';
 import { FIELD_MAP } from './constants';
 import { Eutils } from './schema';
 
+interface EUtilsErrorData {
+    uid: string;
+}
+
+class EUtilsError extends Error {
+    uid: string;
+    constructor(message: string, data: EUtilsErrorData) {
+        super(message);
+        this.uid = data.uid;
+    }
+}
+
 type CSLTransform = (entry: Eutils.EntryOk) => Partial<CSL.Data>;
 
 const transformUID: CSLTransform = entry => {
@@ -37,9 +49,9 @@ const FIELD_TRANSFORMS = new Map<keyof Eutils.EntryOk, CSLTransform>([
     ],
 ]);
 
-const parseEntry = (entry: Eutils.Entry): CSL.Data | Error => {
+const parseEntry = (entry: Eutils.Entry): CSL.Data | EUtilsError => {
     if (entry.__astrocite_kind === 'error') {
-        return new Error(entry.error);
+        return new EUtilsError(entry.error, { uid: entry.uid });
     }
     return Object.keys(entry).reduce(
         (obj, key: keyof Eutils.EntryOk) => {
