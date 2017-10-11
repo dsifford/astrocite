@@ -2,15 +2,18 @@ import { CSL, parseDate } from 'astrocite-core';
 import { FIELD_MAP } from './constants';
 import { Eutils } from './schema';
 
-interface EUtilsErrorData {
-    uid: string;
+export interface EUtilsErrorData {
+    apiError?: boolean;
+    uid?: string;
 }
 
-class EUtilsError extends Error {
-    uid: string;
+export class EUtilsError extends Error {
+    uid: string | undefined;
+    apiError: boolean;
     constructor(message: string, data: EUtilsErrorData) {
         super(message);
         this.uid = data.uid;
+        this.apiError = data.apiError || false;
     }
 }
 
@@ -70,10 +73,13 @@ const parseEntry = (entry: Eutils.Entry): CSL.Data | EUtilsError => {
     );
 };
 
-export function toCSL(input: Eutils.Response): Array<CSL.Data | Error> {
+export function toCSL(input: Eutils.Response): Array<CSL.Data | EUtilsError> {
     const entries = input.result.uids.map(id => ({
         ...input.result[id],
         __astrocite_kind: input.result[id].error ? 'error' : 'entry',
     }));
-    return [...(input.error ? [new Error(input.error)] : []), ...entries.map(parseEntry)];
+    return [
+        ...(input.error ? [new EUtilsError(input.error, { apiError: true })] : []),
+        ...entries.map(parseEntry),
+    ];
 }
