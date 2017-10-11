@@ -1,6 +1,6 @@
 {
   "name": "astrocite",
-  "version": "0.9.2",
+  "version": "0.9.3",
   "description": "Bibliography file format => AST => CSL JSON",
   "license": "MIT",
   "repository": "dsifford/astrocite",
@@ -23,7 +23,7 @@
   ],
   "dependencies": {
     "astrocite-bibtex": "^0.8.5",
-    "astrocite-eutils": "^0.9.2",
+    "astrocite-eutils": "^0.9.3",
     "astrocite-ris": "^0.8.5"
   },
   "devDependencies": {
