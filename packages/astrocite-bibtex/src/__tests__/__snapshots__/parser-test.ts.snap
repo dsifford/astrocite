@@ -235,6 +235,95 @@ Array [
 ]
 `;
 
+exports[`BibTeX Parser should parse files with CRLF line endings 1`] = `
+Array [
+  Object {
+    "author": Array [
+      Object {
+        "family": "Peltan",
+        "given": "Ithan D.",
+      },
+      Object {
+        "family": "Vande Vusse",
+        "given": "Lisa K.",
+      },
+      Object {
+        "family": "Maier",
+        "given": "Ronald V.",
+      },
+      Object {
+        "family": "Watkins",
+        "given": "Timothy R.",
+      },
+    ],
+    "container-title": "Critical Care Medicine",
+    "id": "peltan_international_2015",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2015",
+          "07",
+          "",
+        ],
+      ],
+    },
+    "number": "7",
+    "page": "1429–1438",
+    "title": "An International Normalized Ratio–Based Definition of Acute Traumatic Coagulopathy Is Associated With Mortality, Venous Thromboembolism, and Multiple Organ Failure After Injury:",
+    "type": "article",
+    "volume": "43",
+  },
+  Object {
+    "author": Array [
+      Object {
+        "family": "Inaba",
+        "given": "Kenji",
+      },
+      Object {
+        "family": "Rizoli",
+        "given": "Sandro",
+      },
+      Object {
+        "family": "Veigas",
+        "given": "Precilla V.",
+      },
+      Object {
+        "family": "Callum",
+        "given": "Jeannie",
+      },
+      Object {
+        "family": "Davenport",
+        "given": "Ross",
+      },
+      Object {
+        "family": "Hess",
+        "given": "John",
+      },
+      Object {
+        "family": "Maegele",
+        "given": "Marc",
+      },
+    ],
+    "container-title": "Journal of Trauma and Acute Care Surgery",
+    "id": "inaba_2014_2015",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2015",
+          "06",
+          "",
+        ],
+      ],
+    },
+    "number": "6",
+    "page": "1220–1229",
+    "title": "2014 Consensus conference on viscoelastic test–based transfusion guidelines for early trauma resuscitation: Report of the panel",
+    "type": "article",
+    "volume": "78",
+  },
+]
+`;
+
 exports[`BibTeX Parser should parse files with zero entries 1`] = `Array []`;
 
 exports[`BibTeX Parser should parse known commands and skip unknown commands 1`] = `

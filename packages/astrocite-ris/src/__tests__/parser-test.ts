@@ -42,4 +42,8 @@ describe('RIS Parser', () => {
         const parsed = parse(cases.misc_cases);
         expect(extractIds(parsed)).toMatchSnapshot();
     });
+    it('should parse RIS files with CRLF line endings', () => {
+        const parsed = parse(cases.crlf);
+        expect(extractIds(parsed)).toMatchSnapshot();
+    });
 });

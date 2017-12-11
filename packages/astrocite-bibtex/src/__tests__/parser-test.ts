@@ -59,4 +59,7 @@ describe('BibTeX Parser', () => {
     it('should parse entries without IDs', () => {
         expect(parse(cases.no_id)).toMatchSnapshot();
     });
+    it('should parse files with CRLF line endings', () => {
+        expect(parse(cases.crlf)).toMatchSnapshot();
+    });
 });

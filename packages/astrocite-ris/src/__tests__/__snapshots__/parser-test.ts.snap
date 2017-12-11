@@ -1,5 +1,57 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`RIS Parser should parse RIS files with CRLF line endings 1`] = `
+Array [
+  Object {
+    "URL": "https://pace.oregonstate.edu/courses/sites/default/files/resources/pdf/p0215-0219.pdf",
+    "author": Array [
+      Object {
+        "family": "Feucht",
+        "given": "James R",
+      },
+    ],
+    "container-title": "Journal of Arboriculture",
+    "issue": "9",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "1988",
+        ],
+      ],
+    },
+    "page": "215-219",
+    "page-first": "215-219",
+    "shortTitle": "Herbicide injuries to trees-symptoms and solutions",
+    "title": "Herbicide injuries to trees-symptoms and solutions",
+    "type": "article-journal",
+    "volume": "14",
+  },
+  Object {
+    "ISBN": "TR-43",
+    "URL": "https://www.azlca.com/uploads/documents/diagnosing-and-preventing-herbicide-injury-to-trees.pdf",
+    "author": Array [
+      Object {
+        "family": "Fraedrich",
+        "given": "Bruce R",
+      },
+    ],
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "1990",
+        ],
+      ],
+    },
+    "page": "5",
+    "page-first": "5",
+    "publisher": "Bartlett Tree Experts",
+    "shortTitle": "Diagnosing and Preventing Herbicide Injury to Trees.  Bartlett Tree Research Laboratories Technical Report TR-43",
+    "title": "Diagnosing and Preventing Herbicide Injury to Trees.  Bartlett Tree Research Laboratories Technical Report TR-43",
+    "type": "book",
+  },
+]
+`;
+
 exports[`RIS Parser should parse a long RIS file correctly 1`] = `
 Array [
   Object {

@@ -10,9 +10,11 @@ insert_final_newline = true
 
 [*.bib]
 insert_final_newline = false
+end_of_line = unset
 
 [*.ris]
 insert_final_newline = false
+end_of_line = unset
 
 [package.json]
 indent_size = 2

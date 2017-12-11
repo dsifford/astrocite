@@ -46,7 +46,8 @@ END
     = 'ER' _h '-' __
 
 EOL
-    = [\r\n]
+    = '\n'
+    / '\r\n'
 
 _h "Mandatory Horizontal Whitespace"
     = [ \t]+
