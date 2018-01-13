@@ -19,7 +19,7 @@ Entry
     }
 
 Property
-    = k:PropertyKey PropertySeparator v:PropertyValue EOL {
+    = k:PropertyKey PropertySeparator v:PropertyValue EOL+ {
         return {
             type: 'Property',
             loc: location(),

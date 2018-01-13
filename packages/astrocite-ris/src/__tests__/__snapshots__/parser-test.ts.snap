@@ -741,6 +741,47 @@ Array [
 ]
 `;
 
+exports[`RIS Parser should parse jabref RIS files 1`] = `
+Array [
+  Object {
+    "author": Array [
+      Object {
+        "family": "Smith",
+        "given": "Bob",
+      },
+      Object {
+        "family": "Doe",
+        "given": "Jan",
+      },
+      Object {
+        "family": "Brown",
+        "given": "Judy",
+      },
+      Object {
+        "family": "Martin",
+        "given": "Steve",
+      },
+      Object {
+        "family": "Clark",
+        "given": "Joe",
+      },
+    ],
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2015",
+          "october",
+        ],
+      ],
+    },
+    "publisher": "Test Publisher",
+    "title": "Testing Book Title",
+    "type": "book",
+    "volume": "1",
+  },
+]
+`;
+
 exports[`RIS Parser should parse pages under varied circumstances 1`] = `
 Array [
   Object {

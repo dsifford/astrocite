@@ -46,4 +46,8 @@ describe('RIS Parser', () => {
         const parsed = parse(cases.crlf);
         expect(extractIds(parsed)).toMatchSnapshot();
     });
+    it('should parse jabref RIS files', () => {
+        const parsed = parse(cases.jabref);
+        expect(extractIds(parsed)).toMatchSnapshot();
+    });
 });

@@ -326,6 +326,52 @@ Array [
 
 exports[`BibTeX Parser should parse files with zero entries 1`] = `Array []`;
 
+exports[`BibTeX Parser should parse jabref files 1`] = `
+Array [
+  Object {
+    "author": Array [
+      Object {
+        "family": "Doe",
+        "given": "John",
+      },
+      Object {
+        "family": "Smith",
+        "given": "Jane",
+      },
+      Object {
+        "family": "Dole",
+        "given": "Bob",
+      },
+    ],
+    "edition": "1",
+    "editor": Array [
+      Object {
+        "family": "Brown",
+        "given": "Pam",
+      },
+      Object {
+        "family": "Waters",
+        "given": "Judy",
+      },
+    ],
+    "id": "",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2015",
+          "10",
+          "",
+        ],
+      ],
+    },
+    "publisher": "Publishing & Co",
+    "title": "Testing title of book",
+    "type": "book",
+    "volume": "2",
+  },
+]
+`;
+
 exports[`BibTeX Parser should parse known commands and skip unknown commands 1`] = `
 Array [
   Object {

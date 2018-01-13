@@ -62,4 +62,7 @@ describe('BibTeX Parser', () => {
     it('should parse files with CRLF line endings', () => {
         expect(parse(cases.crlf)).toMatchSnapshot();
     });
+    it('should parse jabref files', () => {
+        expect(parse(cases.jabref)).toMatchSnapshot();
+    });
 });
