@@ -1,8 +1,9 @@
 {
+  "name": "root",
   "private": true,
   "scripts": {
-    "bootstrap": "lerna bootstrap --hoist",
-    "build": "lerna exec -- npm run build",
+    "bootstrap": "lerna bootstrap",
+    "build": "lerna run build",
     "ci": "npm run bootstrap && npm run build && jest --coverage --runInBand",
     "lint": "tslint -e \"**/*.js\" -p . -t codeFrame",
     "postci": "npm run lint",
