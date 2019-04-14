@@ -90,7 +90,7 @@ export const FIELD_MAP: ReadonlyMap<string, keyof Data> = new Map<
     ['LA', 'language'],
     ['LK', 'URL'],
     ['M1', 'number'],
-    ['M3', 'note'],
+    ['M3', 'genre'],
     ['N1', 'note'],
     ['N2', 'abstract'],
     ['NV', 'number-of-volumes'],

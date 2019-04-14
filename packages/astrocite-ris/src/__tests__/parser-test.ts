@@ -53,4 +53,8 @@ describe('RIS Parser', () => {
         const parsed = parse(cases.jabref);
         expect(extractIds(parsed)).toMatchSnapshot();
     });
+    it('should parse genre correctly', () => {
+        const parsed = parse(cases.report);
+        expect(parsed[0].genre).toBe('Test Genre');
+    });
 });

@@ -63,14 +63,17 @@ const parsePubmedIdentifier: DynamicFieldHandler = ({ value }) => {
 };
 
 const parseIssueNumber: DynamicFieldHandler = ({ value, type }) => {
-    return [
-        'book',
-        'chapter',
-        'entry-dictionary',
-        'entry-encyclopedia',
-    ].indexOf(type) === -1
-        ? { ISSN: value }
-        : { ISBN: value };
+    switch (type) {
+        case 'book':
+        case 'chapter':
+        case 'entry-dictionary':
+        case 'entry-encyclopedia':
+            return { ISBN: value };
+        case 'report':
+            return { number: value };
+        default:
+            return { ISSN: value };
+    }
 };
 
 const DYNAMIC_FIELDS: ReadonlyMap<string, DynamicFieldHandler> = new Map([
