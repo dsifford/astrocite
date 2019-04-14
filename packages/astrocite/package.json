@@ -24,6 +24,7 @@
   "dependencies": {
     "astrocite-bibtex": "file:../astrocite-bibtex",
     "astrocite-eutils": "file:../astrocite-eutils",
+    "astrocite-googlebooks": "file:../astrocite-googlebooks",
     "astrocite-ris": "file:../astrocite-ris"
   }
 }
