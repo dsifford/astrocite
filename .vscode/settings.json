@@ -1,6 +1,0 @@
-{
-    "files.associations": {
-        ".prettierrc": "yaml"
-    },
-    "lcov.path": "tmp/coverage/lcov.info"
-}

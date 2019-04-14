@@ -21,10 +21,7 @@
     "citation"
   ],
   "dependencies": {
-    "astrocite-core": "^0.8.5"
-  },
-  "devDependencies": {
-    "pegjs": "^0.10.0",
-    "typescript": "^2.5.2"
+    "astrocite-core": "file:../core",
+    "csl-json": "^0.1.0"
   }
 }

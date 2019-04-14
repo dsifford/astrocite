@@ -63,7 +63,11 @@ Object {
 }
 `;
 
-exports[`parseName() should parse names appropriately 9`] = `Object {}`;
+exports[`parseName() should parse names appropriately 9`] = `
+Object {
+  "family": "",
+}
+`;
 
 exports[`parseName() should parse names appropriately 10`] = `
 Object {
@@ -114,7 +118,11 @@ Object {
 }
 `;
 
-exports[`parseName() should parse names appropriately 17`] = `Object {}`;
+exports[`parseName() should parse names appropriately 17`] = `
+Object {
+  "family": "",
+}
+`;
 
 exports[`parseName() should parse names appropriately 18`] = `
 Object {
@@ -253,7 +261,11 @@ Object {
 }
 `;
 
-exports[`parseName() should parse names appropriately 38`] = `Object {}`;
+exports[`parseName() should parse names appropriately 38`] = `
+Object {
+  "family": "",
+}
+`;
 
 exports[`parseName() should parse names appropriately 39`] = `
 Object {

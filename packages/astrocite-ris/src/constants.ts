@@ -1,6 +1,9 @@
-import { CSL } from 'astrocite-core';
+import { Data, ItemType } from 'csl-json';
 
-export const TYPE_MAP: ReadonlyMap<string, CSL.ItemType> = new Map<string, CSL.ItemType>([
+export const TYPE_MAP: ReadonlyMap<string, ItemType> = new Map<
+    string,
+    ItemType
+>([
     ['ABST', 'article'],
     ['ADVS', 'broadcast'],
     ['AGGR', 'dataset'],
@@ -59,7 +62,10 @@ export const TYPE_MAP: ReadonlyMap<string, CSL.ItemType> = new Map<string, CSL.I
     ['VIDEO', 'broadcast'],
 ]);
 
-export const FIELD_MAP: ReadonlyMap<string, keyof CSL.Data> = new Map<string, keyof CSL.Data>([
+export const FIELD_MAP: ReadonlyMap<string, keyof Data> = new Map<
+    string,
+    keyof Data
+>([
     ['AB', 'abstract'],
     ['AD', 'publisher-place'],
     ['AN', 'number'],

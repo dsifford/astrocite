@@ -1,4 +1,4 @@
-import { CSL } from './CSL';
+import { Person } from 'csl-json';
 
 // prettier-ignore
 const NON_DROPPING_PARTICLES: ReadonlySet<string> = new Set([
@@ -17,13 +17,13 @@ const NON_DROPPING_PARTICLES: ReadonlySet<string> = new Set([
     'vd', 'ver', "von 't", 'von t', "voor 't", 'voor de', 'voor den', "voor in 't", 'voor in t', 'voor',
 ]);
 
-export function parseNameParticles(input: string): Partial<CSL.Person> {
+export function parseNameParticles(input: string): Partial<Person> {
     return NON_DROPPING_PARTICLES.has(input.toLowerCase())
         ? { 'non-dropping-particle': input }
         : { 'dropping-particle': input };
 }
 
-export default function(name: string): CSL.Person {
+export default function(name: string): Person {
     const FIRST_VON_LAST = /([A-Z][a-zA-Z-]+ )?([a-z][a-zA-Z-]+ .+? [a-z][a-zA-Z-]+ )?([A-Z].+)/;
     const VON_LAST_FIRST = /(.+ [a-z][a-zA-Z-]+ )?(.+), (.+)/;
     const VON_LAST_JR_FIRST = /(.+ [a-z][a-zA-Z-]+ )?(.+), (.+), (.+)/;
@@ -54,11 +54,15 @@ export default function(name: string): CSL.Person {
         default:
             literal = name;
     }
+    if (literal) {
+        return {
+            literal,
+        };
+    }
     return {
-        ...last ? { family: last.trim() } : {},
-        ...first ? { given: first.trim() } : {},
-        ...suffix ? { suffix: suffix.trim() } : {},
-        ...von ? parseNameParticles(von.trim()) : {},
-        ...literal ? { literal } : {},
+        family: last.trim(),
+        ...(first ? { given: first.trim() } : {}),
+        ...(suffix ? { suffix: suffix.trim() } : {}),
+        ...(von ? parseNameParticles(von.trim()) : {}),
     };
 }

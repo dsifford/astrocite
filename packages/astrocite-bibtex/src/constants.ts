@@ -1,4 +1,4 @@
-import { CSL } from 'astrocite-core';
+import { Data, ItemType } from 'csl-json';
 
 /**
  * Maps LaTeX dicratical commands to unicode dicraticals
@@ -24,13 +24,12 @@ export const DICRATICS: ReadonlyMap<string, string> = new Map([
 /**
  * Maps BibTeX fields to CSL JSON fields
  */
-export const FIELD_MAP: ReadonlyMap<string, keyof CSL.Data> = new Map<string, keyof CSL.Data>([
+export const FIELD_MAP: ReadonlyMap<string, keyof Data> = new Map([
     ['address', 'publisher-place'],
     ['annote', 'annote'],
     ['author', 'author'],
     ['booktitle', 'container-title'],
     ['chapter', 'chapter-number'],
-    // ['crossref', ''], FIXME: Is this something we can salvage?
     ['edition', 'edition'],
     ['editor', 'editor'],
     ['howpublished', 'medium'],
@@ -38,7 +37,7 @@ export const FIELD_MAP: ReadonlyMap<string, keyof CSL.Data> = new Map<string, ke
     ['journal', 'container-title'],
     ['note', 'note'],
     ['number', 'number'],
-    ['organization', 'publisher'], // FIXME: Is this correct?
+    ['organization', 'publisher'],
     ['pages', 'page'],
     ['publisher', 'publisher'],
     ['school', 'publisher'],
@@ -109,6 +108,7 @@ export const KNOWN_COMMANDS: ReadonlyMap<string, string> = new Map([
     ['Omega', '\u03A9'],
 ]);
 
+// prettier-ignore
 export const KNOWN_MACROS: ReadonlyArray<[string, string]> = [
     // Not technically accurate since BibTeX actually parses into the english month name by default,
     // but this way is easier to work with.
@@ -150,7 +150,7 @@ export const KNOWN_MACROS: ReadonlyArray<[string, string]> = [
 /**
  * Maps BibTeX types to CSL JSON types
  */
-export const TYPE_MAP: ReadonlyMap<string, CSL.ItemType> = new Map<string, CSL.ItemType>([
+export const TYPE_MAP: ReadonlyMap<string, ItemType> = new Map([
     ['article', 'article'],
     ['book', 'book'],
     ['booklet', 'pamphlet'],

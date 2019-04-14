@@ -22,11 +22,8 @@
     "Citation"
   ],
   "dependencies": {
-    "astrocite-bibtex": "^0.10.0",
-    "astrocite-eutils": "^0.9.3",
-    "astrocite-ris": "^0.10.0"
-  },
-  "devDependencies": {
-    "typescript": "^2.5.2"
+    "astrocite-bibtex": "file:../astrocite-bibtex",
+    "astrocite-eutils": "file:../astrocite-eutils",
+    "astrocite-ris": "file:../astrocite-ris"
   }
 }

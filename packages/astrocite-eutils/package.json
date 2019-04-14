@@ -15,9 +15,7 @@
     "build": "rm -rf lib/* && tsc -p ."
   },
   "dependencies": {
-    "astrocite-core": "^0.8.5"
-  },
-  "devDependencies": {
-    "typescript": "^2.5.2"
+    "astrocite-core": "file:../core",
+    "csl-json": "^0.1.0"
   }
 }

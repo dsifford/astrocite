@@ -6,7 +6,7 @@ interface TestCases {
     [filename: string]: string;
 }
 
-function extractIds(data) {
+function extractIds(data: Array<{ id: string; [k: string]: any }>) {
     return data.map(d => {
         delete d.id;
         return d;
@@ -20,9 +20,12 @@ describe('RIS Parser', () => {
         for (const name of casenames) {
             cases = {
                 ...cases,
-                [basename(name, '.ris')]: fs.readFileSync(`${__dirname}/cases/${name}`, {
-                    encoding: 'utf-8',
-                }),
+                [basename(name, '.ris')]: fs.readFileSync(
+                    `${__dirname}/cases/${name}`,
+                    {
+                        encoding: 'utf-8',
+                    },
+                ),
             };
         }
     });

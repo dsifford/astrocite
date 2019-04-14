@@ -1,1 +1,2 @@
-export { toCSL, EUtilsError } from './eutils';
+export { EUtilsError } from './error';
+export { toCSL } from './eutils';

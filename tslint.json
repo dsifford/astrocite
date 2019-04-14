@@ -7,7 +7,6 @@
       "options": ["no-public"]
     },
     "no-floating-promises": true,
-    "no-inferred-empty-object-type": true,
     "no-unnecessary-type-assertion": true,
     "promise-function-async": true,
     "no-reference": false,

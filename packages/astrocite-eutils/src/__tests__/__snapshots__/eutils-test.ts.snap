@@ -5,6 +5,7 @@ Array [
   [Error: Invalid uid PMC345345 at position=40],
   Object {
     "PMCID": "PMC5562999",
+    "URL": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5562999",
     "author": Array [
       Object {
         "family": "Coccolini",
@@ -281,6 +282,7 @@ Array [
     ],
     "container-title": "World Journal of Emergency Surgery : WJES",
     "container-title-short": "World J Emerg Surg",
+    "id": "5562999",
     "issued": Object {
       "date-parts": Array [
         Array [
@@ -298,6 +300,7 @@ Array [
   },
   Object {
     "PMCID": "PMC345853",
+    "URL": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC345853",
     "author": Array [
       Object {
         "family": "Kao",
@@ -318,6 +321,7 @@ Array [
     ],
     "container-title": "Proceedings of the National Academy of Sciences of the United States of America",
     "container-title-short": "Proc Natl Acad Sci U S A",
+    "id": "345853",
     "issue": "3",
     "issued": Object {
       "date-parts": Array [
@@ -336,6 +340,7 @@ Array [
   },
   Object {
     "PMCID": "PMC3456745",
+    "URL": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3456745",
     "author": Array [
       Object {
         "family": "Honda",
@@ -364,6 +369,7 @@ Array [
     ],
     "container-title": "Journal of Biological Physics",
     "container-title-short": "J Biol Phys",
+    "id": "3456745",
     "issue": "3",
     "issued": Object {
       "date-parts": Array [
@@ -390,6 +396,7 @@ Array [
   Object {
     "ISSN": "0047-1828",
     "PMID": "125352",
+    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/125352",
     "author": Array [
       Object {
         "family": "Sassa",
@@ -431,6 +438,7 @@ Array [
   Object {
     "ISSN": "0021-5082",
     "PMID": "34744",
+    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/34744",
     "author": Array [],
     "container-title": "Nihon eiseigaku zasshi. Japanese journal of hygiene",
     "container-title-short": "Nihon Eiseigaku Zasshi",
@@ -456,6 +464,7 @@ Array [
   Object {
     "ISSN": "0017-6192",
     "PMID": "363666",
+    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/363666",
     "author": Array [
       Object {
         "family": "Beck",
@@ -485,6 +494,7 @@ Array [
   Object {
     "ISSN": "0031-7268",
     "PMID": "273457",
+    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/273457",
     "author": Array [
       Object {
         "family": "Czarnecki",
@@ -514,6 +524,7 @@ Array [
   Object {
     "ISSN": "0025-0317",
     "PMID": "23463",
+    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/23463",
     "author": Array [
       Object {
         "family": "Salacz",
@@ -547,11 +558,11 @@ exports[`Pubmed JSON should parse eutils pubmed json edge cases correctly 1`] = 
 Array [
   Object {
     "PMID": "12345",
+    "URL": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12345",
     "author": Array [
       Object {
         "family": "Smith",
       },
-      Object {},
     ],
     "container-title": "Astrocite Testing Journal",
     "container-title-short": "J Astrocite",
