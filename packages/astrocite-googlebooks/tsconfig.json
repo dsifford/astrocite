@@ -3,11 +3,13 @@
   "compilerOptions": {
     "allowJs": false,
     "declaration": true,
-    "outDir": "lib"
+    "outDir": "lib",
+    "noEmit": false
   },
   "include": [
-      "src/**/*",
-      "src/globals.d.ts"
+    "src/**/*"
   ],
-  "exclude": ["**/*-test.ts"]
+  "exclude": [
+    "**/__tests__/**"
+  ]
 }

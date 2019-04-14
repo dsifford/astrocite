@@ -3,8 +3,13 @@
   "compilerOptions": {
     "allowJs": false,
     "declaration": true,
-    "outDir": "lib"
+    "outDir": "lib",
+    "noEmit": false
   },
-  "include": ["src/**/*"],
-  "exclude": ["**/*-test.ts"]
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "**/__tests__/**"
+  ]
 }
