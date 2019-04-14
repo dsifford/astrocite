@@ -20,9 +20,16 @@ const FIELD_TRANSFORMS = new Map<
         'publishedDate',
         ({ publishedDate }) => {
             const [year, month, day] = publishedDate.split('-');
+            if (!year) {
+                return {};
+            }
             return {
                 issued: {
-                    'date-parts': [[year, month, day]],
+                    'date-parts': [
+                        <[string, string?, string?]>(
+                            [year, month, day].filter(Boolean)
+                        ),
+                    ],
                 },
             };
         },
@@ -72,6 +79,6 @@ function parseItem({ id, volumeInfo }: Item, isChapter = false): Data {
     );
 }
 
-export function toCSL({ items }: Response, isChapter = false): Data[] {
+export function toCSL({ items = [] }: Response, isChapter = false): Data[] {
     return items.map(item => parseItem(item, isChapter));
 }
