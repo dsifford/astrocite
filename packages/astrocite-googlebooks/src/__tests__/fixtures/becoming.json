@@ -1,0 +1,81 @@
+{
+  "kind": "books#volumes",
+  "totalItems": 1,
+  "items": [
+    {
+      "kind": "books#volume",
+      "id": "hi17DwAAQBAJ",
+      "etag": "+6EY6fVmdGU",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/hi17DwAAQBAJ",
+      "volumeInfo": {
+        "title": "Becoming",
+        "authors": [
+          "Michelle Obama"
+        ],
+        "publisher": "Crown Publishing Group (NY)",
+        "publishedDate": "2018-11-13",
+        "description": "In a life filled with meaning and accomplishment, Michelle Obama has emerged as one of the most iconic and compelling women of our era. As First Lady of the United States of America, she helped create the most welcoming and inclusive White House in history. With unerring honesty and lively wit, she describes her triumphs and her disappointments, both public and private. A deeply personal reckoning of a woman of soul and substance who has steadily defied expectations.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781524763138"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1524763136"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 400,
+        "printType": "BOOK",
+        "categories": [
+          "Biography & Autobiography"
+        ],
+        "averageRating": 4,
+        "ratingsCount": 42,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=hi17DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=hi17DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=hi17DwAAQBAJ&printsec=frontcover&dq=isbn:1524763136&hl=&cd=1&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=hi17DwAAQBAJ&dq=isbn:1524763136&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Becoming.html?hl=&id=hi17DwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=hi17DwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "In a life filled with meaning and accomplishment, Michelle Obama has emerged as one of the most iconic and compelling women of our era."
+      }
+    }
+  ]
+}

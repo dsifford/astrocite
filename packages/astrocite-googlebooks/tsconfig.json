@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "allowJs": false,
+    "declaration": true,
+    "outDir": "lib"
+  },
+  "include": [
+      "src/**/*",
+      "src/globals.d.ts"
+  ],
+  "exclude": ["**/*-test.ts"]
+}

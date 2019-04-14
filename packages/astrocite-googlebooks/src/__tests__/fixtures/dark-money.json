@@ -1,0 +1,78 @@
+{
+  "kind": "books#volumes",
+  "totalItems": 1,
+  "items": [
+    {
+      "kind": "books#volume",
+      "id": "Vv7zjgEACAAJ",
+      "etag": "Il3Lrq1MvIY",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/Vv7zjgEACAAJ",
+      "volumeInfo": {
+        "title": "Dark Money",
+        "subtitle": "The Hidden History of the Billionaires Behind the Rise of the Radical Right",
+        "authors": [
+          "Jane Mayer"
+        ],
+        "publisher": "Doubleday Books",
+        "publishedDate": "2016-01-19",
+        "description": "Why is America living in an age of profound economic inequality? Why, despite the desperate need to address climate change, have even modest environmental efforts been defeated again and again? Why have protections for employees been decimated? Why do hedge-fund billionaires pay a far lower tax rate than middle-class workers? The conventional answer is that a popular uprising against \"big government\" led to the rise of a broad-based conservative movement. But as Jane Mayer shows in this powerful, meticulously reported history, a network of exceedingly wealthy people with extreme libertarian views bankrolled a systematic, step-by-step plan to fundamentally alter the American political system. The network has brought together some of the richest people on the planet, foremost among them Charles and David Koch. Their core beliefs--that taxes are a form of tyranny; that government oversight of business is an assault on freedom--are sincerely held. But these beliefs also advance their personal and corporate interests: Many of their companies have run afoul of federal pollution, worker safety, securities, and tax laws. When libertarian ideas proved decidedly unpopular with voters, the Koch brothers and their allies decided on another path. If they pooled their vast resources, they could fund an interlocking array of organizations that could work in tandem to influence and ultimately control academic institutions, think tanks, the courts, statehouses, Congress, and, they hoped, the presidency. The political operatives the network employs are disciplined, smart, and at times ruthless. And their efforts have been remarkably successful. Libertarian views on taxes and regulation, once far outside the mainstream and still rejected by most Americans, are ascendant in the majority of state governments, the Supreme Court, and Congress. Meaningful environmental, labor, finance, and tax reform has been stymied. Jane Mayer spent five years conducting hundreds of interviews--including with several sources within the network--and scoured public records, private papers, and court proceedings in reporting this book. In a taut and utterly convincing narrative, she traces the byzantine trail of the billions of dollars spent by the network and provides vivid portraits of the colorful figures behind the new American oligarchy. Dark Money is a book that must be read by anyone who cares about the future of American democracy.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "0385535597"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780385535595"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 464,
+        "printType": "BOOK",
+        "categories": [
+          "Political Science"
+        ],
+        "averageRating": 4,
+        "ratingsCount": 1,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=Vv7zjgEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=Vv7zjgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=Vv7zjgEACAAJ&dq=isbn:0385535597&hl=&cd=1&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=Vv7zjgEACAAJ&dq=isbn:0385535597&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Dark_Money.html?hl=&id=Vv7zjgEACAAJ"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=Vv7zjgEACAAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "The hidden history of the billionaires behind the rise of the radical right."
+      }
+    }
+  ]
+}

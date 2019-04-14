@@ -1,0 +1,724 @@
+{
+  "kind": "books#volumes",
+  "totalItems": 3388,
+  "items": [
+    {
+      "kind": "books#volume",
+      "id": "J3hCp9G7mSIC",
+      "etag": "PWQDi0djerc",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/J3hCp9G7mSIC",
+      "volumeInfo": {
+        "title": "Writing for Computer Science",
+        "authors": [
+          "Justin Zobel"
+        ],
+        "publisher": "Taylor & Francis",
+        "publishedDate": "2004-06-03",
+        "description": "A complete update to a classic, respected resource Invaluable reference, supplying a comprehensive overview on how to undertake and present research",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "1852338024"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9781852338022"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 270,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "1.0.4.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=J3hCp9G7mSIC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=J3hCp9G7mSIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=J3hCp9G7mSIC&printsec=frontcover&dq=computer+science&hl=&cd=1&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=J3hCp9G7mSIC&dq=computer+science&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Writing_for_Computer_Science.html?hl=&id=J3hCp9G7mSIC"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/Writing_for_Computer_Science-sample-epub.acsm?id=J3hCp9G7mSIC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=J3hCp9G7mSIC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "A complete update to a classic, respected resource Invaluable reference, supplying a comprehensive overview on how to undertake and present research"
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "we4WrfSEb4UC",
+      "etag": "5IsJ53jx26Q",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/we4WrfSEb4UC",
+      "volumeInfo": {
+        "title": "Computer Science",
+        "authors": [
+          "Suzie Haminghton"
+        ],
+        "publisher": "Lotus Press",
+        "publishedDate": "2004",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "818909324X"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9788189093242"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 192,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "1.1.2.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=we4WrfSEb4UC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=we4WrfSEb4UC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=we4WrfSEb4UC&printsec=frontcover&dq=computer+science&hl=&cd=2&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=we4WrfSEb4UC&dq=computer+science&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Computer_Science.html?hl=&id=we4WrfSEb4UC"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=we4WrfSEb4UC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "ezdeaHfpYPwC",
+      "etag": "GU5G4csrCOM",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/ezdeaHfpYPwC",
+      "volumeInfo": {
+        "title": "Basic Category Theory for Computer Scientists",
+        "authors": [
+          "Benjamin C. Pierce",
+          "Benjamin C.. Pierce",
+          "Ierce Benjamin"
+        ],
+        "publisher": "MIT Press",
+        "publishedDate": "1991",
+        "description": "Basic Category Theory for Computer Scientists provides a straightforward presentation of the basic constructions and terminology of category theory, including limits, functors, natural transformations, adjoints, and cartesian closed categories. Category theory is a branch of pure mathematics that is becoming an increasingly important tool in theoretical computer science, especially in programming language semantics, domain theory, and concurrency, where it is already a standard language of discourse. Assuming a minimum of mathematical preparation, Basic Category Theory for Computer Scientists provides a straightforward presentation of the basic constructions and terminology of category theory, including limits, functors, natural transformations, adjoints, and cartesian closed categories. Four case studies illustrate applications of category theory to programming language design, semantics, and the solution of recursive domain equations. A brief literature survey offers suggestions for further study in more advanced texts. Contents Tutorial * Applications * Further Reading",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "0262660717"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780262660716"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 100,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "averageRating": 3,
+        "ratingsCount": 5,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.0.1.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=ezdeaHfpYPwC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=ezdeaHfpYPwC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=ezdeaHfpYPwC&printsec=frontcover&dq=computer+science&hl=&cd=3&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=ezdeaHfpYPwC&dq=computer+science&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Basic_Category_Theory_for_Computer_Scien.html?hl=&id=ezdeaHfpYPwC"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=ezdeaHfpYPwC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Basic Category Theory for Computer Scientists provides a straightforward presentation of the basic constructions and terminology of category theory, including limits, functors, natural transformations, adjoints, and cartesian closed ..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "Ofw5w1yuD8kC",
+      "etag": "VQgFBL7IFVo",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/Ofw5w1yuD8kC",
+      "volumeInfo": {
+        "title": "Algorithms on Strings, Trees and Sequences",
+        "subtitle": "Computer Science and Computational Biology",
+        "authors": [
+          "Dan Gusfield"
+        ],
+        "publisher": "Cambridge University Press",
+        "publishedDate": "1997-05-28",
+        "description": "String algorithms are a traditional area of study in computer science. In recent years their importance has grown dramatically with the huge increase of electronically stored text and of molecular sequence data (DNA or protein sequences) produced by various genome projects. This 1997 book is a general text on computer algorithms for string processing. In addition to pure computer science, the book contains extensive discussions on biological problems that are cast as string problems, and on methods developed to solve them. It emphasises the fundamental ideas and techniques central to today's applications. New approaches to this complex material simplify methods that up to now have been for the specialist alone. With over 400 exercises to reinforce the material and develop additional topics, the book is suitable as a text for graduate or advanced undergraduate students in computer science, computational biology, or bio-informatics. Its discussion of current algorithms and techniques also makes it a reference for professionals.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "0521585198"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780521585194"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 534,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.4.0.0.preview.1",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=Ofw5w1yuD8kC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=Ofw5w1yuD8kC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=Ofw5w1yuD8kC&printsec=frontcover&dq=computer+science&hl=&cd=4&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=Ofw5w1yuD8kC&dq=computer+science&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Algorithms_on_Strings_Trees_and_Sequence.html?hl=&id=Ofw5w1yuD8kC"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=Ofw5w1yuD8kC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "This book is a general text on computer algorithms for string processing."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "pbqEAcmJQ8YC",
+      "etag": "z/cPvG2buSs",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/pbqEAcmJQ8YC",
+      "volumeInfo": {
+        "title": "Computer Science",
+        "authors": [
+          "Carl French"
+        ],
+        "publisher": "Cengage Learning EMEA",
+        "publishedDate": "1996",
+        "description": "'An excellent course text around which to base lectures.' 'Well structured, not too complicated, breaks down topics into easily assimilated components.' 'The most comprehensive around ...' Lecturers This highly popular text is used on a wide range of computing courses, including A Level, BTEC, City & Guilds, BCS and BSC. Information has been included on the Internet, RAD and Object Oriented methods. Some obsolete or peripheral material has been cut in order to keep the text to a manageable length.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "0826454607"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780826454607"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 512,
+        "printType": "BOOK",
+        "categories": [
+          "Computer science"
+        ],
+        "averageRating": 3,
+        "ratingsCount": 5,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.0.1.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=pbqEAcmJQ8YC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=pbqEAcmJQ8YC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=pbqEAcmJQ8YC&printsec=frontcover&dq=computer+science&hl=&cd=5&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=pbqEAcmJQ8YC&dq=computer+science&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Computer_Science.html?hl=&id=pbqEAcmJQ8YC"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=pbqEAcmJQ8YC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "&#39; &#39;The most comprehensive around ...&#39; Lecturers This highly popular text is used on a wide range of computing courses, including A Level, BTEC, City &amp; Guilds, BCS and BSC."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "inl_DwAAQBAJ",
+      "etag": "KCCk7y2umHQ",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/inl_DwAAQBAJ",
+      "volumeInfo": {
+        "title": "Computer Science Illuminated",
+        "authors": [
+          "Nell Dale",
+          "John Lewis"
+        ],
+        "publisher": "Jones & Bartlett Learning",
+        "publishedDate": "2019-12-14",
+        "description": "Fully revised aDesigned for the introductory computing and computer science course, the student-friendly Computer Science Illuminated, Seventh Edition provides students with a solid foundation for further study, and offers non-majors a complete introduction to computing. Fully revised and updated, the Seventh Edition of this best-selling text retains the accessibility and in-depth coverage of previous editions, while incorporating all-new material on cutting-edge issues in computer science. Authored by the award-winning team Nell Dale and John nd updated, the Seventh Edition of the best-selling text Computer Science Illuminated retains the accessibility and in-depth coverage of previous editions, while incorporating all-new material on cutting-edge issues in computer science. Authored by the award-winning Nell Dale and John Lewis, Computer Science Illuminated's unique and innovative layered approach moves through the levels of computing from an organized, language-neutral perspective.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781284155617"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1284155617"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 745,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=inl_DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=inl_DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=inl_DwAAQBAJ&printsec=frontcover&dq=computer+science&hl=&cd=6&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=inl_DwAAQBAJ&dq=computer+science&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Computer_Science_Illuminated.html?hl=&id=inl_DwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=inl_DwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Fully revised and updated, the Seventh Edition of this best-selling text retains the accessibility and in-depth coverage of previous editions, while incorporating all-new material on cutting-edge issues in computer science."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "luF4ElMxqg4C",
+      "etag": "vSzNLOYRnOE",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/luF4ElMxqg4C",
+      "volumeInfo": {
+        "title": "Philosophy and Computer Science",
+        "authors": [
+          "Timothy R. Colburn"
+        ],
+        "publisher": "M.E. Sharpe",
+        "publishedDate": "2000",
+        "description": "Colburn (computer science, U. of Minnesota-Duluth) has a doctorate in philosophy and an advanced degree in computer science; he's worked as a philosophy professor, a computer programmer, and a research scientist in artificial intelligence. Here he discusses the philosophical foundations of artificial intelligence; the new encounter of science and philosophy (logic, models of the mind and of reasoning, epistemology); and the philosophy of computer science (touching on math, abstraction, software, and ontology).",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "1563249901"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9781563249907"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 243,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "averageRating": 5,
+        "ratingsCount": 2,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.1.1.0.preview.1",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=luF4ElMxqg4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=luF4ElMxqg4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=luF4ElMxqg4C&printsec=frontcover&dq=computer+science&hl=&cd=7&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=luF4ElMxqg4C&dq=computer+science&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Philosophy_and_Computer_Science.html?hl=&id=luF4ElMxqg4C"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=luF4ElMxqg4C&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Colburn (computer science, U. of Minnesota-Duluth) has a doctorate in philosophy and an advanced degree in computer science; he&#39;s worked as a philosophy professor, a computer programmer, and a research scientist in artificial intelligence."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "lvAo3AeJikQC",
+      "etag": "OBPLBkTb1W8",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/lvAo3AeJikQC",
+      "volumeInfo": {
+        "title": "Mathematical Structures for Computer Science",
+        "authors": [
+          "Judith L. Gersting"
+        ],
+        "publisher": "Macmillan",
+        "publishedDate": "2007",
+        "description": "This edition offers a pedagogically rich and intuitive introduction to discrete mathematics structures. It meets the needs of computer science majors by being both comprehensive and accessible.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "071676864X"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780716768647"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 807,
+        "printType": "BOOK",
+        "categories": [
+          "Mathematics"
+        ],
+        "averageRating": 5,
+        "ratingsCount": 2,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=lvAo3AeJikQC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=lvAo3AeJikQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=lvAo3AeJikQC&printsec=frontcover&dq=computer+science&hl=&cd=8&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=lvAo3AeJikQC&dq=computer+science&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Mathematical_Structures_for_Computer_Sci.html?hl=&id=lvAo3AeJikQC"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=lvAo3AeJikQC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "This edition offers a pedagogically rich and intuitive introduction to discrete mathematics structures. It meets the needs of computer science majors by being both comprehensive and accessible."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "3Cc9AAAAIAAJ",
+      "etag": "1BN7ZrQLUNo",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/3Cc9AAAAIAAJ",
+      "volumeInfo": {
+        "title": "Computer Science and Law",
+        "authors": [
+          "Brian Niblett"
+        ],
+        "publisher": "CUP Archive",
+        "publishedDate": "1980-06-30",
+        "description": "Fourteen international experts consider how computers can be used to discover and apply the legal norms embedded within the woritten sources of the law in this anthology.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "0521234514"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780521234511"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 238,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.0.1.0.preview.1",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=3Cc9AAAAIAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=3Cc9AAAAIAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=3Cc9AAAAIAAJ&printsec=frontcover&dq=computer+science&hl=&cd=9&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=3Cc9AAAAIAAJ&dq=computer+science&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Computer_Science_and_Law.html?hl=&id=3Cc9AAAAIAAJ"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=3Cc9AAAAIAAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Workshop sponsored by the Science Research Council of the United Kingdom and the Scientific and Technical Research Committee of the EEC."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "GDgICwAAQBAJ",
+      "etag": "T7FbFAnvpaQ",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/GDgICwAAQBAJ",
+      "volumeInfo": {
+        "title": "A Dictionary of Computer Science",
+        "authors": [
+          "Andrew Butterfield",
+          "Gerard Ekembe Ngondi",
+          "Anne Kerr"
+        ],
+        "publisher": "Oxford University Press",
+        "publishedDate": "2016-01-28",
+        "description": "Previously named A Dictionary of Computing, this bestselling dictionary has been renamed A Dictionary of Computer Science, and fully revised by a team of computer specialists, making it the most up-to-date and authoritative guide to computing available. Containing over 6,500 entries and with expanded coverage of multimedia, computer applications, networking, and personal computer science, it is a comprehensive reference work encompassing all aspects of the subject and is as valuable for home and office users as it is indispensable for students of computer science. Terms are defined in a jargon-free and concise manner with helpful examples where relevant. The dictionary contains approximately 150 new entries including cloud computing, cross-site scripting, iPad, semantic attack, smartphone, and virtual learning environment. Recommended web links for many entries, accessible via the Dictionary of Computer Science companion website, provide valuable further information and the appendices include useful resources such as generic domain names, file extensions, and the Greek alphabet. This dictionary is suitable for anyone who uses computers, and is ideal for students of computer science and the related fields of IT, maths, physics, media communications, electronic engineering, and natural sciences.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780199688975"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0199688974"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 608,
+        "printType": "BOOK",
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=GDgICwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=GDgICwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=GDgICwAAQBAJ&printsec=frontcover&dq=computer+science&hl=&cd=10&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=GDgICwAAQBAJ&dq=computer+science&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/A_Dictionary_of_Computer_Science.html?hl=&id=GDgICwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=GDgICwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Providing comprehensive coverage of computer applications in industry, school, work, education, and the home, this fully revised dictionary is the ideal reference for students, professionals, and anyone who uses computers."
+      }
+    }
+  ]
+}

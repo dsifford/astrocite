@@ -1,6 +1,6 @@
 # astrocite-eutils
 
-An helper library for converting PubMed EUtils ESummary JSON to CSL JSON.
+A helper library for converting PubMed EUtils ESummary JSON to CSL JSON.
 
 See [astrocite](https://github.com/dsifford/astrocite) for more details.
 

@@ -1,0 +1,705 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Google Books JSON should parse all fixtures to CSL JSON correctly 1`] = `
+Array [
+  Object {
+    "ISBN": "9781524763138",
+    "author": Array [
+      Object {
+        "family": "Obama",
+        "given": "Michelle",
+      },
+    ],
+    "id": "hi17DwAAQBAJ",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2018",
+          "11",
+          "13",
+        ],
+      ],
+    },
+    "language": "en",
+    "number-of-pages": 400,
+    "publisher": "Crown Publishing Group (NY)",
+    "title": "Becoming",
+    "type": "book",
+  },
+]
+`;
+
+exports[`Google Books JSON should parse all fixtures to CSL JSON correctly 2`] = `
+Array [
+  Object {
+    "ISBN": "9780385535595",
+    "author": Array [
+      Object {
+        "family": "Mayer",
+        "given": "Jane",
+      },
+    ],
+    "id": "Vv7zjgEACAAJ",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2016",
+          "01",
+          "19",
+        ],
+      ],
+    },
+    "language": "en",
+    "number-of-pages": 464,
+    "publisher": "Doubleday Books",
+    "title": "Dark Money",
+    "type": "book",
+  },
+]
+`;
+
+exports[`Google Books JSON should parse all fixtures to CSL JSON correctly 3`] = `
+Array [
+  Object {
+    "ISBN": "9780684801520",
+    "author": Array [
+      Object {
+        "family": "Scott Fitzgerald",
+        "given": "Francis",
+      },
+    ],
+    "id": "eaLjDeMV_WsC",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "1995",
+          undefined,
+          undefined,
+        ],
+      ],
+    },
+    "language": "en",
+    "number-of-pages": 216,
+    "publisher": "Scribner",
+    "title": "The Great Gatsby",
+    "type": "book",
+  },
+]
+`;
+
+exports[`Google Books JSON should parse all fixtures to CSL JSON correctly 4`] = `
+Array [
+  Object {
+    "ISBN": "9781852338022",
+    "author": Array [
+      Object {
+        "family": "Zobel",
+        "given": "Justin",
+      },
+    ],
+    "id": "J3hCp9G7mSIC",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2004",
+          "06",
+          "03",
+        ],
+      ],
+    },
+    "language": "en",
+    "number-of-pages": 270,
+    "publisher": "Taylor & Francis",
+    "title": "Writing for Computer Science",
+    "type": "book",
+  },
+  Object {
+    "ISBN": "9788189093242",
+    "author": Array [
+      Object {
+        "family": "Haminghton",
+        "given": "Suzie",
+      },
+    ],
+    "id": "we4WrfSEb4UC",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2004",
+          undefined,
+          undefined,
+        ],
+      ],
+    },
+    "language": "en",
+    "number-of-pages": 192,
+    "publisher": "Lotus Press",
+    "title": "Computer Science",
+    "type": "book",
+  },
+  Object {
+    "ISBN": "9780262660716",
+    "author": Array [
+      Object {
+        "family": "C. Pierce",
+        "given": "Benjamin",
+      },
+      Object {
+        "family": "C.. Pierce",
+        "given": "Benjamin",
+      },
+      Object {
+        "family": "Benjamin",
+        "given": "Ierce",
+      },
+    ],
+    "id": "ezdeaHfpYPwC",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "1991",
+          undefined,
+          undefined,
+        ],
+      ],
+    },
+    "language": "en",
+    "number-of-pages": 100,
+    "publisher": "MIT Press",
+    "title": "Basic Category Theory for Computer Scientists",
+    "type": "book",
+  },
+  Object {
+    "ISBN": "9780521585194",
+    "author": Array [
+      Object {
+        "family": "Gusfield",
+        "given": "Dan",
+      },
+    ],
+    "id": "Ofw5w1yuD8kC",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "1997",
+          "05",
+          "28",
+        ],
+      ],
+    },
+    "language": "en",
+    "number-of-pages": 534,
+    "publisher": "Cambridge University Press",
+    "title": "Algorithms on Strings, Trees and Sequences",
+    "type": "book",
+  },
+  Object {
+    "ISBN": "9780826454607",
+    "author": Array [
+      Object {
+        "family": "French",
+        "given": "Carl",
+      },
+    ],
+    "id": "pbqEAcmJQ8YC",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "1996",
+          undefined,
+          undefined,
+        ],
+      ],
+    },
+    "language": "en",
+    "number-of-pages": 512,
+    "publisher": "Cengage Learning EMEA",
+    "title": "Computer Science",
+    "type": "book",
+  },
+  Object {
+    "ISBN": "9781284155617",
+    "author": Array [
+      Object {
+        "family": "Dale",
+        "given": "Nell",
+      },
+      Object {
+        "family": "Lewis",
+        "given": "John",
+      },
+    ],
+    "id": "inl_DwAAQBAJ",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2019",
+          "12",
+          "14",
+        ],
+      ],
+    },
+    "language": "en",
+    "number-of-pages": 745,
+    "publisher": "Jones & Bartlett Learning",
+    "title": "Computer Science Illuminated",
+    "type": "book",
+  },
+  Object {
+    "ISBN": "9781563249907",
+    "author": Array [
+      Object {
+        "family": "R. Colburn",
+        "given": "Timothy",
+      },
+    ],
+    "id": "luF4ElMxqg4C",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2000",
+          undefined,
+          undefined,
+        ],
+      ],
+    },
+    "language": "en",
+    "number-of-pages": 243,
+    "publisher": "M.E. Sharpe",
+    "title": "Philosophy and Computer Science",
+    "type": "book",
+  },
+  Object {
+    "ISBN": "9780716768647",
+    "author": Array [
+      Object {
+        "family": "L. Gersting",
+        "given": "Judith",
+      },
+    ],
+    "id": "lvAo3AeJikQC",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2007",
+          undefined,
+          undefined,
+        ],
+      ],
+    },
+    "language": "en",
+    "number-of-pages": 807,
+    "publisher": "Macmillan",
+    "title": "Mathematical Structures for Computer Science",
+    "type": "book",
+  },
+  Object {
+    "ISBN": "9780521234511",
+    "author": Array [
+      Object {
+        "family": "Niblett",
+        "given": "Brian",
+      },
+    ],
+    "id": "3Cc9AAAAIAAJ",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "1980",
+          "06",
+          "30",
+        ],
+      ],
+    },
+    "language": "en",
+    "number-of-pages": 238,
+    "publisher": "CUP Archive",
+    "title": "Computer Science and Law",
+    "type": "book",
+  },
+  Object {
+    "ISBN": "9780199688975",
+    "author": Array [
+      Object {
+        "family": "Butterfield",
+        "given": "Andrew",
+      },
+      Object {
+        "family": "Ekembe Ngondi",
+        "given": "Gerard",
+      },
+      Object {
+        "family": "Kerr",
+        "given": "Anne",
+      },
+    ],
+    "id": "GDgICwAAQBAJ",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2016",
+          "01",
+          "28",
+        ],
+      ],
+    },
+    "language": "en",
+    "number-of-pages": 608,
+    "publisher": "Oxford University Press",
+    "title": "A Dictionary of Computer Science",
+    "type": "book",
+  },
+]
+`;
+
+exports[`Google Books JSON should parse all fixtures to CSL JSON correctly, with chapter flag set 1`] = `
+Array [
+  Object {
+    "ISBN": "9781524763138",
+    "author": Array [
+      Object {
+        "family": "Obama",
+        "given": "Michelle",
+      },
+    ],
+    "container-title": "Becoming",
+    "id": "hi17DwAAQBAJ",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2018",
+          "11",
+          "13",
+        ],
+      ],
+    },
+    "language": "en",
+    "number-of-pages": 400,
+    "publisher": "Crown Publishing Group (NY)",
+    "type": "chapter",
+  },
+]
+`;
+
+exports[`Google Books JSON should parse all fixtures to CSL JSON correctly, with chapter flag set 2`] = `
+Array [
+  Object {
+    "ISBN": "9780385535595",
+    "author": Array [
+      Object {
+        "family": "Mayer",
+        "given": "Jane",
+      },
+    ],
+    "container-title": "Dark Money",
+    "id": "Vv7zjgEACAAJ",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2016",
+          "01",
+          "19",
+        ],
+      ],
+    },
+    "language": "en",
+    "number-of-pages": 464,
+    "publisher": "Doubleday Books",
+    "type": "chapter",
+  },
+]
+`;
+
+exports[`Google Books JSON should parse all fixtures to CSL JSON correctly, with chapter flag set 3`] = `
+Array [
+  Object {
+    "ISBN": "9780684801520",
+    "author": Array [
+      Object {
+        "family": "Scott Fitzgerald",
+        "given": "Francis",
+      },
+    ],
+    "container-title": "The Great Gatsby",
+    "id": "eaLjDeMV_WsC",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "1995",
+          undefined,
+          undefined,
+        ],
+      ],
+    },
+    "language": "en",
+    "number-of-pages": 216,
+    "publisher": "Scribner",
+    "type": "chapter",
+  },
+]
+`;
+
+exports[`Google Books JSON should parse all fixtures to CSL JSON correctly, with chapter flag set 4`] = `
+Array [
+  Object {
+    "ISBN": "9781852338022",
+    "author": Array [
+      Object {
+        "family": "Zobel",
+        "given": "Justin",
+      },
+    ],
+    "container-title": "Writing for Computer Science",
+    "id": "J3hCp9G7mSIC",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2004",
+          "06",
+          "03",
+        ],
+      ],
+    },
+    "language": "en",
+    "number-of-pages": 270,
+    "publisher": "Taylor & Francis",
+    "type": "chapter",
+  },
+  Object {
+    "ISBN": "9788189093242",
+    "author": Array [
+      Object {
+        "family": "Haminghton",
+        "given": "Suzie",
+      },
+    ],
+    "container-title": "Computer Science",
+    "id": "we4WrfSEb4UC",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2004",
+          undefined,
+          undefined,
+        ],
+      ],
+    },
+    "language": "en",
+    "number-of-pages": 192,
+    "publisher": "Lotus Press",
+    "type": "chapter",
+  },
+  Object {
+    "ISBN": "9780262660716",
+    "author": Array [
+      Object {
+        "family": "C. Pierce",
+        "given": "Benjamin",
+      },
+      Object {
+        "family": "C.. Pierce",
+        "given": "Benjamin",
+      },
+      Object {
+        "family": "Benjamin",
+        "given": "Ierce",
+      },
+    ],
+    "container-title": "Basic Category Theory for Computer Scientists",
+    "id": "ezdeaHfpYPwC",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "1991",
+          undefined,
+          undefined,
+        ],
+      ],
+    },
+    "language": "en",
+    "number-of-pages": 100,
+    "publisher": "MIT Press",
+    "type": "chapter",
+  },
+  Object {
+    "ISBN": "9780521585194",
+    "author": Array [
+      Object {
+        "family": "Gusfield",
+        "given": "Dan",
+      },
+    ],
+    "container-title": "Algorithms on Strings, Trees and Sequences",
+    "id": "Ofw5w1yuD8kC",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "1997",
+          "05",
+          "28",
+        ],
+      ],
+    },
+    "language": "en",
+    "number-of-pages": 534,
+    "publisher": "Cambridge University Press",
+    "type": "chapter",
+  },
+  Object {
+    "ISBN": "9780826454607",
+    "author": Array [
+      Object {
+        "family": "French",
+        "given": "Carl",
+      },
+    ],
+    "container-title": "Computer Science",
+    "id": "pbqEAcmJQ8YC",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "1996",
+          undefined,
+          undefined,
+        ],
+      ],
+    },
+    "language": "en",
+    "number-of-pages": 512,
+    "publisher": "Cengage Learning EMEA",
+    "type": "chapter",
+  },
+  Object {
+    "ISBN": "9781284155617",
+    "author": Array [
+      Object {
+        "family": "Dale",
+        "given": "Nell",
+      },
+      Object {
+        "family": "Lewis",
+        "given": "John",
+      },
+    ],
+    "container-title": "Computer Science Illuminated",
+    "id": "inl_DwAAQBAJ",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2019",
+          "12",
+          "14",
+        ],
+      ],
+    },
+    "language": "en",
+    "number-of-pages": 745,
+    "publisher": "Jones & Bartlett Learning",
+    "type": "chapter",
+  },
+  Object {
+    "ISBN": "9781563249907",
+    "author": Array [
+      Object {
+        "family": "R. Colburn",
+        "given": "Timothy",
+      },
+    ],
+    "container-title": "Philosophy and Computer Science",
+    "id": "luF4ElMxqg4C",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2000",
+          undefined,
+          undefined,
+        ],
+      ],
+    },
+    "language": "en",
+    "number-of-pages": 243,
+    "publisher": "M.E. Sharpe",
+    "type": "chapter",
+  },
+  Object {
+    "ISBN": "9780716768647",
+    "author": Array [
+      Object {
+        "family": "L. Gersting",
+        "given": "Judith",
+      },
+    ],
+    "container-title": "Mathematical Structures for Computer Science",
+    "id": "lvAo3AeJikQC",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2007",
+          undefined,
+          undefined,
+        ],
+      ],
+    },
+    "language": "en",
+    "number-of-pages": 807,
+    "publisher": "Macmillan",
+    "type": "chapter",
+  },
+  Object {
+    "ISBN": "9780521234511",
+    "author": Array [
+      Object {
+        "family": "Niblett",
+        "given": "Brian",
+      },
+    ],
+    "container-title": "Computer Science and Law",
+    "id": "3Cc9AAAAIAAJ",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "1980",
+          "06",
+          "30",
+        ],
+      ],
+    },
+    "language": "en",
+    "number-of-pages": 238,
+    "publisher": "CUP Archive",
+    "type": "chapter",
+  },
+  Object {
+    "ISBN": "9780199688975",
+    "author": Array [
+      Object {
+        "family": "Butterfield",
+        "given": "Andrew",
+      },
+      Object {
+        "family": "Ekembe Ngondi",
+        "given": "Gerard",
+      },
+      Object {
+        "family": "Kerr",
+        "given": "Anne",
+      },
+    ],
+    "container-title": "A Dictionary of Computer Science",
+    "id": "GDgICwAAQBAJ",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2016",
+          "01",
+          "28",
+        ],
+      ],
+    },
+    "language": "en",
+    "number-of-pages": 608,
+    "publisher": "Oxford University Press",
+    "type": "chapter",
+  },
+]
+`;

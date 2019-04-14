@@ -1,0 +1,81 @@
+{
+  "kind": "books#volumes",
+  "totalItems": 1,
+  "items": [
+    {
+      "kind": "books#volume",
+      "id": "eaLjDeMV_WsC",
+      "etag": "QEEbP4xdP/k",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/eaLjDeMV_WsC",
+      "volumeInfo": {
+        "title": "The Great Gatsby",
+        "authors": [
+          "Francis Scott Fitzgerald"
+        ],
+        "publisher": "Scribner",
+        "publishedDate": "1995",
+        "description": "A young man newly rich tries to recapture the past and win back his former love, despite the fact she has married",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "0684801523"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780684801520"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 216,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "averageRating": 3.5,
+        "ratingsCount": 2526,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "1.7.2.0.preview.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=eaLjDeMV_WsC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=eaLjDeMV_WsC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=eaLjDeMV_WsC&dq=isbn:9780684801520&hl=&cd=1&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=eaLjDeMV_WsC&dq=isbn:9780684801520&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/The_Great_Gatsby.html?hl=&id=eaLjDeMV_WsC"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=eaLjDeMV_WsC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "A young man newly rich tries to recapture the past and win back his former love, despite the fact she has married"
+      }
+    }
+  ]
+}

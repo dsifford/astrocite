@@ -1,12 +1,11 @@
 {
-  "name": "astrocite-eutils",
-  "version": "0.9.3",
-  "description": "Converts PubMed EUtils ESummary API Responses to CSL JSON",
-  "license": "MIT",
+  "name": "astrocite-googlebooks",
+  "version": "0.10.0",
+  "description": "Converts Google Books API responses to CSL JSON",
+  "author": "Derek Sifford <dereksifford@gmail.com>",
   "repository": "dsifford/astrocite",
-  "author": "Derek P Sifford",
+  "license": "MIT",
   "main": "lib/index.js",
-  "types": "lib/index.d.ts",
   "files": [
     "lib/**"
   ],
