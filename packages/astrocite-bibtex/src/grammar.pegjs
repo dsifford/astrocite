@@ -7,8 +7,7 @@
             [/</g, '\u00A1'],
             [/>/g, '\u00BF'],
         ].reduce((output, replacer) => {
-            output = output.replace(replacer[0], replacer[1]);
-            return output;
+            return output.replace(replacer[0], replacer[1]);
         }, text);
     }
 
@@ -35,17 +34,36 @@ File
         };
     }
 
-Junk
-    = '@comment'i [^\n\r]* [\n\r]*
-    / [^@] [^\n\r]* [\n\r]*
+Comment
+    = '@comment'i __h &[{"] v:RegularValue {
+        return {
+            kind: 'BracedComment',
+            loc: location(),
+            value: v,
+        };
+    }
+    / '@comment'i __h v:[^\n\r]* [\n\r]* {
+        return {
+            kind: 'LineComment',
+            loc: location(),
+            value: simpleLatexConversions(normalizeWhitespace(v)),
+        };
+      }
+    / v:([^@] [^\n\r]*) [\n\r]* {
+        return {
+            kind: 'NonEntryText',
+            loc: location(),
+            value: simpleLatexConversions(normalizeWhitespace(v)),
+        };
+      }
 
 Node
-    = Junk* n:(PreambleExpression / StringExpression / Entry) Junk* { return n; }
+    = n:(Comment / PreambleExpression / StringExpression / Entry) { return n; }
 
 //-----------------  Top-level Nodes
 
 Entry
-    = '@' type:$[A-Za-z]+ [({] __ id:EntryId? __ props:Property* __ [})] __ {
+    = '@' type:$[A-Za-z]+ __ [({] __ id:EntryId? __ props:Property* __ [})] __ {
         return {
             kind: 'Entry',
             id: id || '',
@@ -90,7 +108,7 @@ Property
     }
 
 PropertyKey
-    = __ k:$[a-zA-Z0-9-]+ { return k; }
+    = __ k:$[_:a-zA-Z0-9-]+ { return k; }
 
 //----------------------- Value Descriptors
 
@@ -237,7 +255,7 @@ RequiredArgument
 //-------------- Helpers
 
 VariableName
-    = $([a-zA-Z-_][a-zA-Z0-9-_:]+)
+    = $([a-zA-Z-_][a-zA-Z0-9-_:]*)
 
 SimpleDicratical
     = ['`=~^.]
@@ -246,7 +264,7 @@ ExtendedDicratical
     = ['`"c=buv~^.drHk]
 
 PropertySeparator
-    = __h '=' __h
+    = __ '=' __
 
 PropertyTerminator
     = __ ','? __h (LineComment / EOL)*
