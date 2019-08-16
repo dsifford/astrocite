@@ -35,11 +35,11 @@ File
     }
 
 Comment
-    = '@comment'i __h &[{"] v:RegularValue {
+    = '@comment'i __h v:BracedComment {
         return {
             kind: 'BracedComment',
             loc: location(),
-            value: v,
+            value: v.slice(1, -1),
         };
     }
     / '@comment'i __h v:[^\n\r]* [\n\r]* {
@@ -59,6 +59,9 @@ Comment
 
 Node
     = n:(Comment / PreambleExpression / StringExpression / Entry) { return n; }
+
+BracedComment
+    = '{' comment:( [^{}] / BracedComment )* '}' { return '{' + comment.join('') + '}' }
 
 //-----------------  Top-level Nodes
 
@@ -119,8 +122,8 @@ PropertyValue
     }
 
 RegularValue
-    = '"' v:(NestedLiteral / Command / Math / TextNoQuotes)* '"' Concat? { return v; }
-    / '{' v:(NestedLiteral / Command / Math / Text)* '}' Concat? { return v; }
+    = '"' v:(NestedLiteral / Command / TextNoQuotes)* '"' Concat? { return v; }
+    / '{' v:(NestedLiteral / Command / Text)* '}' Concat? { return v; }
 
 StringValue
     = v:String Concat? { return v; }
@@ -164,18 +167,21 @@ String
     }
 
 NestedLiteral
-    = '{' v:(Text / Command / NestedLiteral / Math )* '}' {
+    = '{\\' mark:ExtendedDicratical ' ' char:([a-zA-Z0-9] / '\\' [ij]) '}' {
+        return {
+            kind: 'DicraticalCommand',
+            loc: location(),
+            mark: mark,
+            character: char[0] !== '\\' ? char : {
+              kind: 'RegularCommand',
+              value: char[1],
+              arguments: []
+            }
+        }
+    }
+    / '{' v:(Text / Command / NestedLiteral )* '}' {
         return {
             kind: 'NestedLiteral',
-            loc: location(),
-            value: v,
-        };
-    }
-
-Math
-    = '$' v:(Text / Command / NestedLiteral / Math )* '$' {
-        return {
-            kind: 'Math',
             loc: location(),
             value: v,
         };
@@ -200,23 +206,53 @@ Command
     = DicraticalCommand
     / RegularCommand
     / SymbolCommand
+    / MathMode
 
 DicraticalCommand
-    = '\\' mark:SimpleDicratical char:[a-zA-Z0-9] {
+    = '\\' mark:SimpleDicratical char:([a-zA-Z0-9] / '\\' [ij]) {
         return {
             kind: 'DicraticalCommand',
             loc: location(),
             mark: mark,
-            character: char,
+            character: char[0] !== '\\' ? char : {
+              kind: 'RegularCommand',
+              value: char[1],
+              arguments: []
+            }
         };
     }
-    / '\\' mark:ExtendedDicratical '{' char:[a-zA-Z0-9] '}' {
+    / '\\' mark:ExtendedDicratical '{' char:([a-zA-Z0-9] / '\\' [ij]) '}' {
         return {
             kind: 'DicraticalCommand',
             loc: location(),
             mark: mark,
-            character: char,
+            character: char[0] !== '\\' ? char : {
+              kind: 'RegularCommand',
+              value: char[1],
+              arguments: []
+            }
         }
+    }
+    / '\\' mark:ExtendedDicratical ' ' char:([a-zA-Z0-9] / '\\' [ij]) {
+        return {
+            kind: 'DicraticalCommand',
+            loc: location(),
+            mark: mark,
+            character: char[0] !== '\\' ? char : {
+              kind: 'RegularCommand',
+              value: char[1],
+              arguments: []
+            }
+        }
+    }
+
+MathMode
+    = '$' {
+        return {
+            kind: 'MathMode',
+            loc: location(),
+            value: '$',
+        };
     }
 
 
