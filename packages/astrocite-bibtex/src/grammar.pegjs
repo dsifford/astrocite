@@ -119,8 +119,8 @@ PropertyValue
     }
 
 RegularValue
-    = '"' v:(NestedLiteral / Command / TextNoQuotes)* '"' Concat? { return v; }
-    / '{' v:(NestedLiteral / Command / Text)* '}' Concat? { return v; }
+    = '"' v:(NestedLiteral / Command / Math / TextNoQuotes)* '"' Concat? { return v; }
+    / '{' v:(NestedLiteral / Command / Math / Text)* '}' Concat? { return v; }
 
 StringValue
     = v:String Concat? { return v; }
@@ -128,7 +128,7 @@ StringValue
 //---------------------- Value Kinds
 
 Text
-    = v:[^{}\\]+ {
+    = v:[^${}\\]+ {
         return {
             kind: 'Text',
             loc: location(),
@@ -137,7 +137,7 @@ Text
     }
 
 TextNoQuotes
-    = v:[^{}"\\]+ {
+    = v:[^${}"\\]+ {
         return {
             kind: 'Text',
             loc: location(),
@@ -164,9 +164,18 @@ String
     }
 
 NestedLiteral
-    = '{' v:(Text / Command / NestedLiteral)* '}' {
+    = '{' v:(Text / Command / NestedLiteral / Math )* '}' {
         return {
             kind: 'NestedLiteral',
+            loc: location(),
+            value: v,
+        };
+    }
+
+Math
+    = '$' v:(Text / Command / NestedLiteral / Math )* '$' {
+        return {
+            kind: 'Math',
             loc: location(),
             value: v,
         };
