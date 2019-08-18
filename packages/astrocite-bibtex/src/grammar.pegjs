@@ -327,10 +327,10 @@ VariableName
     = $([a-zA-Z-_][a-zA-Z0-9-_:]*)
 
 SimpleDicratical
-    = ['`=~^.]
+    = ['`"=~\^.]
 
 ExtendedDicratical
-    = ['`"c=buv~^.drHk]
+    = ['`"=~\^.cbuvdrHk]
 
 PropertySeparator
     = __ '=' __
