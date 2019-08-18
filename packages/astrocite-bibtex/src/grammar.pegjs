@@ -131,7 +131,7 @@ StringValue
 //---------------------- Value Kinds
 
 Text
-    = v:[^${}\\]+ {
+    = v:[^\^_${}\\]+ {
         return {
             kind: 'Text',
             loc: location(),
@@ -140,7 +140,7 @@ Text
     }
 
 TextNoQuotes
-    = v:[^${}"\\]+ {
+    = v:[^\^_${}"\\]+ {
         return {
             kind: 'Text',
             loc: location(),
@@ -203,10 +203,34 @@ LineComment
 //---------------------- LaTeX Commands
 
 Command
-    = DicraticalCommand
+    = ScriptCommand
+    / DicraticalCommand
     / RegularCommand
     / SymbolCommand
     / MathMode
+
+ScriptCommand
+    = mode:[_\^] &'{' v:RegularValue {
+        return {
+            kind: (mode === '_' ? 'Sub' : 'Super') + 'scriptCommand',
+            loc: location(),
+            value: v
+        };
+    }
+    / mode:[_\^] &'\\' v:Command {
+        return {
+            kind: (mode === '_' ? 'Sub' : 'Super') + 'scriptCommand',
+            loc: location(),
+            value: v
+        };
+    }
+    / mode:[_\^] v:. {
+        return {
+            kind: (mode === '_' ? 'Sub' : 'Super') + 'scriptCommand',
+            loc: location(),
+            value: v
+        };
+    }
 
 DicraticalCommand
     = '\\' mark:SimpleDicratical char:([a-zA-Z0-9] / '\\' [ij]) {
