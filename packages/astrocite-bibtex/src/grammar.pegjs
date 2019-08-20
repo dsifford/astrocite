@@ -1,14 +1,39 @@
 {
+    const literal = {
+        active: 0,
+
+        enter: function(cmd) {
+          switch (cmd.toLowerCase()) {
+              case 'url':
+                  this.active++;
+                  break;
+          }
+
+          return true
+        },
+
+        leave: function(cmd) {
+          switch (cmd.toLowerCase()) {
+              case 'url':
+                  this.active--;
+                  break;
+          }
+
+          if (this.active < 0) this.active = 0;
+          return true
+        }
+    }
+
     function simpleLatexConversions(text) {
-        return [
-            [/---/g, '\u2014'],
-            [/--/g, '\u2013'],
-            [/~/g, '\u00A0'],
-            [/</g, '\u00A1'],
-            [/>/g, '\u00BF'],
-        ].reduce((output, replacer) => {
-            return output.replace(replacer[0], replacer[1]);
-        }, text);
+        text = text
+            .replace(/---/g, '\u2014')
+            .replace(/--/g, '\u2013')
+            .replace(/</g, '\u00A1')
+            .replace(/>/g, '\u00BF')
+
+        if (!literal.active) text = text.replace(/~/g, '\u00A0')
+
+        return text
     }
 
     function normalizeWhitespace(textArr) {
@@ -290,7 +315,7 @@ SymbolCommand
     }
 
 RegularCommand
-    = '\\' v:$[A-Za-z]+ args:Argument* {
+    = '\\' v:$[A-Za-z]+ &{ return literal.enter(v) } args:Argument* &{ return literal.leave(v) } {
         return {
             kind: 'RegularCommand',
             loc: location(),
