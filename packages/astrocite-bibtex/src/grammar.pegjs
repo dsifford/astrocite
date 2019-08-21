@@ -1,6 +1,8 @@
 {
     const verbatim = {
         active: 0,
+        property: null,
+        closer: null,
 
         verbatimProperty: function(prop) {
             if (prop.match(/^verb[a-z]$/i)) return true;
@@ -16,13 +18,17 @@
             }
             return false;
         },
-        enterProperty: function(prop) {
-            if (this.verbatimProperty(prop)) this.active = 1
+        enterProperty: function(closer) {
+            if (!this.property || !this.verbatimProperty(this.property)) return true;
+            this.property = null;
+            this.active = 1;
+            this.closer = closer;
             return true;
         },
-        leaveProperty: function(prop) {
-            if (this.verbatimProperty(prop)) this.active--;
-            if (this.active < 0) this.active = 0;
+        leaveProperty: function() {
+            this.active = 0;
+            this.closer = ''
+            this.property = ''
             return true;
         },
 
@@ -142,7 +148,7 @@ EntryId
     = __ id:$[^ \t\r\n,]* __ ',' { return id; }
 
 Property
-    = k:PropertyKey &{ return verbatim.enterProperty(k) } PropertySeparator v:PropertyValue &{ return verbatim.leaveProperty(k) } PropertyTerminator {
+    = k:PropertyKey PropertySeparator &{ verbatim.property = k; return true } v:PropertyValue &{ return verbatim.leaveProperty() } PropertyTerminator {
         return {
             kind: 'Property',
             loc: location(),
@@ -163,8 +169,8 @@ PropertyValue
     }
 
 RegularValue
-    = '"' v:(NestedLiteral / VerbatimText / Command / TextNoQuotes)* '"' Concat? { return v; }
-    / '{' v:(NestedLiteral / VerbatimText / Command / Text)* '}' Concat? { return v; }
+    = '"' &{ return verbatim.enterProperty('"') } v:(NestedLiteral / VerbatimText / Command / TextNoQuotes)* '"' Concat? { return v; }
+    / '{' &{ return verbatim.enterProperty('{}') }v:(NestedLiteral / VerbatimText / Command / Text)* '}' Concat? { return v; }
 
 StringValue
     = v:String Concat? { return v; }
@@ -172,7 +178,14 @@ StringValue
 //---------------------- Value Kinds
 
 VerbatimText
-    = &{ return verbatim.active } v:[^{}]+ {
+    = &{ return verbatim.active && verbatim.closer === '"' } v:[^"]+ {
+        return {
+            kind: 'Text',
+            loc: location(),
+            value: simpleLatexConversions(normalizeWhitespace(v)),
+        };
+    }
+    / &{ return verbatim.active && verbatim.closer === '{}' } v:[^{}]+ {
         return {
             kind: 'Text',
             loc: location(),
