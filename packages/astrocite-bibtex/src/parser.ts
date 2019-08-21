@@ -65,8 +65,6 @@ const parseValue = (
                 break;
             case 'MathMode':
                 break;
-            default:
-                output += JSON.stringify(v);
         }
     }
     return output;
