@@ -14,9 +14,12 @@ describe('BibTeX Parser', () => {
         for (const name of casenames) {
             cases = {
                 ...cases,
-                [basename(name, '.bib')]: fs.readFileSync(`${__dirname}/cases/${name}`, {
-                    encoding: 'utf-8',
-                }),
+                [basename(name, '.bib')]: fs.readFileSync(
+                    `${__dirname}/cases/${name}`,
+                    {
+                        encoding: 'utf-8',
+                    },
+                ),
             };
         }
     });
@@ -64,5 +67,12 @@ describe('BibTeX Parser', () => {
     });
     it('should parse jabref files', () => {
         expect(parse(cases.jabref)).toMatchSnapshot();
+    });
+    it('should parse files with verbatim tildes, comments, odd characters in keys, super/subscript, no-dot i/j, and math-mode switches', () => {
+        expect(
+            parse(
+                cases.tilde_comments_underscores_diacritics_sup_sub_nodoti_math,
+            ),
+        ).toMatchSnapshot();
     });
 });
