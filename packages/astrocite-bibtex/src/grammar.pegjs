@@ -1,27 +1,43 @@
 {
-    const literal = {
+    const verbatim = {
         active: 0,
 
-        enter: function(cmd) {
-          switch (cmd.toLowerCase()) {
-              case 'url':
-                  this.active++;
-                  break;
-          }
-
-          return true
+        verbatimProperty: function(prop) {
+            if (prop.match(/^verb[a-z]$/i)) return true;
+            switch (prop.toLowerCase()) {
+                case 'url':
+                case 'doi':
+                case 'file':
+                case 'eprint':
+                case 'verba':
+                case 'verbb':
+                case 'verbc':
+                  return true;
+            }
+            return false;
+        },
+        enterProperty: function(prop) {
+            if (this.verbatimProperty(prop)) this.active = 1
+            return true;
+        },
+        leaveProperty: function(prop) {
+            if (this.verbatimProperty(prop)) this.active--;
+            if (this.active < 0) this.active = 0;
+            return true;
         },
 
-        leave: function(cmd) {
-          switch (cmd.toLowerCase()) {
-              case 'url':
-                  this.active--;
-                  break;
-          }
-
-          if (this.active < 0) this.active = 0;
-          return true
-        }
+        verbatimCommand: function(cmd) {
+            return (cmd.toLowerCase() === 'url');
+        },
+        enterCommand: function(cmd) {
+            if (this.verbatimCommand(cmd)) this.active++;
+            return true;
+        },
+        leaveCommand: function(cmd) {
+            if (this.verbatimCommand(cmd)) this.active--;
+            if (this.active < 0) this.active = 0;
+            return true;
+        },
     }
 
     function simpleLatexConversions(text) {
@@ -31,7 +47,7 @@
             .replace(/</g, '\u00A1')
             .replace(/>/g, '\u00BF')
 
-        if (!literal.active) text = text.replace(/~/g, '\u00A0')
+        if (!verbatim.active) text = text.replace(/~/g, '\u00A0')
 
         return text
     }
@@ -126,7 +142,7 @@ EntryId
     = __ id:$[^ \t\r\n,]* __ ',' { return id; }
 
 Property
-    = k:PropertyKey PropertySeparator v:PropertyValue PropertyTerminator {
+    = k:PropertyKey &{ return verbatim.enterProperty(k) } PropertySeparator v:PropertyValue &{ return verbatim.leaveProperty(k) } PropertyTerminator {
         return {
             kind: 'Property',
             loc: location(),
@@ -147,13 +163,22 @@ PropertyValue
     }
 
 RegularValue
-    = '"' v:(NestedLiteral / Command / TextNoQuotes)* '"' Concat? { return v; }
-    / '{' v:(NestedLiteral / Command / Text)* '}' Concat? { return v; }
+    = '"' v:(NestedLiteral / VerbatimText / Command / TextNoQuotes)* '"' Concat? { return v; }
+    / '{' v:(NestedLiteral / VerbatimText / Command / Text)* '}' Concat? { return v; }
 
 StringValue
     = v:String Concat? { return v; }
 
 //---------------------- Value Kinds
+
+VerbatimText
+    = &{ return verbatim.active } v:[^{}]+ {
+        return {
+            kind: 'Text',
+            loc: location(),
+            value: simpleLatexConversions(normalizeWhitespace(v)),
+        };
+    }
 
 Text
     = v:[^\^_${}\\]+ {
@@ -203,7 +228,7 @@ NestedLiteral
             }
         }
     }
-    / '{' v:(Text / Command / NestedLiteral )* '}' {
+    / '{' v:(VerbatimText / Text / Command / NestedLiteral )* '}' {
         return {
             kind: 'NestedLiteral',
             loc: location(),
@@ -311,7 +336,7 @@ SymbolCommand
     }
 
 RegularCommand
-    = '\\' v:$[A-Za-z]+ &{ return literal.enter(v) } args:Argument* &{ return literal.leave(v) } {
+    = '\\' v:$[A-Za-z]+ &{ return verbatim.enterCommand(v) } args:Argument* &{ return verbatim.leaveCommand(v) } {
         return {
             kind: 'RegularCommand',
             loc: location(),

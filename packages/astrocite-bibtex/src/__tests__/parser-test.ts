@@ -71,7 +71,7 @@ describe('BibTeX Parser', () => {
     it('should parse files with verbatim tildes, comments, odd characters in keys, super/subscript, no-dot i/j, and math-mode switches', () => {
         expect(
             parse(
-                cases.tilde_comments_underscores_diacritics_sup_sub_nodoti_math,
+                cases.tilde_comments_underscores_diacritics_sup_sub_nodoti_math_verbatim,
             ),
         ).toMatchSnapshot();
     });
