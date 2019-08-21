@@ -48,17 +48,42 @@ interface RegularCommand {
     arguments: Argument[];
 }
 
+interface SubscriptCommand {
+    kind: 'SubscriptCommand';
+    loc: Location;
+    value: string;
+    arguments: ValueType;
+}
+
+interface SuperscriptCommand {
+    kind: 'SuperscriptCommand';
+    loc: Location;
+    value: string;
+    arguments: ValueType;
+}
+
 interface SymbolCommand {
     kind: 'SymbolCommand';
     loc: Location;
     value: string;
 }
 
+interface MathMode {
+    kind: 'MathMode';
+    loc: Location;
+}
+
 interface DicraticalCommand {
     kind: 'DicraticalCommand';
     loc: Location;
     mark: string;
-    character: string;
+    character: string | DotlessCharacter;
+}
+
+interface DotlessCharacter {
+    kind: 'DotlessCharacter';
+    loc: Location;
+    character: 'i' | 'j';
 }
 
 interface NestedLiteral {
@@ -95,9 +120,20 @@ interface StringExpression {
     value: ValueType[];
 }
 
-type Command = RegularCommand | SymbolCommand | DicraticalCommand;
+type Command =
+    | RegularCommand
+    | SymbolCommand
+    | DicraticalCommand
+    | SubscriptCommand
+    | SuperscriptCommand
+    | MathMode;
 
-export type ValueType = TextValue | StringValue | NestedLiteral | NumberValue | Command;
+export type ValueType =
+    | TextValue
+    | StringValue
+    | NestedLiteral
+    | NumberValue
+    | Command;
 
 type Children = Entry | PreambleExpression | StringExpression;
 

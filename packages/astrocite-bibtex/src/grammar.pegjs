@@ -198,9 +198,8 @@ NestedLiteral
             loc: location(),
             mark: mark,
             character: char[0] !== '\\' ? char : {
-              kind: 'RegularCommand',
-              value: char[1],
-              arguments: []
+              kind: 'DotlessCharacter',
+              character: char[1],
             }
         }
     }
@@ -264,9 +263,8 @@ DicraticalCommand
             loc: location(),
             mark: mark,
             character: char[0] !== '\\' ? char : {
-              kind: 'RegularCommand',
-              value: char[1],
-              arguments: []
+              kind: 'DotlessCharacter',
+              character: char[1],
             }
         };
     }
@@ -276,9 +274,8 @@ DicraticalCommand
             loc: location(),
             mark: mark,
             character: char[0] !== '\\' ? char : {
-              kind: 'RegularCommand',
-              value: char[1],
-              arguments: []
+              kind: 'DotlessCharacter',
+              character: char[1],
             }
         }
     }
@@ -288,9 +285,8 @@ DicraticalCommand
             loc: location(),
             mark: mark,
             character: char[0] !== '\\' ? char : {
-              kind: 'RegularCommand',
-              value: char[1],
-              arguments: []
+              kind: 'DotlessCharacter',
+              character: char[1],
             }
         }
     }

@@ -34,6 +34,7 @@ const parseValue = (
     macros: Map<string, string>,
 ): string => {
     let output = '';
+    let char;
     const input: ValueType[] = Array.isArray(value) ? value : [value];
     for (const v of input) {
         switch (v.kind) {
@@ -52,8 +53,20 @@ const parseValue = (
                 output += `${KNOWN_COMMANDS.get(v.value) || ''}`;
                 break;
             case 'DicraticalCommand':
-                output += `${v.character}${DICRATICS.get(v.mark)}`;
+                char =
+                    typeof v.character === 'string'
+                        ? v.character
+                        : v.character.character;
+                output += `${char}${DICRATICS.get(v.mark)}`;
                 break;
+            case 'SuperscriptCommand':
+            case 'SubscriptCommand':
+                output += v.value;
+                break;
+            case 'MathMode':
+                break;
+            default:
+                output += JSON.stringify(v);
         }
     }
     return output;
