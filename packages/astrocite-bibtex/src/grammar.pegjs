@@ -3,20 +3,22 @@
         active: 0,
         property: null,
         closer: null,
+        
+        verbatimProperties: options.verbatimProperties ? options.verbatimProperties.map(prop => prop.toLowerCase()) : [
+            'url',
+            'doi',
+            'file',
+            'eprint',
+            'verba',
+            'verbb',
+            'verbc',
+        ],
+        verbatimCommands: options.verbatimCommands ? options.verbatimCommands.map(cmd => cmd.toLowerCase()) : [
+            'url',
+        ],
 
         verbatimProperty: function(prop) {
-            if (prop.match(/^verb[a-z]$/i)) return true;
-            switch (prop.toLowerCase()) {
-                case 'url':
-                case 'doi':
-                case 'file':
-                case 'eprint':
-                case 'verba':
-                case 'verbb':
-                case 'verbc':
-                  return true;
-            }
-            return false;
+            return this.verbatimProperties.includes(prop.toLowerCase())
         },
         enterProperty: function(closer) {
             if (!this.property || !this.verbatimProperty(this.property)) return true;
@@ -33,7 +35,7 @@
         },
 
         verbatimCommand: function(cmd) {
-            return (cmd.toLowerCase() === 'url');
+            return this.verbatimCommands.includes(cmd.toLowerCase())
         },
         enterCommand: function(cmd) {
             if (this.verbatimCommand(cmd)) this.active++;
