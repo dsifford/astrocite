@@ -47,15 +47,17 @@
     }
 
     function simpleLatexConversions(text) {
-        text = text
-            .replace(/---/g, '\u2014')
-            .replace(/--/g, '\u2013')
-            .replace(/</g, '\u00A1')
-            .replace(/>/g, '\u00BF')
+        if (verbatim.active) {
+            return text
 
-        if (!verbatim.active) text = text.replace(/~/g, '\u00A0')
-
-        return text
+        } else {
+          return text
+              .replace(/---/g, '\u2014')
+              .replace(/--/g, '\u2013')
+              .replace(/</g, '\u00A1')
+              .replace(/>/g, '\u00BF')
+              .replace(/~/g, '\u00A0')
+        }
     }
 
     function normalizeWhitespace(textArr) {
