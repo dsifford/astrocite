@@ -77,13 +77,8 @@ interface DicraticalCommand {
     kind: 'DicraticalCommand';
     loc: Location;
     mark: string;
-    character: string | DotlessCharacter;
-}
-
-interface DotlessCharacter {
-    kind: 'DotlessCharacter';
-    loc: Location;
-    character: 'i' | 'j';
+    character: string;
+    dotless: boolean;
 }
 
 interface NestedLiteral {

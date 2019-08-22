@@ -239,10 +239,8 @@ NestedLiteral
             kind: 'DicraticalCommand',
             loc: location(),
             mark: mark,
-            character: char[0] !== '\\' ? char : {
-              kind: 'DotlessCharacter',
-              character: char[1],
-            }
+            dotless: !!char[1],
+            character: char[1] || char[0],
         }
     }
     / '{' v:(VerbatimText / Text / Command / NestedLiteral )* '}' {
@@ -304,10 +302,8 @@ DicraticalCommand
             kind: 'DicraticalCommand',
             loc: location(),
             mark: mark,
-            character: char[0] !== '\\' ? char : {
-              kind: 'DotlessCharacter',
-              character: char[1],
-            }
+            dotless: !!char[1],
+            character: char[1] || char[0],
         };
     }
     / '\\' mark:ExtendedDicratical '{' char:([a-zA-Z0-9] / '\\' [ij]) '}' {
@@ -315,10 +311,8 @@ DicraticalCommand
             kind: 'DicraticalCommand',
             loc: location(),
             mark: mark,
-            character: char[0] !== '\\' ? char : {
-              kind: 'DotlessCharacter',
-              character: char[1],
-            }
+            dotless: !!char[1],
+            character: char[1] || char[0],
         }
     }
     / '\\' mark:ExtendedDicratical ' ' char:([a-zA-Z0-9] / '\\' [ij]) {
@@ -326,10 +320,8 @@ DicraticalCommand
             kind: 'DicraticalCommand',
             loc: location(),
             mark: mark,
-            character: char[0] !== '\\' ? char : {
-              kind: 'DotlessCharacter',
-              character: char[1],
-            }
+            dotless: !!char[1],
+            character: char[1] || char[0],
         }
     }
 
