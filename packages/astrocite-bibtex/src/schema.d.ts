@@ -9,12 +9,6 @@ interface Location {
     end: LocationInfo;
 }
 
-interface File {
-    kind: 'File';
-    loc: Location;
-    children: Node[];
-}
-
 interface TextValue {
     kind: 'Text';
     loc: Location;
@@ -156,7 +150,7 @@ export type ValueType =
     | NumberValue
     | Command;
 
-type Children = Entry | PreambleExpression | StringExpression;
+type Children = Entry | PreambleExpression | StringExpression | Comment;
 
 type Node = Comment | PreambleExpression | StringExpression | Entry;
 
@@ -165,3 +159,10 @@ export interface AST {
     loc: Location;
     children: Children[];
 }
+
+type ParseOptions = {
+    verbatimProperties?: string[];
+    verbatimCommands?: string[];
+};
+
+export declare function parse(input: string, options?: ParseOptions): AST;
