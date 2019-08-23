@@ -9,6 +9,12 @@ interface Location {
     end: LocationInfo;
 }
 
+interface File {
+    kind: 'File';
+    loc: Location;
+    children: Node[];
+}
+
 interface TextValue {
     kind: 'Text';
     loc: Location;
@@ -115,6 +121,26 @@ interface StringExpression {
     value: ValueType[];
 }
 
+interface BracedComment {
+    kind: 'BracedComment';
+    loc: Location;
+    value: string;
+}
+
+interface LineComment {
+    kind: 'LineComment';
+    loc: Location;
+    value: string;
+}
+
+interface NonEntryText {
+    kind: 'NonEntryText';
+    loc: Location;
+    value: string;
+}
+
+type Comment = BracedComment | BracedComment | NonEntryText;
+
 type Command =
     | RegularCommand
     | SymbolCommand
@@ -131,6 +157,8 @@ export type ValueType =
     | Command;
 
 type Children = Entry | PreambleExpression | StringExpression;
+
+type Node = Comment | PreambleExpression | StringExpression | Entry;
 
 export interface AST {
     kind: 'File';
