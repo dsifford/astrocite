@@ -8,7 +8,7 @@ import {
     TYPE_MAP,
 } from './constants';
 import * as parser from './grammar';
-import { AST, Argument, Entry, RegularCommand, ValueType } from './schema.d';
+import { Argument, AST, Entry, RegularCommand, ValueType } from './schema.d';
 
 interface DatePart {
     kind?: string;
