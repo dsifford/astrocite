@@ -8,7 +8,7 @@ import {
     TYPE_MAP,
 } from './constants';
 import * as parser from './grammar';
-import { AST, Entry, ValueType } from './schema.d';
+import { AST, Entry, ValueType, RegularCommand, Argument } from './schema.d';
 
 interface DatePart {
     kind?: string;
@@ -29,6 +29,32 @@ const curriedDate: PartialDate0 = () => (first = { value: '' }) => (
         : { issued: { 'date-parts': [[second.value, first.value, '']] } };
 };
 
+function parseArgument(arg: Argument, macros: Map<string, string>): string {
+    switch (arg.kind) {
+        case 'OptionalArgument':
+            return arg.value;
+        case 'RequiredArgument':
+            return parseValue(arg.value, macros);
+            break;
+        default:
+            return '';
+    }
+}
+
+function parseRegularCommand(
+    cmd: RegularCommand,
+    macros: Map<string, string>,
+): string {
+    switch (cmd.value) {
+        case 'url':
+            return cmd.arguments
+                .map(arg => parseArgument(arg, macros))
+                .join('');
+        default:
+            return KNOWN_COMMANDS.get(cmd.value) || '';
+    }
+}
+
 const parseValue = (
     value: ValueType | ValueType[],
     macros: Map<string, string>,
@@ -48,6 +74,8 @@ const parseValue = (
                 output += parseValue(v.value, macros);
                 break;
             case 'RegularCommand':
+                output += parseRegularCommand(v, macros);
+                break;
             case 'SymbolCommand':
                 output += `${KNOWN_COMMANDS.get(v.value) || ''}`;
                 break;
@@ -57,8 +85,6 @@ const parseValue = (
             case 'SuperscriptCommand':
             case 'SubscriptCommand':
                 output += v.value;
-                break;
-            case 'MathMode':
                 break;
         }
     }
