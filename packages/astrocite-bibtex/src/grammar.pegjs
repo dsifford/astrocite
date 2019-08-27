@@ -368,7 +368,7 @@ OptionalArgument
     }
 
 RequiredArgument
-    = '{' __h v:(Command / Text / NestedLiteral)* __h '}' {
+    = '{' __h v:(Command / Text)* __h '}' {
         return {
             kind: 'RequiredArgument',
             loc: location(),
