@@ -1,6 +1,6 @@
 {
   "name": "astrocite-googlebooks",
-  "version": "0.14.0",
+  "version": "0.15.0",
   "description": "Converts Google Books API responses to CSL JSON",
   "author": "Derek Sifford <dereksifford@gmail.com>",
   "repository": "dsifford/astrocite",
