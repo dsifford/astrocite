@@ -9,71 +9,71 @@ interface Location {
     end: LocationInfo;
 }
 
-interface TextValue {
+export interface TextValue {
     kind: 'Text';
     loc: Location;
     value: string;
 }
 
-interface StringValue {
+export interface StringValue {
     kind: 'String';
     loc: Location;
     value: string;
 }
 
-interface NumberValue {
+export interface NumberValue {
     kind: 'Number';
     loc: Location;
     value: number;
 }
 
-interface RequiredArgument {
+export interface RequiredArgument {
     kind: 'RequiredArgument';
     loc: Location;
     value: Array<Command | TextValue>;
 }
 
-interface OptionalArgument {
+export interface OptionalArgument {
     kind: 'OptionalArgument';
     loc: Location;
     value: string;
 }
 
-type Argument = RequiredArgument | OptionalArgument;
+export type Argument = RequiredArgument | OptionalArgument;
 
-interface RegularCommand {
+export interface RegularCommand {
     kind: 'RegularCommand';
     loc: Location;
     value: string;
     arguments: Argument[];
 }
 
-interface SubscriptCommand {
+export interface SubscriptCommand {
     kind: 'SubscriptCommand';
     loc: Location;
     value: string;
     arguments: ValueType;
 }
 
-interface SuperscriptCommand {
+export interface SuperscriptCommand {
     kind: 'SuperscriptCommand';
     loc: Location;
     value: string;
     arguments: ValueType;
 }
 
-interface SymbolCommand {
+export interface SymbolCommand {
     kind: 'SymbolCommand';
     loc: Location;
     value: string;
 }
 
-interface MathMode {
+export interface MathMode {
     kind: 'MathMode';
     loc: Location;
 }
 
-interface DicraticalCommand {
+export interface DicraticalCommand {
     kind: 'DicraticalCommand';
     loc: Location;
     mark: string;
@@ -81,13 +81,13 @@ interface DicraticalCommand {
     dotless: boolean;
 }
 
-interface NestedLiteral {
+export interface NestedLiteral {
     kind: 'NestedLiteral';
     loc: Location;
     value: ValueType[];
 }
 
-interface Property {
+export interface Property {
     kind: 'Property';
     loc: Location;
     key: string;
@@ -102,40 +102,40 @@ export interface Entry {
     properties: Property[];
 }
 
-interface PreambleExpression {
+export interface PreambleExpression {
     kind: 'PreambleExpression';
     loc: Location;
     value: ValueType[];
 }
 
-interface StringExpression {
+export interface StringExpression {
     kind: 'StringExpression';
     loc: Location;
     key: string;
     value: ValueType[];
 }
 
-interface BracedComment {
+export interface BracedComment {
     kind: 'BracedComment';
     loc: Location;
     value: string;
 }
 
-interface LineComment {
+export interface LineComment {
     kind: 'LineComment';
     loc: Location;
     value: string;
 }
 
-interface NonEntryText {
+export interface NonEntryText {
     kind: 'NonEntryText';
     loc: Location;
     value: string;
 }
 
-type Comment = BracedComment | BracedComment | NonEntryText;
+export type Comment = BracedComment | LineComment | NonEntryText;
 
-type Command =
+export type Command =
     | RegularCommand
     | SymbolCommand
     | DicraticalCommand
@@ -150,9 +150,9 @@ export type ValueType =
     | NumberValue
     | Command;
 
-type Children = Entry | PreambleExpression | StringExpression | Comment;
+export type Children = Entry | PreambleExpression | StringExpression | Comment;
 
-type Node = Comment | PreambleExpression | StringExpression | Entry;
+export type Node = Comment | PreambleExpression | StringExpression | Entry;
 
 export interface AST {
     kind: 'File';
@@ -160,7 +160,7 @@ export interface AST {
     children: Children[];
 }
 
-type ParseOptions = {
+export type ParseOptions = {
     verbatimProperties?: string[];
     verbatimCommands?: string[];
 };
