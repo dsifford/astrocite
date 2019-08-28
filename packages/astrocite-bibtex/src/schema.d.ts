@@ -48,10 +48,29 @@ interface RegularCommand {
     arguments: Argument[];
 }
 
+interface SubscriptCommand {
+    kind: 'SubscriptCommand';
+    loc: Location;
+    value: string;
+    arguments: ValueType;
+}
+
+interface SuperscriptCommand {
+    kind: 'SuperscriptCommand';
+    loc: Location;
+    value: string;
+    arguments: ValueType;
+}
+
 interface SymbolCommand {
     kind: 'SymbolCommand';
     loc: Location;
     value: string;
+}
+
+interface MathMode {
+    kind: 'MathMode';
+    loc: Location;
 }
 
 interface DicraticalCommand {
@@ -59,6 +78,7 @@ interface DicraticalCommand {
     loc: Location;
     mark: string;
     character: string;
+    dotless: boolean;
 }
 
 interface NestedLiteral {
@@ -95,14 +115,54 @@ interface StringExpression {
     value: ValueType[];
 }
 
-type Command = RegularCommand | SymbolCommand | DicraticalCommand;
+interface BracedComment {
+    kind: 'BracedComment';
+    loc: Location;
+    value: string;
+}
 
-export type ValueType = TextValue | StringValue | NestedLiteral | NumberValue | Command;
+interface LineComment {
+    kind: 'LineComment';
+    loc: Location;
+    value: string;
+}
 
-type Children = Entry | PreambleExpression | StringExpression;
+interface NonEntryText {
+    kind: 'NonEntryText';
+    loc: Location;
+    value: string;
+}
+
+type Comment = BracedComment | BracedComment | NonEntryText;
+
+type Command =
+    | RegularCommand
+    | SymbolCommand
+    | DicraticalCommand
+    | SubscriptCommand
+    | SuperscriptCommand
+    | MathMode;
+
+export type ValueType =
+    | TextValue
+    | StringValue
+    | NestedLiteral
+    | NumberValue
+    | Command;
+
+type Children = Entry | PreambleExpression | StringExpression | Comment;
+
+type Node = Comment | PreambleExpression | StringExpression | Entry;
 
 export interface AST {
     kind: 'File';
     loc: Location;
     children: Children[];
 }
+
+type ParseOptions = {
+    verbatimProperties?: string[];
+    verbatimCommands?: string[];
+};
+
+export declare function parse(input: string, options?: ParseOptions): AST;

@@ -324,6 +324,38 @@ Array [
 ]
 `;
 
+exports[`BibTeX Parser should parse files with verbatim tildes, comments, odd characters in keys, super/subscript, no-dot i/j, and math-mode switches 1`] = `
+Array [
+  Object {
+    "author": Array [
+      Object {
+        "family": "Giunchiglia",
+        "given": "Fausto",
+      },
+      Object {
+        "family": "Traverso",
+        "given": "Paolo",
+      },
+    ],
+    "container-title": "Proçeedings of ECP-99",
+    "id": "nau-etal:2001_a",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "1999",
+          "",
+          "",
+        ],
+      ],
+    },
+    "note": "Paper accompanying invíted talk to be presented at the 1999 European Conference on Planning (ECP-99). Available through http://afrodite.itc.it:1024/~leaf/",
+    "publisher": "",
+    "title": "Planning as Model-checking",
+    "type": "article",
+  },
+]
+`;
+
 exports[`BibTeX Parser should parse files with zero entries 1`] = `Array []`;
 
 exports[`BibTeX Parser should parse jabref files 1`] = `

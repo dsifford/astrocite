@@ -1,15 +1,65 @@
 {
+    const verbatim = {
+        active: 0,
+        property: null,
+        closer: null,
+        
+        verbatimProperties: options.verbatimProperties ? options.verbatimProperties.map(prop => prop.toLowerCase()) : [
+            'url',
+            'doi',
+            'file',
+            'eprint',
+            'verba',
+            'verbb',
+            'verbc',
+        ],
+        verbatimCommands: options.verbatimCommands ? options.verbatimCommands.map(cmd => cmd.toLowerCase()) : [
+            'url',
+        ],
+
+        verbatimProperty: function(prop) {
+            return this.verbatimProperties.includes(prop.toLowerCase())
+        },
+        enterProperty: function(closer) {
+            if (!this.property || !this.verbatimProperty(this.property)) return true;
+            this.property = null;
+            this.active = 1;
+            this.closer = closer;
+            return true;
+        },
+        leaveProperty: function() {
+            this.active = 0;
+            this.closer = ''
+            this.property = ''
+            return true;
+        },
+
+        verbatimCommand: function(cmd) {
+            return this.verbatimCommands.includes(cmd.toLowerCase())
+        },
+        enterCommand: function(cmd) {
+            if (this.verbatimCommand(cmd)) this.active++;
+            return true;
+        },
+        leaveCommand: function(cmd) {
+            if (this.verbatimCommand(cmd)) this.active--;
+            if (this.active < 0) this.active = 0;
+            return true;
+        },
+    }
+
     function simpleLatexConversions(text) {
-        return [
-            [/---/g, '\u2014'],
-            [/--/g, '\u2013'],
-            [/~/g, '\u00A0'],
-            [/</g, '\u00A1'],
-            [/>/g, '\u00BF'],
-        ].reduce((output, replacer) => {
-            output = output.replace(replacer[0], replacer[1]);
-            return output;
-        }, text);
+        if (verbatim.active) {
+            return text
+
+        } else {
+          return text
+              .replace(/---/g, '\u2014')
+              .replace(/--/g, '\u2013')
+              .replace(/</g, '\u00A1')
+              .replace(/>/g, '\u00BF')
+              .replace(/~/g, '\u00A0')
+        }
     }
 
     function normalizeWhitespace(textArr) {
@@ -35,17 +85,39 @@ File
         };
     }
 
-Junk
-    = '@comment'i [^\n\r]* [\n\r]*
-    / [^@] [^\n\r]* [\n\r]*
+Comment
+    = '@comment'i __h v:BracedComment {
+        return {
+            kind: 'BracedComment',
+            loc: location(),
+            value: v.slice(1, -1),
+        };
+    }
+    / '@comment'i __h v:[^\n\r]* [\n\r]* {
+        return {
+            kind: 'LineComment',
+            loc: location(),
+            value: simpleLatexConversions(normalizeWhitespace(v)),
+        };
+      }
+    / v:([^@] [^\n\r]*) [\n\r]* {
+        return {
+            kind: 'NonEntryText',
+            loc: location(),
+            value: simpleLatexConversions(normalizeWhitespace(v)),
+        };
+      }
 
 Node
-    = Junk* n:(PreambleExpression / StringExpression / Entry) Junk* { return n; }
+    = n:(Comment / PreambleExpression / StringExpression / Entry) { return n; }
+
+BracedComment
+    = '{' comment:( [^{}] / BracedComment )* '}' { return '{' + comment.join('') + '}' }
 
 //-----------------  Top-level Nodes
 
 Entry
-    = '@' type:$[A-Za-z]+ [({] __ id:EntryId? __ props:Property* __ [})] __ {
+    = '@' type:$[A-Za-z]+ __ [({] __ id:EntryId? __ props:Property* __ [})] __ {
         return {
             kind: 'Entry',
             id: id || '',
@@ -80,7 +152,7 @@ EntryId
     = __ id:$[^ \t\r\n,]* __ ',' { return id; }
 
 Property
-    = k:PropertyKey PropertySeparator v:PropertyValue PropertyTerminator {
+    = k:PropertyKey PropertySeparator &{ verbatim.property = k; return true } v:PropertyValue &{ return verbatim.leaveProperty() } PropertyTerminator {
         return {
             kind: 'Property',
             loc: location(),
@@ -90,7 +162,7 @@ Property
     }
 
 PropertyKey
-    = __ k:$[a-zA-Z0-9-]+ { return k; }
+    = __ k:$[_:a-zA-Z0-9-]+ { return k; }
 
 //----------------------- Value Descriptors
 
@@ -101,16 +173,32 @@ PropertyValue
     }
 
 RegularValue
-    = '"' v:(NestedLiteral / Command / TextNoQuotes)* '"' Concat? { return v; }
-    / '{' v:(NestedLiteral / Command / Text)* '}' Concat? { return v; }
+    = '"' &{ return verbatim.enterProperty('"') } v:(NestedLiteral / VerbatimText / Command / TextNoQuotes)* '"' Concat? { return v; }
+    / '{' &{ return verbatim.enterProperty('{}') }v:(NestedLiteral / VerbatimText / Command / Text)* '}' Concat? { return v; }
 
 StringValue
     = v:String Concat? { return v; }
 
 //---------------------- Value Kinds
 
+VerbatimText
+    = &{ return verbatim.active && verbatim.closer === '"' } v:[^"]+ {
+        return {
+            kind: 'Text',
+            loc: location(),
+            value: simpleLatexConversions(normalizeWhitespace(v)),
+        };
+    }
+    / &{ return verbatim.active && verbatim.closer === '{}' } v:[^{}]+ {
+        return {
+            kind: 'Text',
+            loc: location(),
+            value: simpleLatexConversions(normalizeWhitespace(v)),
+        };
+    }
+
 Text
-    = v:[^{}\\]+ {
+    = v:[^\^_${}\\]+ {
         return {
             kind: 'Text',
             loc: location(),
@@ -119,7 +207,7 @@ Text
     }
 
 TextNoQuotes
-    = v:[^{}"\\]+ {
+    = v:[^\^_${}"\\]+ {
         return {
             kind: 'Text',
             loc: location(),
@@ -146,7 +234,16 @@ String
     }
 
 NestedLiteral
-    = '{' v:(Text / Command / NestedLiteral)* '}' {
+    = '{\\' mark:ExtendedDicratical ' ' char:([a-zA-Z0-9] / '\\' [ij]) '}' {
+        return {
+            kind: 'DicraticalCommand',
+            loc: location(),
+            mark: mark,
+            dotless: !!char[1],
+            character: char[1] || char[0],
+        }
+    }
+    / '{' v:(VerbatimText / Text / Command / NestedLiteral )* '}' {
         return {
             kind: 'NestedLiteral',
             loc: location(),
@@ -170,26 +267,71 @@ LineComment
 //---------------------- LaTeX Commands
 
 Command
-    = DicraticalCommand
+    = ScriptCommand
+    / DicraticalCommand
     / RegularCommand
     / SymbolCommand
+    / MathMode
 
-DicraticalCommand
-    = '\\' mark:SimpleDicratical char:[a-zA-Z0-9] {
+ScriptCommand
+    = mode:[_\^] &'{' v:RegularValue {
         return {
-            kind: 'DicraticalCommand',
+            kind: (mode === '_' ? 'Sub' : 'Super') + 'scriptCommand',
             loc: location(),
-            mark: mark,
-            character: char,
+            value: v
         };
     }
-    / '\\' mark:ExtendedDicratical '{' char:[a-zA-Z0-9] '}' {
+    / mode:[_\^] &'\\' v:Command {
+        return {
+            kind: (mode === '_' ? 'Sub' : 'Super') + 'scriptCommand',
+            loc: location(),
+            value: v
+        };
+    }
+    / mode:[_\^] v:. {
+        return {
+            kind: (mode === '_' ? 'Sub' : 'Super') + 'scriptCommand',
+            loc: location(),
+            value: v
+        };
+    }
+
+DicraticalCommand
+    = '\\' mark:SimpleDicratical char:([a-zA-Z0-9] / '\\' [ij]) {
         return {
             kind: 'DicraticalCommand',
             loc: location(),
             mark: mark,
-            character: char,
+            dotless: !!char[1],
+            character: char[1] || char[0],
+        };
+    }
+    / '\\' mark:ExtendedDicratical '{' char:([a-zA-Z0-9] / '\\' [ij]) '}' {
+        return {
+            kind: 'DicraticalCommand',
+            loc: location(),
+            mark: mark,
+            dotless: !!char[1],
+            character: char[1] || char[0],
         }
+    }
+    / '\\' mark:ExtendedDicratical ' ' char:([a-zA-Z0-9] / '\\' [ij]) {
+        return {
+            kind: 'DicraticalCommand',
+            loc: location(),
+            mark: mark,
+            dotless: !!char[1],
+            character: char[1] || char[0],
+        }
+    }
+
+MathMode
+    = '$' {
+        return {
+            kind: 'MathMode',
+            loc: location(),
+            value: '$',
+        };
     }
 
 
@@ -203,7 +345,7 @@ SymbolCommand
     }
 
 RegularCommand
-    = '\\' v:$[A-Za-z]+ args:Argument* {
+    = '\\' v:$[A-Za-z]+ &{ return verbatim.enterCommand(v) } args:Argument* &{ return verbatim.leaveCommand(v) } {
         return {
             kind: 'RegularCommand',
             loc: location(),
@@ -237,16 +379,16 @@ RequiredArgument
 //-------------- Helpers
 
 VariableName
-    = $([a-zA-Z-_][a-zA-Z0-9-_:]+)
+    = $([a-zA-Z-_][a-zA-Z0-9-&_:]*)
 
 SimpleDicratical
-    = ['`=~^.]
+    = ['`"=~\^.]
 
 ExtendedDicratical
-    = ['`"c=buv~^.drHk]
+    = ['`"=~\^.cbuvdrHk]
 
 PropertySeparator
-    = __h '=' __h
+    = __ '=' __
 
 PropertyTerminator
     = __ ','? __h (LineComment / EOL)*
