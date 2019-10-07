@@ -30,6 +30,8 @@ Array [
 exports[`BibTeX Parser should parse a simple .bib file 1`] = `
 Array [
   Object {
+    "DOI": "10.1097/CCM.0000000000000981",
+    "URL": "http://content.wkhealth.com/linkback/openurl?sid=WKPTLP:landingpage&an=00003246-201507000-00011",
     "author": Array [
       Object {
         "family": "Peltan",
@@ -66,6 +68,8 @@ Array [
     "volume": "43",
   },
   Object {
+    "DOI": "10.1097/TA.0000000000000657",
+    "URL": "http://content.wkhealth.com/linkback/openurl?sid=WKPTLP:landingpage&an=01586154-201506000-00023",
     "author": Array [
       Object {
         "family": "Inaba",
@@ -238,6 +242,8 @@ Array [
 exports[`BibTeX Parser should parse files with CRLF line endings 1`] = `
 Array [
   Object {
+    "DOI": "10.1097/CCM.0000000000000981",
+    "URL": "http://content.wkhealth.com/linkback/openurl?sid=WKPTLP:landingpage&an=00003246-201507000-00011",
     "author": Array [
       Object {
         "family": "Peltan",
@@ -274,6 +280,8 @@ Array [
     "volume": "43",
   },
   Object {
+    "DOI": "10.1097/TA.0000000000000657",
+    "URL": "http://content.wkhealth.com/linkback/openurl?sid=WKPTLP:landingpage&an=01586154-201506000-00023",
     "author": Array [
       Object {
         "family": "Inaba",
@@ -327,6 +335,7 @@ Array [
 exports[`BibTeX Parser should parse files with verbatim tildes, comments, odd characters in keys, super/subscript, no-dot i/j, and math-mode switches 1`] = `
 Array [
   Object {
+    "URL": "\\\\:",
     "author": Array [
       Object {
         "family": "Giunchiglia",
@@ -601,6 +610,45 @@ Array [
     ],
     "id": "case_4",
     "type": "article",
+  },
+]
+`;
+
+exports[`BibTeX Parser should parse non-standard fields 1`] = `
+Array [
+  Object {
+    "DOI": "10.1007/978-981-13-9913-8_2",
+    "URL": "https://link.springer.com/chapter/10.1007%2F978-981-13-9913-8_2",
+    "author": Array [
+      Object {
+        "family": "Verkhratsky",
+        "given": "Alexei",
+      },
+      Object {
+        "family": "Ho",
+        "given": "Margaret S",
+      },
+      Object {
+        "family": "Parpura",
+        "given": "Vladimir",
+      },
+    ],
+    "container-title": "Advances in experimental medicine and biology",
+    "id": "Verkhratsky2019Evolution",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2019",
+          "",
+          "",
+        ],
+      ],
+    },
+    "page": "15–44",
+    "publisher-place": "United States",
+    "title": "Evolution of Neuroglia",
+    "type": "article",
+    "volume": "1175",
   },
 ]
 `;

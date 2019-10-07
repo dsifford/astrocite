@@ -75,4 +75,7 @@ describe('BibTeX Parser', () => {
             ),
         ).toMatchSnapshot();
     });
+    it('should parse non-standard fields', () => {
+        expect(parse(cases.non_standard_fields)).toMatchSnapshot();
+    });
 });
