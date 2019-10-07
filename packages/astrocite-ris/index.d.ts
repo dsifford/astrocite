@@ -29,8 +29,8 @@ interface AST {
     children: Entry[];
 }
 
-export namespace AST {
-    function parse(input: string): AST;
-}
+export const AST: {
+    parse(input: string): AST;
+};
 
-export function parse(input: string): any;
+export function parse(input: string): CSL.Data[];
