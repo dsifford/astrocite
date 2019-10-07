@@ -160,9 +160,13 @@ export interface AST {
     children: Children[];
 }
 
-export type ParseOptions = {
+export interface ParseOptions {
     verbatimProperties?: string[];
     verbatimCommands?: string[];
+}
+
+export const AST: {
+    parse(input: string, options?: ParseOptions): AST;
 };
 
-export declare function parse(input: string, options?: ParseOptions): AST;
+export function parse(input: string): CSL.Data[];
