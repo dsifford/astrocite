@@ -31,6 +31,7 @@ exports[`BibTeX Parser should parse a simple .bib file 1`] = `
 Array [
   Object {
     "DOI": "10.1097/CCM.0000000000000981",
+    "ISSN": "0090-3493",
     "URL": "http://content.wkhealth.com/linkback/openurl?sid=WKPTLP:landingpage&an=00003246-201507000-00011",
     "author": Array [
       Object {
@@ -69,6 +70,7 @@ Array [
   },
   Object {
     "DOI": "10.1097/TA.0000000000000657",
+    "ISSN": "2163-0755",
     "URL": "http://content.wkhealth.com/linkback/openurl?sid=WKPTLP:landingpage&an=01586154-201506000-00023",
     "author": Array [
       Object {
@@ -243,6 +245,7 @@ exports[`BibTeX Parser should parse files with CRLF line endings 1`] = `
 Array [
   Object {
     "DOI": "10.1097/CCM.0000000000000981",
+    "ISSN": "0090-3493",
     "URL": "http://content.wkhealth.com/linkback/openurl?sid=WKPTLP:landingpage&an=00003246-201507000-00011",
     "author": Array [
       Object {
@@ -281,6 +284,7 @@ Array [
   },
   Object {
     "DOI": "10.1097/TA.0000000000000657",
+    "ISSN": "2163-0755",
     "URL": "http://content.wkhealth.com/linkback/openurl?sid=WKPTLP:landingpage&an=01586154-201506000-00023",
     "author": Array [
       Object {
@@ -437,6 +441,7 @@ Array [
 exports[`BibTeX Parser should parse minified files 1`] = `
 Array [
   Object {
+    "ISBN": "0385527403",
     "author": Array [
       Object {
         "family": "Torre",
@@ -618,6 +623,8 @@ exports[`BibTeX Parser should parse non-standard fields 1`] = `
 Array [
   Object {
     "DOI": "10.1007/978-981-13-9913-8_2",
+    "ISSN": "0065-2598",
+    "PMID": "31583583",
     "URL": "https://link.springer.com/chapter/10.1007%2F978-981-13-9913-8_2",
     "author": Array [
       Object {
