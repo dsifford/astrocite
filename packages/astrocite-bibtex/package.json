@@ -1,6 +1,6 @@
 {
   "name": "astrocite-bibtex",
-  "version": "0.15.4",
+  "version": "0.16.0",
   "description": "Parser and AST for converting BibTeX to CSL JSON",
   "license": "MIT",
   "repository": "dsifford/astrocite",
