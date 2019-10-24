@@ -6,6 +6,7 @@ Array [
   Object {
     "DOI": "10.1186/s13017-017-0151-4",
     "PMCID": "PMC5562999",
+    "PMID": "28828034",
     "URL": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5562999",
     "author": Array [
       Object {
@@ -301,6 +302,7 @@ Array [
   },
   Object {
     "PMCID": "PMC345853",
+    "PMID": "7038688",
     "URL": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC345853",
     "author": Array [
       Object {
@@ -342,6 +344,7 @@ Array [
   Object {
     "DOI": "10.1023/A:1020304420132",
     "PMCID": "PMC3456745",
+    "PMID": "23345781",
     "URL": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3456745",
     "author": Array [
       Object {

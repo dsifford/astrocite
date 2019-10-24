@@ -12,51 +12,34 @@ const FIELD_TRANSFORMS = new Map<
     [
         'articleids',
         ({ articleids, uid }) => {
-            const data: Partial<Data> = {};
-
-            const chooseURL = () => {
-                const pmcid = articleids.find(({ idtype, value }) => {
-                    return idtype === 'pmcid' && value === `PMC${uid}`;
-                });
-
-                if (pmcid) {
-                    return `https://www.ncbi.nlm.nih.gov/pmc/articles/${pmcid.value}`;
-                }
-
-                const pmid = articleids.find(({ idtype, value }) => {
-                    return idtype === 'pubmed' && value === uid;
-                });
-
-                if (pmid) {
-                    return `https://www.ncbi.nlm.nih.gov/pubmed/${pmid.value}`;
-                }
-
-                return undefined;
-            };
-
-            const url = chooseURL();
-
-            if (url) {
-                data.URL = url;
-            }
+            const ids: { [key: string]: string } = {};
 
             for (const { idtype, value } of articleids) {
-                switch (idtype) {
-                    case 'doi':
-                        data.DOI = value;
-                        break;
+                ids[idtype] = value;
+            }
 
-                    case 'pmc':
-                    case 'pmcid':
-                        if (value.match(/^PMC\d+$/)) {
-                            data.PMCID = value;
-                        }
-                        break;
+            const data: Partial<Data> = {};
 
-                    case 'pubmed':
-                        data.PMID = value;
-                        break;
+            if (ids.doi) {
+                data.DOI = ids.doi;
+            }
+
+            for (const value of [ids.pubmed, ids.pmid]) {
+                if (value) {
+                    data.PMID = value;
                 }
+            }
+
+            for (const value of [ids.pmc, ids.pmcid]) {
+                if (value && value.match(/^PMC\d+$/)) {
+                    data.PMCID = value;
+                }
+            }
+
+            if (data.PMID && data.PMID === uid) {
+                data.URL = `https://www.ncbi.nlm.nih.gov/pubmed/${data.PMID}`;
+            } else if (data.PMCID && data.PMCID === `PMC${uid}`) {
+                data.URL = `https://www.ncbi.nlm.nih.gov/pmc/articles/${data.PMCID}`;
             }
 
             return data;
