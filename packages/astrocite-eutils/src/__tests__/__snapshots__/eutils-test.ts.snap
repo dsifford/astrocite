@@ -4,6 +4,7 @@ exports[`Pubmed JSON should parse eutils pmc json correctly 1`] = `
 Array [
   [Error: Invalid uid PMC345345 at position=40],
   Object {
+    "DOI": "10.1186/s13017-017-0151-4",
     "PMCID": "PMC5562999",
     "URL": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5562999",
     "author": Array [
@@ -339,6 +340,7 @@ Array [
     "volume": "79",
   },
   Object {
+    "DOI": "10.1023/A:1020304420132",
     "PMCID": "PMC3456745",
     "URL": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3456745",
     "author": Array [
@@ -557,8 +559,6 @@ Array [
 exports[`Pubmed JSON should parse eutils pubmed json edge cases correctly 1`] = `
 Array [
   Object {
-    "PMID": "12345",
-    "URL": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12345",
     "author": Array [
       Object {
         "family": "Smith",
