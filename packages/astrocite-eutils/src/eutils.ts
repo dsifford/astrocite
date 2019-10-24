@@ -1,5 +1,5 @@
 import { parseDate } from 'astrocite-core';
-import { Data } from 'csl-json';
+import { Data, Person } from 'csl-json';
 
 import { FIELD_MAP } from './constants';
 import { EUtilsError } from './error';

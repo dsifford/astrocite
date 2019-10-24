@@ -563,6 +563,9 @@ Array [
       Object {
         "family": "Smith",
       },
+      Object {
+        "literal": "Climate Change Research Group.",
+      },
     ],
     "container-title": "Astrocite Testing Journal",
     "container-title-short": "J Astrocite",
