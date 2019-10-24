@@ -5,6 +5,29 @@ import { FIELD_MAP } from './constants';
 import { EUtilsError } from './error';
 import { Entry, EntryOk, isError, Response } from './schema';
 
+const chooseURL = (
+    articleids: Array<{ idtype: string; value: string }>,
+    uid: string,
+) => {
+    const pmcid = articleids.find(({ idtype, value }) => {
+        return idtype === 'pmcid' && value === `PMC${uid}`;
+    });
+
+    if (pmcid) {
+        return `https://www.ncbi.nlm.nih.gov/pmc/articles/${pmcid.value}`;
+    }
+
+    const pmid = articleids.find(({ idtype, value }) => {
+        return idtype === 'pubmed' && value === uid;
+    });
+
+    if (pmid) {
+        return `https://www.ncbi.nlm.nih.gov/pubmed/${pmid.value}`;
+    }
+
+    return undefined;
+};
+
 const FIELD_TRANSFORMS = new Map<
     keyof EntryOk,
     (entry: EntryOk) => Partial<Data>
@@ -12,11 +35,38 @@ const FIELD_TRANSFORMS = new Map<
     [
         'articleids',
         ({ articleids, uid }) => {
-            return {
-                URL: articleids.some(({ value }) => value === uid)
-                    ? `https://www.ncbi.nlm.nih.gov/pubmed/${uid}`
-                    : `https://www.ncbi.nlm.nih.gov/pmc/articles/PMC${uid}`,
-            };
+            const data: Partial<Data> = {};
+
+            const url = chooseURL(articleids, uid);
+
+            if (url) {
+                data.URL = url;
+            }
+
+            for (const { idtype, value } of articleids) {
+                // store the identifier
+                switch (idtype) {
+                    case 'doi':
+                        data.DOI = value;
+                        break;
+
+                    case 'pmc':
+                        data.PMCID = value;
+                        break;
+
+                    case 'pmcid':
+                        if (value.match(/^PMC\d+$/)) {
+                            data.PMCID = value;
+                        }
+                        break;
+
+                    case 'pubmed':
+                        data.PMID = value;
+                        break;
+                }
+            }
+
+            return data;
         },
     ],
     [
@@ -66,24 +116,6 @@ const FIELD_TRANSFORMS = new Map<
                 journalAbbreviation: source,
                 'container-title-short': source,
             };
-        },
-    ],
-    [
-        'uid',
-        ({ articleids, uid }) => {
-            const { idtype = '', value = uid } =
-                articleids.find(i => i.value.endsWith(uid)) || {};
-            switch (idtype) {
-                case 'pubmed':
-                case 'pmid':
-                case '':
-                    return { PMID: value };
-                case 'pmc':
-                case 'pmcid':
-                    return { PMCID: value };
-                default:
-                    return {};
-            }
         },
     ],
 ]);
