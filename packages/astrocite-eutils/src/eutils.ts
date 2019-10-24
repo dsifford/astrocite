@@ -47,9 +47,6 @@ const FIELD_TRANSFORMS = new Map<
                         break;
 
                     case 'pmc':
-                        data.PMCID = value;
-                        break;
-
                     case 'pmcid':
                         if (value.match(/^PMC\d+$/)) {
                             data.PMCID = value;
