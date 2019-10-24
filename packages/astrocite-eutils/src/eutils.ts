@@ -1,5 +1,5 @@
 import { parseDate } from 'astrocite-core';
-import { Data } from 'csl-json';
+import { Data, Person } from 'csl-json';
 import { decode } from 'he';
 
 import { FIELD_MAP, HTML_FIELD_MAP } from './constants';
@@ -51,14 +51,32 @@ const FIELD_TRANSFORMS = new Map<
         ({ authors }) => {
             return {
                 author: authors
-                    .map(({ name }) => {
-                        const [family, given] = name.split(' ');
-                        return {
-                            family: family || '',
-                            ...(given ? { given } : {}),
-                        };
+                    .map(({ authtype, name }) => {
+                        switch (authtype) {
+                            case 'CollectiveName':
+                                if (!name) {
+                                    return undefined;
+                                }
+
+                                return {
+                                    literal: name,
+                                };
+
+                            case 'Author':
+                            default:
+                                const [family, given] = name.split(' ');
+
+                                if (!family) {
+                                    return undefined;
+                                }
+
+                                return {
+                                    family,
+                                    ...(given ? { given } : {}),
+                                };
+                        }
                     })
-                    .filter(({ family }) => family !== ''),
+                    .filter(Boolean) as Person[],
             };
         },
     ],
