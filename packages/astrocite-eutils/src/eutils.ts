@@ -28,7 +28,7 @@ const FIELD_TRANSFORMS = new Map<
                         switch (authtype) {
                             case 'CollectiveName':
                                 if (!name) {
-                                    return null;
+                                    return undefined;
                                 }
 
                                 return {
@@ -40,7 +40,7 @@ const FIELD_TRANSFORMS = new Map<
                                 const [family, given] = name.split(' ');
 
                                 if (!family) {
-                                    return null;
+                                    return undefined;
                                 }
 
                                 return {
@@ -49,7 +49,7 @@ const FIELD_TRANSFORMS = new Map<
                                 };
                         }
                     })
-                    .filter(item => item !== null) as Person[],
+                    .filter(Boolean) as Person[],
             };
         },
     ],
