@@ -1,7 +1,8 @@
 import { parseDate } from 'astrocite-core';
 import { Data } from 'csl-json';
+import { decode } from 'he';
 
-import { FIELD_MAP } from './constants';
+import { FIELD_MAP, HTML_FIELD_MAP } from './constants';
 import { EUtilsError } from './error';
 import { Entry, EntryOk, isError, Response } from './schema';
 
@@ -106,6 +107,10 @@ function parseEntry(entry: Entry): Data | EUtilsError {
             const cslKey = FIELD_MAP.get(key);
             if (cslKey) {
                 return { ...obj, [cslKey]: entry[key] };
+            }
+            const htmlKey = HTML_FIELD_MAP.get(key);
+            if (htmlKey) {
+                return { ...obj, [htmlKey]: decode(entry[key] as string) };
             }
             return obj;
         },
