@@ -5,29 +5,6 @@ import { FIELD_MAP } from './constants';
 import { EUtilsError } from './error';
 import { Entry, EntryOk, isError, Response } from './schema';
 
-const chooseURL = (
-    articleids: Array<{ idtype: string; value: string }>,
-    uid: string,
-) => {
-    const pmcid = articleids.find(({ idtype, value }) => {
-        return idtype === 'pmcid' && value === `PMC${uid}`;
-    });
-
-    if (pmcid) {
-        return `https://www.ncbi.nlm.nih.gov/pmc/articles/${pmcid.value}`;
-    }
-
-    const pmid = articleids.find(({ idtype, value }) => {
-        return idtype === 'pubmed' && value === uid;
-    });
-
-    if (pmid) {
-        return `https://www.ncbi.nlm.nih.gov/pubmed/${pmid.value}`;
-    }
-
-    return undefined;
-};
-
 const FIELD_TRANSFORMS = new Map<
     keyof EntryOk,
     (entry: EntryOk) => Partial<Data>
@@ -37,14 +14,33 @@ const FIELD_TRANSFORMS = new Map<
         ({ articleids, uid }) => {
             const data: Partial<Data> = {};
 
-            const url = chooseURL(articleids, uid);
+            const chooseURL = () => {
+                const pmcid = articleids.find(({ idtype, value }) => {
+                    return idtype === 'pmcid' && value === `PMC${uid}`;
+                });
+
+                if (pmcid) {
+                    return `https://www.ncbi.nlm.nih.gov/pmc/articles/${pmcid.value}`;
+                }
+
+                const pmid = articleids.find(({ idtype, value }) => {
+                    return idtype === 'pubmed' && value === uid;
+                });
+
+                if (pmid) {
+                    return `https://www.ncbi.nlm.nih.gov/pubmed/${pmid.value}`;
+                }
+
+                return undefined;
+            };
+
+            const url = chooseURL();
 
             if (url) {
                 data.URL = url;
             }
 
             for (const { idtype, value } of articleids) {
-                // store the identifier
                 switch (idtype) {
                     case 'doi':
                         data.DOI = value;
