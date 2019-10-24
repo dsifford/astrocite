@@ -24,14 +24,32 @@ const FIELD_TRANSFORMS = new Map<
         ({ authors }) => {
             return {
                 author: authors
-                    .map(({ name }) => {
-                        const [family, given] = name.split(' ');
-                        return {
-                            family: family || '',
-                            ...(given ? { given } : {}),
-                        };
+                    .map(({ authtype, name }) => {
+                        switch (authtype) {
+                            case 'CollectiveName':
+                                if (!name) {
+                                    return null;
+                                }
+
+                                return {
+                                    literal: name,
+                                };
+
+                            case 'Author':
+                            default:
+                                const [family, given] = name.split(' ');
+
+                                if (!family) {
+                                    return null;
+                                }
+
+                                return {
+                                    family,
+                                    ...(given ? { given } : {}),
+                                };
+                        }
                     })
-                    .filter(({ family }) => family !== ''),
+                    .filter(item => item !== null) as Person[],
             };
         },
     ],

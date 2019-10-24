@@ -20,6 +20,10 @@
           "name": "",
           "authtype": "Author",
           "clusterid": ""
+        },
+        {
+          "name": "Climate Change Research Group.",
+          "authtype": "CollectiveName"
         }
       ],
       "lastauthor": "",
