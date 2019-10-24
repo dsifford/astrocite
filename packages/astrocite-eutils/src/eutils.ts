@@ -13,11 +13,37 @@ const FIELD_TRANSFORMS = new Map<
     [
         'articleids',
         ({ articleids, uid }) => {
-            return {
-                URL: articleids.some(({ value }) => value === uid)
-                    ? `https://www.ncbi.nlm.nih.gov/pubmed/${uid}`
-                    : `https://www.ncbi.nlm.nih.gov/pmc/articles/PMC${uid}`,
-            };
+            const ids: { [key: string]: string } = {};
+
+            for (const { idtype, value } of articleids) {
+                ids[idtype] = value;
+            }
+
+            const data: Partial<Data> = {};
+
+            if (ids.doi) {
+                data.DOI = ids.doi;
+            }
+
+            for (const value of [ids.pubmed, ids.pmid]) {
+                if (value) {
+                    data.PMID = value;
+                }
+            }
+
+            for (const value of [ids.pmc, ids.pmcid]) {
+                if (value && value.match(/^PMC\d+$/)) {
+                    data.PMCID = value;
+                }
+            }
+
+            if (data.PMID && data.PMID === uid) {
+                data.URL = `https://www.ncbi.nlm.nih.gov/pubmed/${data.PMID}`;
+            } else if (data.PMCID && data.PMCID === `PMC${uid}`) {
+                data.URL = `https://www.ncbi.nlm.nih.gov/pmc/articles/${data.PMCID}`;
+            }
+
+            return data;
         },
     ],
     [
@@ -67,24 +93,6 @@ const FIELD_TRANSFORMS = new Map<
                 journalAbbreviation: source,
                 'container-title-short': source,
             };
-        },
-    ],
-    [
-        'uid',
-        ({ articleids, uid }) => {
-            const { idtype = '', value = uid } =
-                articleids.find(i => i.value.endsWith(uid)) || {};
-            switch (idtype) {
-                case 'pubmed':
-                case 'pmid':
-                case '':
-                    return { PMID: value };
-                case 'pmc':
-                case 'pmcid':
-                    return { PMCID: value };
-                default:
-                    return {};
-            }
         },
     ],
 ]);
