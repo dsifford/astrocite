@@ -7,7 +7,7 @@
   "author": "Derek P Sifford",
   "main": "lib/index.js",
   "scripts": {
-    "build": "rm -rf lib/* && pegjs -o src/grammar.js src/grammar.pegjs && tsc -p . && cp src/schema.d.ts lib/grammar.d.ts && cp src/schema.d.ts index.d.ts"
+    "build": "rm -rf lib/* && pegjs -o src/grammar.js src/grammar.pegjs && tsc -p . && patch -u -p0 -o lib/grammar.d.ts < schema-grammar.patch && cp src/schema.d.ts index.d.ts"
   },
   "files": [
     "lib/**",

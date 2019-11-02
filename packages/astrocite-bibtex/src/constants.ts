@@ -50,8 +50,6 @@ export const FIELD_MAP: ReadonlyMap<string, keyof Data> = new Map([
     ['title', 'title'],
     ['url', 'URL'],
     ['volume', 'volume'],
-    ['url', 'URL'],
-    ['doi', 'DOI'],
 ]);
 
 /**
