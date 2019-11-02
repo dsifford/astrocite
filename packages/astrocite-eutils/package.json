@@ -1,6 +1,6 @@
 {
   "name": "astrocite-eutils",
-  "version": "0.15.0",
+  "version": "0.16.0",
   "description": "Converts PubMed EUtils ESummary API Responses to CSL JSON",
   "license": "MIT",
   "repository": "dsifford/astrocite",
@@ -15,6 +15,10 @@
   },
   "dependencies": {
     "astrocite-core": "file:../core",
-    "csl-json": "^0.1.0"
+    "csl-json": "^0.1.0",
+    "he": "^1.2.0"
+  },
+  "devDependencies": {
+    "@types/he": "^1.1.0"
   }
 }

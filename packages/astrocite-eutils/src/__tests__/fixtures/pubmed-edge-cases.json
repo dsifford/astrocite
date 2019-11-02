@@ -20,10 +20,14 @@
           "name": "",
           "authtype": "Author",
           "clusterid": ""
+        },
+        {
+          "name": "Climate Change Research Group.",
+          "authtype": "CollectiveName"
         }
       ],
       "lastauthor": "",
-      "title": "Testing various edge cases.",
+      "title": "Testing various &lt;i&gt;edge&lt;/i&gt; cases.",
       "sorttitle": "testing various edge cases",
       "volume": "1",
       "issue": "1",
@@ -53,7 +57,7 @@
       "references": [],
       "attributes": [],
       "pmcrefcount": "",
-      "fulljournalname": "Astrocite Testing Journal",
+      "fulljournalname": "Astrocite &amp; Testing Journal",
       "elocationid": "",
       "doctype": "citation",
       "srccontriblist": [],

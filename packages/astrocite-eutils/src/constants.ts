@@ -3,11 +3,8 @@ import { EntryOk } from './schema';
 
 export const FIELD_MAP = new Map<keyof EntryOk, keyof Data>([
     ['availablefromurl', 'URL'],
-    ['bookname', 'title'],
-    ['booktitle', 'title'],
     ['chapter', 'chapter-number'],
     ['edition', 'edition'],
-    ['fulljournalname', 'container-title'],
     ['issn', 'ISSN'],
     ['issue', 'issue'],
     ['medium', 'medium'],
@@ -16,6 +13,12 @@ export const FIELD_MAP = new Map<keyof EntryOk, keyof Data>([
     ['publisherlocation', 'publisher-place'],
     ['publishername', 'publisher'],
     ['reportnumber', 'number'],
-    ['title', 'title'],
     ['volume', 'volume'],
+]);
+
+export const HTML_FIELD_MAP = new Map<keyof EntryOk, keyof Data>([
+    ['bookname', 'title'],
+    ['booktitle', 'title'],
+    ['fulljournalname', 'container-title'],
+    ['title', 'title'],
 ]);
