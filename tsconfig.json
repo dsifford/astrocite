@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "allowJs": true,
+    "declaration": true,
     "baseUrl": ".",
     "target": "es5",
     "lib": [

@@ -165,8 +165,4 @@ export interface ParseOptions {
     verbatimCommands?: string[];
 }
 
-export const AST: {
-    parse(input: string, options?: ParseOptions): AST;
-};
-
-export function parse(input: string): CSL.Data[];
+export function parse(input: string, options?: ParseOptions): AST;

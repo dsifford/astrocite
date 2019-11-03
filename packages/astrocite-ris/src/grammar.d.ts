@@ -29,8 +29,4 @@ interface AST {
     children: Entry[];
 }
 
-export const AST: {
-    parse(input: string): AST;
-};
-
-export function parse(input: string): CSL.Data[];
+export function parse(input: string): AST;

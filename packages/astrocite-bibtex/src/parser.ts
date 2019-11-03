@@ -8,7 +8,6 @@ import {
     TYPE_MAP,
 } from './constants';
 import * as parser from './grammar';
-import { Argument, AST, Entry, RegularCommand, ValueType } from './schema.d';
 
 interface DatePart {
     kind?: string;
@@ -29,7 +28,10 @@ const curriedDate: PartialDate0 = () => (first = { value: '' }) => (
         : { issued: { 'date-parts': [[second.value, first.value, '']] } };
 };
 
-function parseArgument(arg: Argument, macros: Map<string, string>): string {
+function parseArgument(
+    arg: parser.Argument,
+    macros: Map<string, string>,
+): string {
     switch (arg.kind) {
         case 'OptionalArgument':
             return arg.value;
@@ -42,7 +44,7 @@ function parseArgument(arg: Argument, macros: Map<string, string>): string {
 }
 
 function parseRegularCommand(
-    cmd: RegularCommand,
+    cmd: parser.RegularCommand,
     macros: Map<string, string>,
 ): string {
     switch (cmd.value) {
@@ -56,11 +58,11 @@ function parseRegularCommand(
 }
 
 const parseValue = (
-    value: ValueType | ValueType[],
+    value: parser.ValueType | parser.ValueType[],
     macros: Map<string, string>,
 ): string => {
     let output = '';
-    const input: ValueType[] = Array.isArray(value) ? value : [value];
+    const input: parser.ValueType[] = Array.isArray(value) ? value : [value];
     for (const v of input) {
         switch (v.kind) {
             case 'Text':
@@ -91,7 +93,7 @@ const parseValue = (
     return output;
 };
 
-const parseEntry = (node: Entry, macros: Map<string, string>): Data => {
+const parseEntry = (node: parser.Entry, macros: Map<string, string>): Data => {
     let entry: Data = {
         id: node.id,
         type: TYPE_MAP.get(node.type) || 'article',
@@ -137,7 +139,7 @@ const parseEntry = (node: Entry, macros: Map<string, string>): Data => {
 
 export default function parseCSL(source: string): Data[] {
     const STRINGS_MAP: Map<string, string> = new Map(KNOWN_MACROS);
-    const { children } = <AST>parser.parse(source);
+    const { children } = parser.parse(source);
     let csl: Data[] = [];
 
     for (const node of children) {

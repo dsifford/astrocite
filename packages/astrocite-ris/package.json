@@ -6,13 +6,12 @@
   "repository": "dsifford/astrocite",
   "author": "Derek P Sifford",
   "main": "lib/index.js",
-  "types": "index.d.ts",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "build": "rm -rf lib/* && pegjs -o src/grammar.js src/grammar.pegjs && tsc -p ."
+    "build": "rm -rf lib/* && pegjs -o lib/grammar.js src/grammar.pegjs && cp src/*.d.ts lib && tsc -p ."
   },
   "files": [
-    "lib/**",
-    "index.d.ts"
+    "lib/**"
   ],
   "keywords": [
     "RIS",
