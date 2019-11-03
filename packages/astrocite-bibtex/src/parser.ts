@@ -1,5 +1,8 @@
 import { parseName } from 'astrocite-core';
 import { Data } from 'csl-json';
+
+import { Argument, AST, Entry, RegularCommand, ValueType } from '../';
+import { AST as parser } from './';
 import {
     DICRATICS,
     FIELD_MAP,
@@ -7,8 +10,6 @@ import {
     KNOWN_MACROS,
     TYPE_MAP,
 } from './constants';
-import * as parser from './grammar';
-import { Argument, AST, Entry, RegularCommand, ValueType } from './schema.d';
 
 interface DatePart {
     kind?: string;
