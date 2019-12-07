@@ -1,13 +1,13 @@
 {
   "name": "astrocite-bibtex",
-  "version": "0.16.0",
+  "version": "0.16.1",
   "description": "Parser and AST for converting BibTeX to CSL JSON",
   "license": "MIT",
   "repository": "dsifford/astrocite",
   "author": "Derek P Sifford",
   "main": "lib/index.js",
   "scripts": {
-    "build": "rm -rf lib/* && pegjs -o src/grammar.js src/grammar.pegjs && tsc -p . && patch -u -p0 -o lib/grammar.d.ts < schema-grammar.patch && cp src/schema.d.ts index.d.ts"
+    "build": "rm -rf lib/* && pegjs -o src/grammar.js src/grammar.pegjs && tsc -p ."
   },
   "files": [
     "lib/**",
