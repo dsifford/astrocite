@@ -209,6 +209,52 @@ Array [
 ]
 `;
 
+exports[`BibTeX Parser should parse emph with nested-literal argument 1`] = `
+Array [
+  Object {
+    "author": Array [
+      Object {
+        "family": "Childs",
+        "given": "Emma",
+      },
+      Object {
+        "family": "Hohoff",
+        "given": "Christa",
+      },
+      Object {
+        "family": "Deckert",
+        "given": "Jurgen",
+      },
+      Object {
+        "family": "Xu",
+        "given": "Ke",
+      },
+      Object {
+        "family": "Badner",
+        "given": "Judith",
+      },
+      Object {
+        "family": "de Wit",
+        "given": "Harriet",
+      },
+    ],
+    "container-title": "Neuropsychopharmacology",
+    "id": "ChildsHohoffDeckerEtAl08",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2008",
+          "",
+          "",
+        ],
+      ],
+    },
+    "title": "Association between <i>ADORA2A</i> and <i>DRD2</i> polymorphisms and caffeine-induced anxiety.",
+    "type": "article",
+  },
+]
+`;
+
 exports[`BibTeX Parser should parse empty files 1`] = `Array []`;
 
 exports[`BibTeX Parser should parse entries without IDs 1`] = `
