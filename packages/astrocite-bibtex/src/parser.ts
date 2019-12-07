@@ -51,6 +51,12 @@ function parseRegularCommand(
             return cmd.arguments
                 .map(arg => parseArgument(arg, macros))
                 .join('');
+        case 'emph':
+            return (
+                '<i>' +
+                cmd.arguments.map(arg => parseArgument(arg, macros)).join('') +
+                '</i>'
+            );
         default:
             return KNOWN_COMMANDS.get(cmd.value) || '';
     }
