@@ -104,17 +104,19 @@ const parseEntry = (node: Entry, macros: Map<string, string>): Data => {
         type: TYPE_MAP.get(node.type) || 'article',
     };
     let date: CurriedDate = curriedDate();
+    const keys = node.properties.map(property => property.key);
     for (const property of node.properties) {
         switch (property.key) {
             case 'year':
-            case 'month':
+            case 'month': {
                 date = date({
                     kind: property.key,
                     value: parseValue(property.value, macros),
                 });
                 break;
+            }
             case 'author':
-            case 'editor':
+            case 'editor': {
                 entry = {
                     ...entry,
                     [property.key]: parseValue(property.value, macros)
@@ -123,7 +125,17 @@ const parseEntry = (node: Entry, macros: Map<string, string>): Data => {
                         .map(parseName),
                 };
                 break;
-            default:
+            }
+            case 'number': {
+                // map "number" to "issue" unless there's an "issue" field
+                const field = keys.includes('issue') ? 'number' : 'issue';
+                entry = {
+                    ...entry,
+                    [field]: parseValue(property.value, macros),
+                };
+                break;
+            }
+            default: {
                 const field = FIELD_MAP.get(property.key);
                 if (field) {
                     entry = {
@@ -131,6 +143,8 @@ const parseEntry = (node: Entry, macros: Map<string, string>): Data => {
                         [field]: parseValue(property.value, macros),
                     };
                 }
+                break;
+            }
         }
     }
     while (typeof date === 'function') {
