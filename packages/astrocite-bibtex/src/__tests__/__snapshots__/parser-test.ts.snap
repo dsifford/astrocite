@@ -19,8 +19,8 @@ exports[`BibTeX Parser should parse a file without leading or trailing whitespac
 Array [
   Object {
     "id": "my_ref_id",
+    "issue": "6",
     "note": "Note in quotes",
-    "number": "6",
     "title": "Title in braces",
     "type": "book",
   },
@@ -53,6 +53,7 @@ Array [
     ],
     "container-title": "Critical Care Medicine",
     "id": "peltan_international_2015",
+    "issue": "7",
     "issued": Object {
       "date-parts": Array [
         Array [
@@ -62,7 +63,6 @@ Array [
         ],
       ],
     },
-    "number": "7",
     "page": "1429–1438",
     "title": "An International Normalized Ratio–Based Definition of Acute Traumatic Coagulopathy Is Associated With Mortality, Venous Thromboembolism, and Multiple Organ Failure After Injury:",
     "type": "article",
@@ -104,6 +104,7 @@ Array [
     ],
     "container-title": "Journal of Trauma and Acute Care Surgery",
     "id": "inaba_2014_2015",
+    "issue": "6",
     "issued": Object {
       "date-parts": Array [
         Array [
@@ -113,7 +114,6 @@ Array [
         ],
       ],
     },
-    "number": "6",
     "page": "1220–1229",
     "title": "2014 Consensus conference on viscoelastic test–based transfusion guidelines for early trauma resuscitation: Report of the panel",
     "type": "article",
@@ -257,6 +257,33 @@ Array [
 
 exports[`BibTeX Parser should parse empty files 1`] = `Array []`;
 
+exports[`BibTeX Parser should parse entries with number and issue fields 1`] = `
+Array [
+  Object {
+    "id": "number_only",
+    "issue": "70",
+    "title": "Number only",
+    "type": "article",
+    "volume": "43",
+  },
+  Object {
+    "id": "issue_only",
+    "issue": "7",
+    "title": "Issue only",
+    "type": "article",
+    "volume": "43",
+  },
+  Object {
+    "id": "number_and_issue",
+    "issue": "7",
+    "number": "70",
+    "title": "Number and issue",
+    "type": "article",
+    "volume": "43",
+  },
+]
+`;
+
 exports[`BibTeX Parser should parse entries without IDs 1`] = `
 Array [
   Object {
@@ -313,6 +340,7 @@ Array [
     ],
     "container-title": "Critical Care Medicine",
     "id": "peltan_international_2015",
+    "issue": "7",
     "issued": Object {
       "date-parts": Array [
         Array [
@@ -322,7 +350,6 @@ Array [
         ],
       ],
     },
-    "number": "7",
     "page": "1429–1438",
     "title": "An International Normalized Ratio–Based Definition of Acute Traumatic Coagulopathy Is Associated With Mortality, Venous Thromboembolism, and Multiple Organ Failure After Injury:",
     "type": "article",
@@ -364,6 +391,7 @@ Array [
     ],
     "container-title": "Journal of Trauma and Acute Care Surgery",
     "id": "inaba_2014_2015",
+    "issue": "6",
     "issued": Object {
       "date-parts": Array [
         Array [
@@ -373,7 +401,6 @@ Array [
         ],
       ],
     },
-    "number": "6",
     "page": "1220–1229",
     "title": "2014 Consensus conference on viscoelastic test–based transfusion guidelines for early trauma resuscitation: Report of the panel",
     "type": "article",

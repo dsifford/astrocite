@@ -81,4 +81,7 @@ describe('BibTeX Parser', () => {
     it('should parse emph with nested-literal argument', () => {
         expect(parse(cases.emph_nestedliteral)).toMatchSnapshot();
     });
+    it('should parse entries with number and issue fields', () => {
+        expect(parse(cases.number_and_issue)).toMatchSnapshot();
+    });
 });

@@ -39,7 +39,7 @@ export const FIELD_MAP: ReadonlyMap<string, keyof Data> = new Map([
     ['issn', 'ISSN'],
     ['journal', 'container-title'],
     ['note', 'note'],
-    ['number', 'number'],
+    ['issue', 'issue'],
     ['organization', 'publisher'],
     ['pages', 'page'],
     ['pmcid', 'PMCID'],
