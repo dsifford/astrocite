@@ -7,9 +7,9 @@ interface TestCases {
 }
 
 function extractIds(data: Array<{ id: string; [k: string]: any }>) {
-    return data.map(d => {
-        delete d.id;
-        return d;
+    return data.map((d) => {
+        const { id, ...rest } = d;
+        return rest;
     });
 }
 
