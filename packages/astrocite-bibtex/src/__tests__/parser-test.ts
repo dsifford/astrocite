@@ -84,4 +84,7 @@ describe('BibTeX Parser', () => {
     it('should parse entries with number and issue fields', () => {
         expect(parse(cases.number_and_issue)).toMatchSnapshot();
     });
+    it('should parse entries with bibtex special characters', () => {
+        expect(parse(cases.special_symbols)).toMatchSnapshot();
+    });
 });
