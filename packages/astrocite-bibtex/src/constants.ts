@@ -112,6 +112,19 @@ export const KNOWN_COMMANDS: ReadonlyMap<string, string> = new Map([
     ['Phi', '\u03A6'],
     ['Psi', '\u03A8'],
     ['Omega', '\u03A9'],
+
+    // non-accented characters often found in author names and titles
+    // see http://www.bibtex.org/SpecialSymbols/
+    ['oe', '\u0153'],
+    ['OE', '\u0152'],
+    ['ae', '\u00E6'],
+    ['AE', '\u00C6'],
+    ['aa', '\u00E5'],
+    ['o', '\u00F8'],
+    ['O', '\u00D8'],
+    ['l', '\u0142'],
+    ['L', '\u0141'],
+    ['ss', '\u00DF'],
 ]);
 
 // prettier-ignore

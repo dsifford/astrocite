@@ -257,6 +257,101 @@ Array [
 
 exports[`BibTeX Parser should parse empty files 1`] = `Array []`;
 
+exports[`BibTeX Parser should parse entries with bibtex special characters 1`] = `
+Array [
+  Object {
+    "author": Array [
+      Object {
+        "family": "Møller",
+        "given": "Anders",
+      },
+      Object {
+        "family": "Olesen",
+        "given": "Østerby",
+      },
+      Object {
+        "family": "Schwartzbach",
+        "given": "Michael I",
+      },
+    ],
+    "container-title": "ACM Trans. Program. Lang. Syst. Article",
+    "id": "Møller2007",
+    "issue": "10",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2007",
+          "",
+          "",
+        ],
+      ],
+    },
+    "title": "Static Validation of XSL Transformations",
+    "type": "article",
+    "volume": "29",
+  },
+  Object {
+    "DOI": "10.1145/2034691.2034749",
+    "ISBN": "9781450308632",
+    "author": Array [
+      Object {
+        "family": "Pimentel",
+        "given": "Maria da Graça",
+      },
+      Object {
+        "family": "Carlos",
+        "given": "São",
+      },
+    ],
+    "id": "Pimentel2011",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2011",
+          "",
+          "",
+        ],
+      ],
+    },
+    "page": "277–280",
+    "title": "Documenting Social Networks",
+    "type": "paper-conference",
+  },
+  Object {
+    "DOI": "10.1016/j.jclepro.2020.122204",
+    "ISSN": "09596526",
+    "author": Array [
+      Object {
+        "family": "del Río Castro",
+        "given": "Gema",
+      },
+      Object {
+        "family": "González Fernández",
+        "given": "María Camino",
+      },
+      Object {
+        "family": "Colsa",
+        "given": "Ángel Uruburu",
+      },
+    ],
+    "container-title": "Journal of Cleaner Production",
+    "id": "DelRioCastro2020",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          "2020",
+          "sep",
+          "",
+        ],
+      ],
+    },
+    "page": "122204",
+    "title": "Unleashing the convergence amid digitalization and sustainability towards pursuing the Sustainable Development Goals (SDGs): A holistic review",
+    "type": "article",
+  },
+]
+`;
+
 exports[`BibTeX Parser should parse entries with number and issue fields 1`] = `
 Array [
   Object {
